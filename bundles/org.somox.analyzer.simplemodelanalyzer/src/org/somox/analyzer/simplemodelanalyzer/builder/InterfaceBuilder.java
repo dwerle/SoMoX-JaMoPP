@@ -59,7 +59,7 @@ public class InterfaceBuilder extends AbstractBuilder {
      * programming language interfaces) or normal GASTClasses if the interface has been derived from
      * all public methods to their respective SAMM model interfaces
      */
-    private final Map<Type, OperationInterface> alreadyCreatedInterfaces = new HashMap<Type, OperationInterface>();
+    private final Map<Type, Interface> alreadyCreatedInterfaces = new HashMap<Type, Interface>();
 
     /**
      * Logger of this builder
@@ -158,7 +158,7 @@ public class InterfaceBuilder extends AbstractBuilder {
                 // Setting null here since the interface implementation is not generally known; i.
                 // e. there could be multiple
                 // implementations.
-                final OperationInterface reqInterface = this.createInterface(null, accessedClass);
+                final OperationInterface reqInterface = (OperationInterface) this.createInterface(null, accessedClass);
 
                 // If the interface has already been added to component, do not
                 // add it again
@@ -289,7 +289,7 @@ public class InterfaceBuilder extends AbstractBuilder {
         if (this.interfaceStrategy.isComponentInterface(superType)) {
             InterfaceBuilder.logger.debug("Found interface " + KDMHelper.computeFullQualifiedName(superType)
                     + " for component " + componentCandidate.getComponent().getEntityName());
-            final OperationInterface providedInterface = this.createInterface(gastClass, superType);
+            final OperationInterface providedInterface = (OperationInterface) this.createInterface(gastClass, superType);
 
             if (!this.componentProvidesInterface(providedInterface, componentCandidate.getComponent())) {
                 this.createProvidedPortAndBehaviour(componentCandidate, providedInterface, superType);
@@ -328,6 +328,7 @@ public class InterfaceBuilder extends AbstractBuilder {
         // that implement the same interface, then the model is invalid, because several
         // SEFFs in the compoment reference the same operation signature
         // In addition multiple provided roles are created
+        // dsg8fe does not affect MOM Interfaces 
         final List<ConcreteClassifier> gastClasses = componentCandidate.getImplementingClasses();
 
         if (!gastClasses.isEmpty()) {
@@ -366,7 +367,7 @@ public class InterfaceBuilder extends AbstractBuilder {
         }
 
         if (this.alreadyCreatedInterfaces.containsKey(gastClass)) {
-            return this.alreadyCreatedInterfaces.get(gastClass);
+            return (OperationInterface) this.alreadyCreatedInterfaces.get(gastClass);
         }
 
         final OperationInterface compInterface = RepositoryFactory.eINSTANCE.createOperationInterface();
@@ -392,11 +393,16 @@ public class InterfaceBuilder extends AbstractBuilder {
      *            the SAMM repository in which the interface should be contained
      * @return the interface
      */
-    private OperationInterface createInterface(final ConcreteClassifier implementingClass,
+    private Interface createInterface(final ConcreteClassifier implementingClass,
+            final ConcreteClassifier interfaceClass) {
+    	Interface inf = this.createOperationInterface(implementingClass, interfaceClass);
+    	return inf;
+    }
+    private OperationInterface createOperationInterface(final ConcreteClassifier implementingClass,
             final ConcreteClassifier interfaceClass) {
 
         // check for existing interface:
-        OperationInterface operationInterface = this.getExistingInterface(interfaceClass);
+        OperationInterface operationInterface = (OperationInterface) this.getExistingInterface(interfaceClass);
 
         // new interface
         if (operationInterface == null) {
@@ -431,8 +437,8 @@ public class InterfaceBuilder extends AbstractBuilder {
      * @param interfaces
      * @return null if no interface could not be found
      */
-    private OperationInterface getExistingInterface(final Type gastClass) {
-        OperationInterface returnInterface = null;
+    private Interface getExistingInterface(final Type gastClass) {
+        Interface returnInterface = null;
 
         if (this.alreadyCreatedInterfaces.containsKey(gastClass)) {
             returnInterface = this.alreadyCreatedInterfaces.get(gastClass);
