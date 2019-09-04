@@ -18,6 +18,7 @@ import org.emftext.language.java.types.Type;
 import org.emftext.language.java.types.TypeReference;
 import org.palladiosimulator.pcm.core.entity.ComposedProvidingRequiringEntity;
 import org.palladiosimulator.pcm.repository.BasicComponent;
+import org.palladiosimulator.pcm.repository.EventGroup;
 import org.palladiosimulator.pcm.repository.Interface;
 import org.palladiosimulator.pcm.repository.OperationInterface;
 import org.palladiosimulator.pcm.repository.OperationProvidedRole;
@@ -27,6 +28,7 @@ import org.palladiosimulator.pcm.repository.RepositoryComponent;
 import org.palladiosimulator.pcm.repository.RepositoryFactory;
 import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Role;
+import org.palladiosimulator.pcm.repository.SourceRole;
 //import de.fzi.gast.accesses.Access;
 //import de.fzi.gast.accesses.InheritanceTypeAccess;
 //import de.fzi.gast.accesses.accessesPackage;
@@ -70,6 +72,11 @@ public class InterfaceBuilder extends AbstractBuilder {
      * Builder used to build methods and method signatures
      */
     private OperationBuilder operationBuilder = null;
+    
+    /**
+     * Builder used to build EventGroups
+     */
+    private EventRelElementsBuilder eventRelBuilder = null;
 
     /**
      * Builder used to build GAST Behaviours for provided methods
@@ -108,6 +115,7 @@ public class InterfaceBuilder extends AbstractBuilder {
         InterfaceBuilder.logger.debug("Interface builder initialised");
 
         this.operationBuilder = new OperationBuilder(gastModel, configuration, result);
+        this.eventRelBuilder = new EventRelElementsBuilder(gastModel, configuration, result);
         this.behaviourBuilder = new Seff2JavaASTBuilder(gastModel, configuration, result);
 
         // TODO: extract to configurable strategy
@@ -125,7 +133,8 @@ public class InterfaceBuilder extends AbstractBuilder {
      *            The component for which this method should create required interfaces
      * @return true if a interface was added; false else
      */
-    public boolean findAndAddRequiredInterfaces(final ComponentImplementingClassesLink componentCandidate) {
+    @SuppressWarnings("unused")
+	public boolean findAndAddRequiredInterfaces(final ComponentImplementingClassesLink componentCandidate) {
         boolean addedARequiredInterface = false;
 
         // Filter used to remove inheritance type relations from the list of accesses
@@ -147,19 +156,34 @@ public class InterfaceBuilder extends AbstractBuilder {
             filteredAccessedClasses.addAll(filteredAccessList);
             componentClasses.add(clazz);
         }
-
+        
         // remove self accesses inside component (NOT equal to a self access)
         filteredAccessedClasses.removeAll(componentClasses);
 
-        for (final ConcreteClassifier accessedClass : this.somoxConfiguration.getClassifierFilter()
-                .filter(filteredAccessedClasses)) {
+        for (final ConcreteClassifier accessedClass : this.somoxConfiguration.getClassifierFilter().filter(filteredAccessedClasses)) {
+        	
+            if (eventRelBuilder.isJMSInterface(accessedClass)) { // Interface is MOM Interface 
+
+            	EventGroup reqEventGroup = (EventGroup) this.getExistingInterface(accessedClass);
+            	if (null == reqEventGroup) {
+                	reqEventGroup = eventRelBuilder.createEventGroup(null, accessedClass, interfaceStrategy);
+            	}
+            	
+            	eventRelBuilder.createSourcePort(componentCandidate.getComponent(), reqEventGroup, naming);
+                // dsg8fe if Interface is MessageProducer / Consumer each Port could be usefue. -> duplicates allowed
+            	this.updateInterfacesInSourceCodeDecorator(componentCandidate, reqEventGroup, accessedClass,
+                        !InterfaceBuilder.PROVIDED_INTERFACE);	
+            	
+            }
+            //else 
             if (this.interfaceStrategy.isComponentInterface(accessedClass)) {
 
                 // Setting null here since the interface implementation is not generally known; i.
                 // e. there could be multiple
                 // implementations.
+                //final OperationInterface reqInterface = this.createOperationInterface(null, accessedClass);
+            	// TODO dsg8fe decide if interface should be generalized or OperationInterface called
                 final OperationInterface reqInterface = (OperationInterface) this.createInterface(null, accessedClass);
-
                 // If the interface has already been added to component, do not
                 // add it again
                 if (!this.doesComponentAlreadyRequireInterface(reqInterface, componentCandidate.getComponent())) {
@@ -252,7 +276,9 @@ public class InterfaceBuilder extends AbstractBuilder {
                     return true;
                 }
 
-            } else {
+            } else if (role instanceof SourceRole) {
+            	// TODO dsg8fe thats not easy, because it make no sense to compare an eventgroup to the interface
+            }else {
                 InterfaceBuilder.logger.warn("Role type not yet supported: " + role.getClass().getSimpleName());
             }
         }
@@ -393,10 +419,26 @@ public class InterfaceBuilder extends AbstractBuilder {
      *            the SAMM repository in which the interface should be contained
      * @return the interface
      */
-    private Interface createInterface(final ConcreteClassifier implementingClass,
+    @SuppressWarnings("unused") // TODO dsg8fe remove when check if JMS interface is available
+    // TODO dsg8fe remove if it is always decided "outside" which Interface Type is needed
+	private Interface createInterface(final ConcreteClassifier implementingClass,
             final ConcreteClassifier interfaceClass) {
-    	Interface inf = this.createOperationInterface(implementingClass, interfaceClass);
-    	return inf;
+    	
+        // check for existing interface:
+    	Interface inf = this.getExistingInterface(interfaceClass);
+
+        // new interface
+        if (inf == null) {
+        	if (false) { // Interface is MOM Interface 
+        		inf = eventRelBuilder.createEventGroup(implementingClass, interfaceClass, interfaceStrategy);
+        	} else {
+        		inf = this.createOperationInterface(implementingClass, interfaceClass);
+        	}
+        }
+    	
+        this.alreadyCreatedInterfaces.put(interfaceClass, inf);
+        this.analysisResult.getInternalArchitectureModel().getInterfaces__Repository().add(inf);
+        return inf;
     }
     private OperationInterface createOperationInterface(final ConcreteClassifier implementingClass,
             final ConcreteClassifier interfaceClass) {
@@ -424,8 +466,8 @@ public class InterfaceBuilder extends AbstractBuilder {
 
             this.operationBuilder.createOperations(implementingClass, interfaceClass, operationInterface);
 
-            this.alreadyCreatedInterfaces.put(interfaceClass, operationInterface);
-            this.analysisResult.getInternalArchitectureModel().getInterfaces__Repository().add(operationInterface);
+            // this.alreadyCreatedInterfaces.put(interfaceClass, operationInterface);
+            // this.analysisResult.getInternalArchitectureModel().getInterfaces__Repository().add(operationInterface);
         }
         return operationInterface;
     }
