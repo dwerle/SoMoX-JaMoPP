@@ -67,6 +67,21 @@ public class BasicFunctionClassificationStrategy extends AbstractLibraryCallFunc
         logger.trace("no external call: " + method.getName());
         return false;
     }
+    
+    protected boolean isJmsCall(final Method method) {
+        final ComponentImplementingClassesLink compLink = this.queryComponentLink(this.primitiveComponent);
+        if (null == compLink) {
+            return false;
+        }
+        if (method.getName().equals("send")) {
+            logger.debug("Classified call as JMS call: " + method.getName() + " for component "
+                    + this.primitiveComponent.getEntityName());
+            return true;
+        }
+        
+        logger.trace("no JMS call: " + method.getName());
+        return false;    	
+    }
 
     private ComponentImplementingClassesLink queryComponentLink(final BasicComponent primitiveComponent) {
         for (final ComponentImplementingClassesLink compLink : this.sourceCodeDecoratorRepository

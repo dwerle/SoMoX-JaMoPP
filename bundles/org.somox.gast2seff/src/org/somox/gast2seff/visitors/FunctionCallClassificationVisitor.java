@@ -87,7 +87,9 @@ public class FunctionCallClassificationVisitor extends ComposedSwitch<Collection
         /**
          * Classifies a call as an call that emits an event, i.e., it is an external call also
          */
-        EMITEVENT
+        EMITEVENT,
+        
+        JMSCALL
     }
 
     private final HashMap<Commentable, List<BitSet>> annotations = new HashMap<Commentable, List<BitSet>>();
@@ -343,6 +345,8 @@ public class FunctionCallClassificationVisitor extends ComposedSwitch<Collection
             return 4;
         case EMITEVENT:
             return 5;
+        case JMSCALL:
+        	return 6;
         }
         throw new UnsupportedOperationException();
     }

@@ -505,6 +505,10 @@ public class JaMoPPStatementVisitor extends AbstractJaMoPPStatementVisitor {
         this.seff.getSteps_Behaviour().add(call);
         this.lastType = newLastType;
     }
+    
+    private void createJMSCallAction(final Statement object, final Method calledMethod, final BitSet newLastType) {
+    	final EmitEventAction call = SeffFactory.eINSTANCE.createEmitEventAction();
+    }
 
     // @Override
     // public Object caseSimpleStatement(SimpleStatement object) {
@@ -699,6 +703,11 @@ public class JaMoPPStatementVisitor extends AbstractJaMoPPStatementVisitor {
             final BitSet statementAnnotation) {
         this.createExternalCallAction(object, calledMethod, statementAnnotation);
     }
+    
+    protected void foundJMSCall(final Statement object, final Method calledMethod, final BitSet statementAnnotation) {
+        this.createJMSCallAction(object, calledMethod, statementAnnotation);
+    }
+    
 
     @Override
     protected void foundEmitEventAction(final Statement statement, final Method calledMethod,
@@ -717,6 +726,11 @@ public class JaMoPPStatementVisitor extends AbstractJaMoPPStatementVisitor {
         }
         this.seff.getSteps_Behaviour().add(emitEventAction);
         this.lastType = statementAnnotation;
+    }
+    
+    protected void foundJmsCallAction()
+    {
+    	
     }
 
     @Override

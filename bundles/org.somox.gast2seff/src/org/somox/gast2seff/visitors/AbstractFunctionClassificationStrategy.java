@@ -43,7 +43,10 @@ public abstract class AbstractFunctionClassificationStrategy implements IFunctio
         for (final Method method : methods) {
             final BitSet currentBitSet = new BitSet();
             if (method != null) {
-                if (this.isExternalCall(method)) {
+                if (this.isJmsCall(method)) {
+                	this.logger.debug("Found JMS call: " + method.getName());
+                	currentBitSet.set(FunctionCallClassificationVisitor.getIndex(FunctionCallType.JMSCALL));
+                } else if (this.isExternalCall(method)) {
                     this.logger.debug("Found external call: " + method.getName());// GAST2SEFFCHANGE//GAST2SEFFCHANGE
                     currentBitSet.set(FunctionCallClassificationVisitor.getIndex(FunctionCallType.EXTERNAL));
                 }else if (this.isEmitEventCall(method)){
@@ -125,5 +128,7 @@ public abstract class AbstractFunctionClassificationStrategy implements IFunctio
      * @return true if the function access is
      */
     protected abstract boolean isLibraryCall(Method method);
+    
+    protected abstract boolean isJmsCall(Method method);
 
 }

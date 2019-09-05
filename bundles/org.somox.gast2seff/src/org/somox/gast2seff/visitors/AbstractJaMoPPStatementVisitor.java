@@ -90,6 +90,8 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
 
     protected abstract void foundExternalCall(Statement object, Method calledMethod, BitSet statementAnnotation);
     
+    protected abstract void foundJMSCall(Statement object, Method calledMethod, BitSet statementAnnotation);
+    
     /**
      * The method is if an emit event action has been found. 
      * As we are currently not able to deal with emit event actions and in order to achieve backwards compatibility, we 
@@ -138,7 +140,10 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
         if (0 < calledMethods.size()) {
             for (int i = 0; i < statementAnnotations.size(); i++) {
                 final BitSet statementAnnotation = statementAnnotations.get(i);
-                if (this.isExternalCall(statementAnnotation)) {
+                if (this.isJmsCall(statementAnnotation)) {
+                	final Method calledMethod = calledMethods.get(i);
+                	this.foundJMSCall(object, calledMethod, statementAnnotation);
+                } else if (this.isExternalCall(statementAnnotation)) {
                     final Method calledMethod = calledMethods.get(i);
                     this.foundExternalCall(object, calledMethod, statementAnnotation);
                 } else if (this.isEmitEventCall(statementAnnotation)) {
@@ -184,7 +189,7 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
 
     }
 
-    private void setVisited(final Collection<BitSet> thisTypes) {
+	private void setVisited(final Collection<BitSet> thisTypes) {
         for (final BitSet thisType : thisTypes) {
             this.setVisited(thisType);
         }
@@ -359,6 +364,10 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
             positionString.append("no position information available");
         }
         return positionString.toString();
+    }
+    
+    private boolean isJmsCall(BitSet statementAnnotation) {
+    	return statementAnnotation.get(FunctionCallClassificationVisitor.getIndex(FunctionCallType.JMSCALL));
     }
 
     protected boolean isExternalCall(final BitSet statementAnnotation) {
