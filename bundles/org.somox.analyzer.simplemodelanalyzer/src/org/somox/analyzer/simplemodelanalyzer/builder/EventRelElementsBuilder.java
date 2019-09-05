@@ -1,8 +1,12 @@
 package org.somox.analyzer.simplemodelanalyzer.builder;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.emftext.language.java.classifiers.Classifier;
 import org.emftext.language.java.classifiers.ConcreteClassifier;
 import org.emftext.language.java.types.ClassifierReference;
+import org.emftext.language.java.types.Type;
 import org.palladiosimulator.pcm.repository.EventGroup;
 import org.palladiosimulator.pcm.repository.EventType;
 import org.palladiosimulator.pcm.repository.Interface;
@@ -22,6 +26,8 @@ import org.somox.kdmhelper.metamodeladdition.Root;
 
 public class EventRelElementsBuilder extends AbstractBuilder {
 	private int egCounter = 0;
+	
+	private final Map<Type, EventGroup> alreadyCreatedEvents = new HashMap<Type, EventGroup>();
 	
     public EventRelElementsBuilder(Root astModel, SoMoXConfiguration somoxConfiguration, AnalysisResult analysisResult) {
 		super(astModel, somoxConfiguration, analysisResult);
@@ -57,6 +63,7 @@ public class EventRelElementsBuilder extends AbstractBuilder {
        	 eventgroup.getEventTypes__EventGroup().add(eventType);
          //this.operationBuilder.createOperations(implementingClass, interfaceClass, operationInterface);
        	 this.analysisResult.getInternalArchitectureModel().getInterfaces__Repository().add(eventgroup);
+       	 this.addAsExistingEventGroup(interfaceClass, eventgroup);
 	 
    	 return eventgroup;
     }
@@ -109,11 +116,25 @@ public class EventRelElementsBuilder extends AbstractBuilder {
     }
     
     public boolean isJMSInterface(final ConcreteClassifier accessedClass) {
-    	String nameAccessedClass = accessedClass.getClass().getName();
     	if (accessedClass.getName().equals("MessageProducer") | accessedClass.getName().equals("MessageConsumer")) {
     		return true;
     	}else {
     		return false;
     	}
     }
+    
+    public EventGroup getExistingEventGroup(final Type gastClass) {
+    	EventGroup returnInterface = null;
+
+        if (this.alreadyCreatedEvents.containsKey(gastClass)) {
+            returnInterface = this.alreadyCreatedEvents.get(gastClass);
+        }
+
+        return returnInterface;
+    }
+    
+    public void addAsExistingEventGroup(final Type gastClass, EventGroup eventgroup) {
+    	this.alreadyCreatedEvents.put(gastClass, eventgroup);
+    }
+    
 }

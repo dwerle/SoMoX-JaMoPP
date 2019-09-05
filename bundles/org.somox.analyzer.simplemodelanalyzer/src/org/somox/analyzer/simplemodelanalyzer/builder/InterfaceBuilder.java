@@ -164,7 +164,7 @@ public class InterfaceBuilder extends AbstractBuilder {
         	
             if (eventRelBuilder.isJMSInterface(accessedClass)) { // Interface is MOM Interface 
 
-            	EventGroup reqEventGroup = (EventGroup) this.getExistingInterface(accessedClass);
+            	EventGroup reqEventGroup = eventRelBuilder.getExistingEventGroup(accessedClass);
             	if (null == reqEventGroup) {
                 	reqEventGroup = eventRelBuilder.createEventGroup(null, accessedClass, interfaceStrategy);
             	}
@@ -174,9 +174,7 @@ public class InterfaceBuilder extends AbstractBuilder {
             	this.updateInterfacesInSourceCodeDecorator(componentCandidate, reqEventGroup, accessedClass,
                         !InterfaceBuilder.PROVIDED_INTERFACE);	
             	
-            }
-            //else 
-            if (this.interfaceStrategy.isComponentInterface(accessedClass)) {
+            } else if (this.interfaceStrategy.isComponentInterface(accessedClass)) {
 
                 // Setting null here since the interface implementation is not generally known; i.
                 // e. there could be multiple
