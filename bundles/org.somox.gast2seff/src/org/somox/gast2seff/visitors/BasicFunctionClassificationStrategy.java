@@ -74,6 +74,13 @@ public class BasicFunctionClassificationStrategy extends AbstractLibraryCallFunc
             return false;
         }
         if (method.getName().equals("send")) {
+        	logger.warn("Parameter getAnnotationInterface: " + method.getAnnotationInterface());
+            logger.debug("Classified call as JMS call: " + method.getName() + " for component "
+                    + this.primitiveComponent.getEntityName());
+            return true;
+        }
+        if (method.getName().equals("receive")) {
+        	logger.warn("Parameter getAnnotationInterface: " + method.getAnnotationInterface());
             logger.debug("Classified call as JMS call: " + method.getName() + " for component "
                     + this.primitiveComponent.getEntityName());
             return true;

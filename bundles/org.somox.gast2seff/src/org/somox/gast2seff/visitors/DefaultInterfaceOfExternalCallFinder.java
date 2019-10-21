@@ -6,6 +6,7 @@ import org.emftext.language.java.members.Member;
 import org.emftext.language.java.members.Method;
 import org.emftext.language.java.statements.Statement;
 import org.palladiosimulator.pcm.repository.BasicComponent;
+import org.palladiosimulator.pcm.repository.EventGroup;
 import org.palladiosimulator.pcm.repository.Interface;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.RequiredRole;
@@ -42,6 +43,16 @@ public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternal
 
         for (final RequiredRole requiredRole : this.getBasicComponent().getRequiredRoles_InterfaceRequiringEntity()) {
             Interface pcmInterface = this.getInterfaceFromRequiredRole(requiredRole);
+            
+            if (pcmInterface instanceof EventGroup && pcmInterface != null) { // TODO dsg8fe My heart breaks when I see my fucking stupid source code.
+                logger.trace("accessed interface port " + requiredRole.getEntityName());
+                interfacePortOperationTuple.role = requiredRole;
+                interfacePortOperationTuple.signature = (Signature) ((EventGroup) pcmInterface).getEventTypes__EventGroup().get(0);
+                return interfacePortOperationTuple;            	
+            }
+            
+            /* TODO dsg8fe non of the condition is based on one of the parameter... what is the purpose of the whole construct? 
+             * AND the existence of an interface ergo required role is checked with pcmInterface != null simply ... :( */
             for (final InterfaceSourceCodeLink ifLink : this.getSourceCodeDecoratorRepository()
                     .getInterfaceSourceCodeLink()) {
                 if (pcmInterface != null && pcmInterface.equals(ifLink.getInterface())) {
@@ -59,7 +70,7 @@ public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternal
         logger.warn("found no if port for " + accessedConcreteClassifier);
         return interfacePortOperationTuple;
     }
-
+    
     protected SourceCodeDecoratorRepository getSourceCodeDecoratorRepository() {
         return sourceCodeDecoratorRepository;
     }
@@ -92,7 +103,6 @@ public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternal
 
             final Member methodSourceCodeDecorator = methodLink.getFunction();
             if (methodSourceCodeDecorator.equals(invokedMethod)) { // GAST2SEFFCHANGE
-
                 logger.trace("accessed operation " + methodLink.getOperation().getEntityName());
                 return methodLink.getOperation();
             }

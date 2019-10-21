@@ -10,6 +10,8 @@ import org.emftext.language.java.members.Method;
 import org.emftext.language.java.statements.Statement;
 import org.somox.gast2seff.visitors.FunctionCallClassificationVisitor.FunctionCallType;
 
+import indirCommDetection.JMSDetection;
+
 /**
  * Base implementation of {@link IFunctionClassificationStrategy}. Delagates the decisions on the
  * function call types to subclasses
@@ -45,6 +47,7 @@ public abstract class AbstractFunctionClassificationStrategy implements IFunctio
             if (method != null) {
                 if (this.isJmsCall(method)) {
                 	this.logger.debug("Found JMS call: " + method.getName());
+                	logger.warn(method.getParameters());
                 	currentBitSet.set(FunctionCallClassificationVisitor.getIndex(FunctionCallType.JMSCALL));
                 } else if (this.isExternalCall(method)) {
                     this.logger.debug("Found external call: " + method.getName());// GAST2SEFFCHANGE//GAST2SEFFCHANGE

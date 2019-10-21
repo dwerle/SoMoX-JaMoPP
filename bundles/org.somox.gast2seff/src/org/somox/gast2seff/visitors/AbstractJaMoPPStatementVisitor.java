@@ -29,8 +29,11 @@ import org.emftext.language.java.statements.SynchronizedBlock;
 import org.emftext.language.java.statements.TryBlock;
 import org.emftext.language.java.statements.WhileLoop;
 import org.emftext.language.java.statements.util.StatementsSwitch;
+import org.palladiosimulator.pcm.repository.Role;
 import org.somox.gast2seff.visitors.FunctionCallClassificationVisitor.FunctionCallType;
 import org.somox.kdmhelper.KDMHelper;
+
+import indirCommDetection.JMSDetection;
 
 public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Object> {
     private static final Logger logger = Logger.getLogger(AbstractJaMoPPStatementVisitor.class);
@@ -90,7 +93,7 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
 
     protected abstract void foundExternalCall(Statement object, Method calledMethod, BitSet statementAnnotation);
     
-    protected abstract void foundJMSCall(Statement object, Method calledMethod, BitSet statementAnnotation);
+    protected abstract Role foundJMSCall(Statement object, Method calledMethod, BitSet statementAnnotation);
     
     /**
      * The method is if an emit event action has been found. 
@@ -142,7 +145,11 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
                 final BitSet statementAnnotation = statementAnnotations.get(i);
                 if (this.isJmsCall(statementAnnotation)) {
                 	final Method calledMethod = calledMethods.get(i);
-                	this.foundJMSCall(object, calledMethod, statementAnnotation);
+                	
+                	Role role = this.foundJMSCall(object, calledMethod, statementAnnotation); // TODO dsg8fe better solution: SEFF Source Link
+                	//System.out.println("found Role:" + role.getEntityName());
+                	String destination = JMSDetection.parseStatementForDestination(object);
+                	JMSDetection.setRoleConnectedToDestination(destination, role);
                 } else if (this.isExternalCall(statementAnnotation)) {
                     final Method calledMethod = calledMethods.get(i);
                     this.foundExternalCall(object, calledMethod, statementAnnotation);
@@ -311,7 +318,9 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
                     .getIndex(FunctionCallType.INTERNAL_CALL_CONTAINING_EXTERNAL_CALL));
             final boolean isEmitEventCall = statementType
                     .get(FunctionCallClassificationVisitor.getIndex(FunctionCallType.EMITEVENT));
-            if (isExternalCall || isInternalCallContainingExternalCall || isEmitEventCall) {
+            final boolean isJmsCall = statementType
+                    .get(FunctionCallClassificationVisitor.getIndex(FunctionCallType.JMSCALL));
+            if (isExternalCall || isInternalCallContainingExternalCall || isEmitEventCall || isJmsCall) {
                 return true;
             }
         }
@@ -421,6 +430,10 @@ public abstract class AbstractJaMoPPStatementVisitor extends ComposedSwitch<Obje
         }
         
         if(this.isEmitEventCall(thisType)){
+            return false;
+        }
+        
+        if(this.isJmsCall(thisType)){
             return false;
         }
 

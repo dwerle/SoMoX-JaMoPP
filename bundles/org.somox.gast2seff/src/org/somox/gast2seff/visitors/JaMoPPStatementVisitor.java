@@ -24,6 +24,8 @@ import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.OperationSignature;
 import org.palladiosimulator.pcm.repository.PassiveResource;
 import org.palladiosimulator.pcm.repository.RepositoryFactory;
+import org.palladiosimulator.pcm.repository.Role;
+import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.repository.SourceRole;
 import org.palladiosimulator.pcm.seff.AbstractAction;
 import org.palladiosimulator.pcm.seff.AcquireAction;
@@ -37,6 +39,8 @@ import org.palladiosimulator.pcm.seff.ResourceDemandingInternalBehaviour;
 import org.palladiosimulator.pcm.seff.SeffFactory;
 import org.palladiosimulator.pcm.seff.StartAction;
 import org.palladiosimulator.pcm.seff.StopAction;
+import org.palladiosimulator.simulizar.indirection.actions.ActionsFactory;
+import org.palladiosimulator.simulizar.indirection.actions.ConsumeEventAction;
 import org.somox.gast2seff.visitors.InterfaceOfExternalCallFinding.InterfacePortOperationTuple;
 import org.somox.kdmhelper.GetAccessedType;
 import org.somox.kdmhelper.KDMHelper;
@@ -47,6 +51,7 @@ import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 import org.somox.sourcecodedecorator.SourcecodedecoratorFactory;
 
 import de.uka.ipd.sdq.identifier.Identifier;
+import indirCommDetection.JMSDetection;
 
 /**
  * A visitor which traverses a GAST behaviour and creates a SEFF matching the traversed behaviour.
@@ -505,11 +510,67 @@ public class JaMoPPStatementVisitor extends AbstractJaMoPPStatementVisitor {
         this.seff.getSteps_Behaviour().add(call);
         this.lastType = newLastType;
     }
+
+    private EmitEventAction createEmitEventAction(Statement statement, Method calledMethod, BitSet statementAnnotation) {
+        final EmitEventAction emitEventAction = SeffFactory.eINSTANCE.createEmitEventAction();
+        this.createAbstracActionClassMethodLink(emitEventAction, statement);
+        this.linkSeffElement(emitEventAction, statement);
+        emitEventAction.setEntityName(calledMethod.getName() + this.positionToString(statement));
+        final InterfacePortOperationTuple ifOperationTuple = this.interfaceOfExternalCallFinder
+                .getCalledInterfacePort(calledMethod, statement);
+        if (null == ifOperationTuple) {
+            JaMoPPStatementVisitor.logger.warn("ifOperationTuple == null");
+        } else {
+            emitEventAction.setSourceRole__EmitEventAction((SourceRole) ifOperationTuple.role);
+            emitEventAction.setEventType__EmitEventAction((EventType) ifOperationTuple.signature);
+        }
+        this.seff.getSteps_Behaviour().add(emitEventAction);
+        this.lastType = statementAnnotation;
+        
+        return emitEventAction;
+	}
     
-    private void createJMSCallAction(final Statement object, final Method calledMethod, final BitSet newLastType) {
-    	final EmitEventAction call = SeffFactory.eINSTANCE.createEmitEventAction();
+    private SourceRole createEmitCallAction (final Statement object, final Method calledMethod, final BitSet newLastType) {
+    	EmitEventAction emitEventAction = SeffFactory.eINSTANCE.createEmitEventAction(); //todo dsg8fe this.createEmitEventAction(object, calledMethod, newLastType);
+        this.createAbstracActionClassMethodLink(emitEventAction, object);
+        this.linkSeffElement(emitEventAction, object);
+        emitEventAction.setEntityName(calledMethod.getName() + this.positionToString(object));
+        final InterfacePortOperationTuple ifOperationTuple = this.interfaceOfExternalCallFinder
+                .getCalledInterfacePort(calledMethod, object);
+        
+        if (null == ifOperationTuple) {
+            JaMoPPStatementVisitor.logger.warn("ifOperationTuple == null");
+        } else {
+            emitEventAction.setSourceRole__EmitEventAction((SourceRole) ifOperationTuple.role);
+            emitEventAction.setEventType__EmitEventAction((EventType) ifOperationTuple.signature);
+        }
+        this.seff.getSteps_Behaviour().add(emitEventAction);
+        this.lastType = newLastType;
+    	
+    	return emitEventAction.getSourceRole__EmitEventAction(); // instead of ifOperationTuple.role -> in case ifOperationTuple == null 
     }
 
+    private SinkRole createConsumeCallAction(final Statement object, final Method calledMethod, final BitSet newLastType) {
+		ConsumeEventAction consumeEventAction = ActionsFactory.eINSTANCE.createConsumeEventAction();
+		this.createAbstracActionClassMethodLink(consumeEventAction, object);
+        this.linkSeffElement(consumeEventAction, object);
+        consumeEventAction.setEntityName(calledMethod.getName() + this.positionToString(object));
+        
+        final InterfacePortOperationTuple ifOperationTuple = this.interfaceOfExternalCallFinder
+                .getCalledInterfacePort(calledMethod, object);
+        
+        if (null == ifOperationTuple) {
+            JaMoPPStatementVisitor.logger.warn("ifOperationTuple == null");
+        } else {
+        	consumeEventAction.setSinkRole((SinkRole) ifOperationTuple.role);
+        	consumeEventAction.setEventType((EventType) ifOperationTuple.signature);
+        }
+        this.seff.getSteps_Behaviour().add(consumeEventAction);
+        this.lastType = newLastType;
+    	
+    	return consumeEventAction.getSinkRole(); // instead of ifOperationTuple.role -> in case ifOperationTuple == null 
+		
+	}
     // @Override
     // public Object caseSimpleStatement(SimpleStatement object) {
     // BitSet statementAnnotation = this.functionClassificationAnnotation.get(object);
@@ -704,36 +765,29 @@ public class JaMoPPStatementVisitor extends AbstractJaMoPPStatementVisitor {
         this.createExternalCallAction(object, calledMethod, statementAnnotation);
     }
     
-    protected void foundJMSCall(final Statement object, final Method calledMethod, final BitSet statementAnnotation) {
-        this.createJMSCallAction(object, calledMethod, statementAnnotation);
+    protected Role foundJMSCall(final Statement object, final Method calledMethod, final BitSet statementAnnotation) {
+        Role role = null;
+        
+    	if (JMSDetection.isReceiver(calledMethod)){
+    		this.createConsumeCallAction(object, calledMethod, statementAnnotation);
+    		logger.info("Found JMSCall Receiver: " + calledMethod.getName());
+        } else if (JMSDetection.isProducer(calledMethod)) {
+        	role = this.createEmitCallAction(object, calledMethod, statementAnnotation);
+        	logger.info("Found JMSCall Producer: " + calledMethod.getName());
+        } else {
+        	logger.error("Found JMSCall is not supported: " + calledMethod.getName());
+        }
+    	return role;
     }
-    
 
-    @Override
+	@Override
     protected void foundEmitEventAction(final Statement statement, final Method calledMethod,
             final BitSet statementAnnotation) {
-        final EmitEventAction emitEventAction = SeffFactory.eINSTANCE.createEmitEventAction();
-        this.createAbstracActionClassMethodLink(emitEventAction, statement);
-        this.linkSeffElement(emitEventAction, statement);
-        emitEventAction.setEntityName(calledMethod.getName() + this.positionToString(statement));
-        final InterfacePortOperationTuple ifOperationTuple = this.interfaceOfExternalCallFinder
-                .getCalledInterfacePort(calledMethod, statement);
-        if (null == ifOperationTuple) {
-            JaMoPPStatementVisitor.logger.warn("ifOperationTuple == null");
-        } else {
-            emitEventAction.setSourceRole__EmitEventAction((SourceRole) ifOperationTuple.role);
-            emitEventAction.setEventType__EmitEventAction((EventType) ifOperationTuple.signature);
-        }
-        this.seff.getSteps_Behaviour().add(emitEventAction);
-        this.lastType = statementAnnotation;
-    }
-    
-    protected void foundJmsCallAction()
-    {
     	
+    	this.createEmitEventAction(statement, calledMethod, statementAnnotation);
     }
 
-    @Override
+	@Override
     protected Object handleSynchronizedBlock(final SynchronizedBlock synchronizedBlock) {
         final PassiveResource passiveResource = RepositoryFactory.eINSTANCE.createPassiveResource();
         passiveResource.setEntityName(this.positionToString(KDMHelper.getJavaNodeSourceRegion(synchronizedBlock)));
