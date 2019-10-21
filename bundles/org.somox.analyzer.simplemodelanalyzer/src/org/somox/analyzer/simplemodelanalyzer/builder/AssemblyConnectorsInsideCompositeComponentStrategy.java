@@ -15,8 +15,14 @@ import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.RequiredRole;
+import org.palladiosimulator.pcm.repository.SinkRole;
+import org.palladiosimulator.pcm.repository.SourceRole;
+import org.palladiosimulator.simulizar.indirection.system.DataChannel;
+import org.palladiosimulator.simulizar.indirection.system.SystemFactory;
 import org.somox.metrics.ClusteringRelation;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
+
+import indirCommDetection.JMSDetection;
 
 /**
  * Strategy: Prefer establishing assembly connectors INSIDE a composite component instead of
@@ -131,10 +137,35 @@ public class AssemblyConnectorsInsideCompositeComponentStrategy implements IAsse
                         outerComposite.getConnectors__ComposedStructure().add(newAssemblyConnector);
 
                     }
+                } else if (requiredRole instanceof SourceRole && providedRole instanceof SinkRole ) {
+                	final SourceRole sourceRole = (SourceRole) requiredRole;
+                	final SinkRole sinkRole = (SinkRole) providedRole;
+                	//if (sourceRole.getEventGroup__SourceRole().equals(sinkRole.getEventGroup__SinkRole())) {
+                	if (JMSDetection.isSinkAndSourceRoleConnected(sinkRole, sourceRole)) {
+                    	
+                		DataChannel dataChannel = SystemFactory.eINSTANCE.createDataChannel();
+                    	dataChannel.setEntityName("MyDataChannel");
+                    	dataChannel.setSinkEventGroup(sinkRole.getEventGroup__SinkRole());
+                    	dataChannel.setSourceEventGroup(sourceRole.getEventGroup__SourceRole());
+                    	dataChannel.setParentStructure__EventChannel(outerComposite);
+                    	
+                		final Connector DataChannelSinkConnector =  DataChannelConnectorBuilder.createDataChannelSinkConnector(
+                                outerComposite, sinkRole, requiringComponent.getComponent(),
+                                providingComponent.getComponent(), dataChannel);
+                		outerComposite.getConnectors__ComposedStructure().add(DataChannelSinkConnector);
+                		
+                		final Connector DataChannelSourceConnector =  DataChannelConnectorBuilder.createDataChannelSourceConnector(
+                                outerComposite, sourceRole, requiringComponent.getComponent(),
+                                providingComponent.getComponent(), dataChannel);
+                		outerComposite.getConnectors__ComposedStructure().add(DataChannelSourceConnector);
+                		
+                	}
+                	
                 } else {
                     logger.warn("Provided role type: " + providedRole.getClass().getSimpleName()
                             + " and required role type: " + requiredRole.getClass().getSimpleName()
                             + " not yet supported");
+                    logger.warn("Sussan hier musst du noch matcharbeit machen, auch wenns durchläuft!");
                 }
             }
         }

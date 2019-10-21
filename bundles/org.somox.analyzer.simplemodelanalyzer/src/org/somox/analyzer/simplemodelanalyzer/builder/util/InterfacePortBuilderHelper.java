@@ -24,6 +24,8 @@ import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
 import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Role;
+import org.palladiosimulator.pcm.repository.SinkRole;
+import org.palladiosimulator.pcm.repository.SourceRole;
 import org.somox.analyzer.simplemodelanalyzer.builder.InterfacesBoundInConnectorFilter;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.InterfaceSourceCodeLink;
@@ -211,6 +213,12 @@ public class InterfacePortBuilderHelper {
                     if (interfaceLinkSub.getInterface().equals(componentInterface)) {
                         return currentRole;
                     }
+                } else if (currentRole instanceof SinkRole) {
+                	final Interface componentEventGroup = ((SinkRole) currentRole).getEventGroup__SinkRole();
+                    if (interfaceLinkSub.getInterface().equals(componentEventGroup)) {
+                        return currentRole;
+                    }
+                	
                 } else {
                     logger.warn("Role type not supported: " + currentRole.getClass().getSimpleName());
                 }
@@ -223,6 +231,11 @@ public class InterfacePortBuilderHelper {
                     final Interface componentInterface = ((OperationRequiredRole) currentRole)
                             .getRequiredInterface__OperationRequiredRole();
                     if (interfaceLinkSub.getInterface().equals(componentInterface)) {
+                        return currentRole;
+                    }
+                } else if (currentRole instanceof SourceRole) {
+                	final Interface componentEventGroup = ((SourceRole) currentRole).getEventGroup__SourceRole();
+                    if (interfaceLinkSub.getInterface().equals(componentEventGroup)) {
                         return currentRole;
                     }
                 } else {

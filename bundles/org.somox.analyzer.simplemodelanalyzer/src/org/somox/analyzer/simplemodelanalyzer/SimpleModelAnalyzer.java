@@ -1,11 +1,18 @@
 package org.somox.analyzer.simplemodelanalyzer;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.emftext.language.java.classifiers.ConcreteClassifier;
+import org.emftext.language.java.classifiers.Interface;
 import org.somox.analyzer.AnalysisResult;
 import org.somox.analyzer.ModelAnalyzer;
 import org.somox.analyzer.ModelAnalyzerException;
@@ -18,6 +25,8 @@ import org.somox.analyzer.simplemodelanalyzer.factories.ISoMoXStrategiesFactory;
 import org.somox.configuration.AbstractMoxConfiguration;
 import org.somox.configuration.SoMoXConfiguration;
 import org.somox.extractor.ExtractionResult;
+import org.somox.filter.ComposedFilter;
+import org.somox.filter.EClassBasedFilter;
 import org.somox.kdmhelper.KDMReader;
 import org.somox.kdmhelper.metamodeladdition.Root;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
@@ -75,10 +84,50 @@ public class SimpleModelAnalyzer implements ModelAnalyzer<SoMoXConfiguration> {
         final KDMReader modelReader = new KDMReader();
         try {
             modelReader.loadProject(somoxConfiguration.getFileLocations().getProjectNames().toArray(new String[0]));
+            
         } catch (final IOException e) {
             SimpleModelAnalyzer.logger.error("Failed to load GAST Model", e);
             throw new ModelAnalyzerException("Failed to load GAST model", e);
         }
+        /* Sussans Spielwiese
+        final KDMReader JmsReader = new KDMReader();
+        final Root jmsRoot = JmsReader.getRoot();
+        
+        try {
+        	final File folder = new File("C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\ConfigurationTest\\jms1.1\\src\\share\\javax\\jms");
+        	File[] folders = {folder};
+        	List<File> allApiResources = Arrays.asList(folders);
+			JmsReader.loadProject(allApiResources);
+		} catch (IOException e) {
+			SimpleModelAnalyzer.logger.error("Failed to load JMS Interfaces", e);
+		}
+        
+        final List<ConcreteClassifier> classList = jmsRoot.getNormalClasses();
+    
+        ConcreteClassifier reprMessageListener = null;
+        ConcreteClassifier reprMessageProducer = null;
+        ConcreteClassifier reprMessageConsumer = null;
+
+        
+        for (final ConcreteClassifier clazz : classList) {
+        	if (clazz instanceof Interface)
+        	{
+        		if (clazz.getName().equals("MessageListener")) {
+        			reprMessageListener = clazz;
+        		} else if (clazz.getName().equals("MessageProducer")) {
+        			reprMessageProducer = clazz;
+        		} else if (clazz.getName().equals("MessageConsumer")) {
+        			reprMessageConsumer = clazz;
+        		}
+        	}
+        }
+        
+        somoxConfiguration.setReprMessageListener(reprMessageListener);
+        somoxConfiguration.setReprMessageProducer(reprMessageProducer);
+        somoxConfiguration.setReprMessageConsumer(reprMessageConsumer);
+        
+        Sussans Spielwiese End */
+        
         final Root root = modelReader.getRoot();
         analysisResult = this.analyzeGASTModel(root, somoxConfiguration, progressMonitor);
         analysisResult.setRoot(root);
@@ -125,8 +174,7 @@ public class SimpleModelAnalyzer implements ModelAnalyzer<SoMoXConfiguration> {
         // org.somox.changetest.Helper.sortFile(fileName);
 
         // Component Detection
-        this.clusterComponents(initialComponents, somoxConfiguration, pcmComponentBuilder, strategiesFactory,
-                progressMonitor);
+        this.clusterComponents(initialComponents, somoxConfiguration, pcmComponentBuilder, strategiesFactory, progressMonitor);
 
         // Post Detection Phase
         this.postComponentDetection(somoxConfiguration, analysisResult, strategiesFactory, progressMonitor);

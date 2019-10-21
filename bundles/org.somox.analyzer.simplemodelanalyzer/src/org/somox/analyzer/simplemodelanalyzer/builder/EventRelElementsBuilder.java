@@ -3,6 +3,7 @@ package org.somox.analyzer.simplemodelanalyzer.builder;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.emftext.language.java.classifiers.Classifier;
 import org.emftext.language.java.classifiers.ConcreteClassifier;
 import org.emftext.language.java.types.ClassifierReference;
@@ -29,6 +30,8 @@ public class EventRelElementsBuilder extends AbstractBuilder {
 	
 	private final Map<Type, EventGroup> alreadyCreatedEvents = new HashMap<Type, EventGroup>();
 	
+	private static Logger logger = Logger.getLogger(EventRelElementsBuilder.class);
+	
     public EventRelElementsBuilder(Root astModel, SoMoXConfiguration somoxConfiguration, AnalysisResult analysisResult) {
 		super(astModel, somoxConfiguration, analysisResult);
 	}
@@ -38,22 +41,9 @@ public class EventRelElementsBuilder extends AbstractBuilder {
 	public EventGroup createEventGroup(final ConcreteClassifier implementingClass,
             final ConcreteClassifier interfaceClass, IComponentInterfaceStrategy interfaceStrategy) {
     	
-    	// MessageConsumer and MessageProducer are different required interfaces in the source code, 
-    	// but in the model they should be represented by one interface 
-    	// and a prodvided role in one component and a required role in the other component.
+
     	 EventGroup eventgroup = RepositoryFactory.eINSTANCE.createEventGroup();
 	
-        /*enfor (final ClassifierReference inheritanceTypeAccess : KDMHelper
-                .getInheritanceTypeAccesses(interfaceClass)) {
-            final Classifier superType = inheritanceTypeAccess.getTarget();
-            if (superType instanceof ConcreteClassifier) {
-                if (this.somoxConfiguration.getClassifierFilter().passes((ConcreteClassifier) superType)
-                        && interfaceStrategy.isComponentInterface((ConcreteClassifier) superType)) {
-                    final Interface parentInterface = this.createEventGroup(implementingClass, (ConcreteClassifier) superType, interfaceStrategy);
-                    //eventgroup.getParentInterfaces__Interface().add(parentInterface);
-                }
-            }
-         }*/
        	 eventgroup.setEntityName("JMSEventGroup" + egCounter);
        	 egCounter++;
          //eventgroup.setEntityName(this.naming.createInterfaceName(interfaceClass));
@@ -64,6 +54,9 @@ public class EventRelElementsBuilder extends AbstractBuilder {
          //this.operationBuilder.createOperations(implementingClass, interfaceClass, operationInterface);
        	 this.analysisResult.getInternalArchitectureModel().getInterfaces__Repository().add(eventgroup);
        	 this.addAsExistingEventGroup(interfaceClass, eventgroup);
+       	 
+       	logger.info("creating EventGroup: interfaceClass: " + interfaceClass.getName()
+       			+ " eventgroup: " + eventgroup.getEntityName() + " eventType: " + eventType.getEntityName());
 	 
    	 return eventgroup;
     }
@@ -115,13 +108,25 @@ public class EventRelElementsBuilder extends AbstractBuilder {
         return false;
     }
     
-    public boolean isJMSInterface(final ConcreteClassifier accessedClass) {
-    	if (accessedClass.getName().equals("MessageProducer") | accessedClass.getName().equals("MessageConsumer")) {
+    public boolean isJMSReceiverInterface(final ConcreteClassifier accessedClass) {
+    	// if (accessedClass.equals(somoxConfiguration.getReprMessageConsumer())) {
+    	if (accessedClass.getName().equals("MessageConsumer")) {
     		return true;
     	}else {
     		return false;
     	}
     }
+
+    public boolean isJMSProducerInterface(final ConcreteClassifier accessedClass) {
+    	//if (accessedClass.equals(somoxConfiguration.getReprMessageProducer())) {
+    	if (accessedClass.getName().equals("MessageProducer")) {
+    		EventRelElementsBuilder.logger.warn("MESSAGEPRODUCER");
+    		return true;
+    	}else {
+    		return false;
+    	}
+    }
+    
     
     public EventGroup getExistingEventGroup(final Type gastClass) {
     	EventGroup returnInterface = null;

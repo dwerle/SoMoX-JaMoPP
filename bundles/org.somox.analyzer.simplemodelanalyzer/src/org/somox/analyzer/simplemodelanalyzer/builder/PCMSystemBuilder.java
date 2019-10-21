@@ -14,11 +14,14 @@ import org.palladiosimulator.pcm.allocation.AllocationFactory;
 import org.palladiosimulator.pcm.core.composition.AssemblyContext;
 import org.palladiosimulator.pcm.core.composition.CompositionFactory;
 import org.palladiosimulator.pcm.core.composition.ProvidedDelegationConnector;
+import org.palladiosimulator.pcm.core.composition.SinkDelegationConnector;
+import org.palladiosimulator.pcm.repository.EventGroup;
 import org.palladiosimulator.pcm.repository.OperationInterface;
 import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
 import org.palladiosimulator.pcm.repository.RepositoryFactory;
+import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
 import org.palladiosimulator.pcm.resourceenvironment.ResourceEnvironment;
 import org.palladiosimulator.pcm.system.System;
@@ -164,6 +167,11 @@ public class PCMSystemBuilder extends AbstractBuilder {
                     this.createSystemProvidedRoleAndDelegationConnector(pcmSystem, compLink, assemblyContext,
                             opProvRole);
 
+                } else if (role instanceof SinkRole) {
+                	
+                	final SinkRole sinkRole = (SinkRole) role;
+                	this.createSystemSinkRoleAndSinkDelegationConnector(pcmSystem, compLink, assemblyContext, sinkRole);
+                	
                 } else {
                     logger.warn("Role type not yet supported: " + role.getClass().getSimpleName());
                 }
@@ -209,7 +217,6 @@ public class PCMSystemBuilder extends AbstractBuilder {
     // }
     // return set;
     // }
-
     private void createSystemProvidedRoleAndDelegationConnector(final System pcmSystem,
             final ComponentImplementingClassesLink compLink, final AssemblyContext assemblyContext,
             final OperationProvidedRole innerProvidedRole) {
@@ -219,6 +226,7 @@ public class PCMSystemBuilder extends AbstractBuilder {
         createSystemProvidedRoleAndDelegationConnector(pcmSystem, assemblyContext, innerProvidedRole, name);
     }
 
+    /* TODO dsg8fe make private? */
     public static ProvidedDelegationConnector createSystemProvidedRoleAndDelegationConnector(final System pcmSystem,
             final AssemblyContext assemblyContext, final OperationProvidedRole innerProvidedRole, final String name) {
         final OperationInterface opInterface = innerProvidedRole.getProvidedInterface__OperationProvidedRole();
@@ -250,6 +258,44 @@ public class PCMSystemBuilder extends AbstractBuilder {
         pcmSystem.getConnectors__ComposedStructure().add(delegationConnector);
 
         return delegationConnector;
+    }
+ 
+    private void createSystemSinkRoleAndSinkDelegationConnector(final System pcmSystem,
+            final ComponentImplementingClassesLink compLink, final AssemblyContext assemblyContext,
+            final SinkRole innerSinkRole) {
+        final RepositoryComponent component = compLink.getComponent();
+        final String name = this.namingStrategy.createProvidedSystemPortName(
+        		innerSinkRole.getEventGroup__SinkRole(), component);
+        createSystemSinkRoleAndSinkDelegationConnector(pcmSystem, assemblyContext, innerSinkRole, name);
+    }
+    
+    private static SinkDelegationConnector createSystemSinkRoleAndSinkDelegationConnector(final System pcmSystem,
+            final AssemblyContext assemblyContext, final SinkRole innerSinkRole, final String name) {
+        final EventGroup eventgroup = innerSinkRole.getEventGroup__SinkRole();
+
+        if (eventgroup == null) {
+            logger.error("No EventGroup set for role: " + innerSinkRole.getEntityName());
+            return null;
+        }
+
+        // create system provided role
+        final SinkRole outerSinkRole = RepositoryFactory.eINSTANCE.createSinkRole();
+        outerSinkRole.setProvidingEntity_ProvidedRole(pcmSystem);
+        outerSinkRole.setEntityName(name);
+        outerSinkRole.setEventGroup__SinkRole(eventgroup);
+
+        // create delegation connector for provided role
+        final SinkDelegationConnector sinkDelegationConnector = CompositionFactory.eINSTANCE.createSinkDelegationConnector();
+        sinkDelegationConnector.setAssemblyContext__SinkDelegationConnector(assemblyContext);
+        sinkDelegationConnector.setInnerSinkRole__SinkRole(innerSinkRole);
+        sinkDelegationConnector.setOuterSinkRole__SinkRole(outerSinkRole);
+        sinkDelegationConnector.setParentStructure__Connector(pcmSystem);
+        sinkDelegationConnector.setEntityName(eventgroup.getEntityName());
+
+        // store connector in system
+        pcmSystem.getConnectors__ComposedStructure().add(sinkDelegationConnector);
+
+        return sinkDelegationConnector;
     }
 
 }

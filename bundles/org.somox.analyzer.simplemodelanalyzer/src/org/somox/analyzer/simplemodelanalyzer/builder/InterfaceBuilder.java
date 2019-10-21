@@ -162,19 +162,39 @@ public class InterfaceBuilder extends AbstractBuilder {
 
         for (final ConcreteClassifier accessedClass : this.somoxConfiguration.getClassifierFilter().filter(filteredAccessedClasses)) {
         	
-            if (eventRelBuilder.isJMSInterface(accessedClass)) { // Interface is MOM Interface 
+            if (eventRelBuilder.isJMSProducerInterface(accessedClass)) { // Interface is MOM Interface 
 
             	EventGroup reqEventGroup = eventRelBuilder.getExistingEventGroup(accessedClass);
-            	if (null == reqEventGroup) {
-                	reqEventGroup = eventRelBuilder.createEventGroup(null, accessedClass, interfaceStrategy);
+	
+            	if (!this.componentProvidesInterface(reqEventGroup, componentCandidate.getComponent())) {
+                	if (null == reqEventGroup) {
+                    	reqEventGroup = eventRelBuilder.createEventGroup(null, accessedClass, interfaceStrategy);
+                	}
+                	
+                	eventRelBuilder.createSourcePort(componentCandidate.getComponent(), reqEventGroup, naming);
+                    // dsg8fe if Interface is MessageProducer / Consumer each Port could be usefue. -> duplicates allowed
+                	this.updateInterfacesInSourceCodeDecorator(componentCandidate, reqEventGroup, accessedClass,
+                            !InterfaceBuilder.PROVIDED_INTERFACE);	
+                	
+                	addedARequiredInterface = true;
             	}
             	
-            	eventRelBuilder.createSourcePort(componentCandidate.getComponent(), reqEventGroup, naming);
-                // dsg8fe if Interface is MessageProducer / Consumer each Port could be usefue. -> duplicates allowed
-            	this.updateInterfacesInSourceCodeDecorator(componentCandidate, reqEventGroup, accessedClass,
-                        !InterfaceBuilder.PROVIDED_INTERFACE);	
+
             	
-            } else if (this.interfaceStrategy.isComponentInterface(accessedClass)) {
+            } else if (eventRelBuilder.isJMSReceiverInterface(accessedClass)) {
+            	EventGroup reqEventGroup = eventRelBuilder.getExistingEventGroup(accessedClass);
+            	
+            	if (!this.doesComponentAlreadyRequireInterface(reqEventGroup, componentCandidate.getComponent())) {
+	            	if (null == reqEventGroup) {
+	                	reqEventGroup = eventRelBuilder.createEventGroup(null, accessedClass, interfaceStrategy);
+	            	}
+	            	
+	            	eventRelBuilder.createSinkPort(componentCandidate.getComponent(), reqEventGroup, naming);
+	                // dsg8fe if Interface is MessageProducer / Consumer each Port could be usefue. -> duplicates allowed
+	            	this.updateInterfacesInSourceCodeDecorator(componentCandidate, reqEventGroup, accessedClass,
+	                        !InterfaceBuilder.PROVIDED_INTERFACE);
+            	}
+        	} if (this.interfaceStrategy.isComponentInterface(accessedClass)) {
 
                 // Setting null here since the interface implementation is not generally known; i.
                 // e. there could be multiple
@@ -225,7 +245,8 @@ public class InterfaceBuilder extends AbstractBuilder {
             }
         }
 
-        if (componentCandidate.getComponent().getProvidedRoles_InterfaceProvidingEntity().isEmpty()) {
+        boolean isAProvidedRoleExisting = componentCandidate.getComponent().getProvidedRoles_InterfaceProvidingEntity().isEmpty();
+        if (isAProvidedRoleExisting) {
             this.assignPublicMethodsAsInterfaceForComponentsWithoutInterface(componentCandidate);
         }
     }
@@ -275,7 +296,11 @@ public class InterfaceBuilder extends AbstractBuilder {
                 }
 
             } else if (role instanceof SourceRole) {
-            	// TODO dsg8fe thats not easy, because it make no sense to compare an eventgroup to the interface
+            	final SourceRole sourcceRole = (SourceRole) role;
+            	final EventGroup eventGroup = sourcceRole.getEventGroup__SourceRole();
+            	if (eventGroup.equals(theInterface)) {
+            		return true;
+            	}
             }else {
                 InterfaceBuilder.logger.warn("Role type not yet supported: " + role.getClass().getSimpleName());
             }
