@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.emftext.language.java.classifiers.Classifier;
@@ -28,6 +29,7 @@ import org.palladiosimulator.pcm.repository.RepositoryComponent;
 import org.palladiosimulator.pcm.repository.RepositoryFactory;
 import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Role;
+import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.repository.SourceRole;
 //import de.fzi.gast.accesses.Access;
 //import de.fzi.gast.accesses.InheritanceTypeAccess;
@@ -48,6 +50,8 @@ import org.somox.kdmhelper.metamodeladdition.Root;
 import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.somox.sourcecodedecorator.InterfaceSourceCodeLink;
 import org.somox.sourcecodedecorator.SourcecodedecoratorFactory;
+
+import indirCommDetection.JMSDetection;
 
 /**
  * Builder used to create {@link Interface}s in the SAMM instance based on reverse engineered code
@@ -160,13 +164,19 @@ public class InterfaceBuilder extends AbstractBuilder {
         // remove self accesses inside component (NOT equal to a self access)
         filteredAccessedClasses.removeAll(componentClasses);
 
+        int countJmsInterfaceProviderNeeded = 0; // TODO dsg8fe move Jms specifics in own module
+        int countJmsInterfaceRequiredNeeded = 0;
+        
+        int countJmsInterfaceProvider = JMSDetection.getNumberOfProvidedJmsInterfaces(componentCandidate);
+        int countJmsInterfaceRequired = JMSDetection.getNumberOfRequiredJmsInterfaces(componentCandidate);
+        
         for (final ConcreteClassifier accessedClass : this.somoxConfiguration.getClassifierFilter().filter(filteredAccessedClasses)) {
         	
-            if (eventRelBuilder.isJMSProducerInterface(accessedClass)) { // Interface is MOM Interface 
-
-            	EventGroup reqEventGroup = eventRelBuilder.getExistingEventGroup(accessedClass);
-	
-            	if (!this.componentProvidesInterface(reqEventGroup, componentCandidate.getComponent())) {
+            if (eventRelBuilder.isJMSProducerInterface(accessedClass)) { // Interface is MOM Interface
+            	countJmsInterfaceRequiredNeeded++;
+            	if (countJmsInterfaceRequiredNeeded > countJmsInterfaceRequired) {
+                	EventGroup reqEventGroup = eventRelBuilder.getExistingEventGroup(accessedClass);
+                	
                 	if (null == reqEventGroup) {
                     	reqEventGroup = eventRelBuilder.createEventGroup(null, accessedClass, interfaceStrategy);
                 	}
@@ -178,13 +188,12 @@ public class InterfaceBuilder extends AbstractBuilder {
                 	
                 	addedARequiredInterface = true;
             	}
+	
+            } else if (eventRelBuilder.isJMSReceiverInterface(accessedClass)) { // Interface is MOM Interface
+            	countJmsInterfaceProviderNeeded++;
             	
-
-            	
-            } else if (eventRelBuilder.isJMSReceiverInterface(accessedClass)) {
-            	EventGroup reqEventGroup = eventRelBuilder.getExistingEventGroup(accessedClass);
-            	
-            	if (!this.doesComponentAlreadyRequireInterface(reqEventGroup, componentCandidate.getComponent())) {
+            	if (countJmsInterfaceProviderNeeded > countJmsInterfaceProvider) {
+                	EventGroup reqEventGroup = eventRelBuilder.getExistingEventGroup(accessedClass);
 	            	if (null == reqEventGroup) {
 	                	reqEventGroup = eventRelBuilder.createEventGroup(null, accessedClass, interfaceStrategy);
 	            	}
@@ -194,7 +203,7 @@ public class InterfaceBuilder extends AbstractBuilder {
 	            	this.updateInterfacesInSourceCodeDecorator(componentCandidate, reqEventGroup, accessedClass,
 	                        !InterfaceBuilder.PROVIDED_INTERFACE);
             	}
-        	} if (this.interfaceStrategy.isComponentInterface(accessedClass)) {
+        	} else if (this.interfaceStrategy.isComponentInterface(accessedClass)) {
 
                 // Setting null here since the interface implementation is not generally known; i.
                 // e. there could be multiple
@@ -245,9 +254,19 @@ public class InterfaceBuilder extends AbstractBuilder {
             }
         }
 
-        boolean isAProvidedRoleExisting = componentCandidate.getComponent().getProvidedRoles_InterfaceProvidingEntity().isEmpty();
-        if (isAProvidedRoleExisting) {
+        EList<ProvidedRole> providedroles = componentCandidate.getComponent().getProvidedRoles_InterfaceProvidingEntity();
+        if (providedroles.isEmpty()) {
             this.assignPublicMethodsAsInterfaceForComponentsWithoutInterface(componentCandidate);
+        } else {
+        	boolean onlySinkRoles = true;
+        	for (ProvidedRole role : providedroles) {
+        		if (!(role instanceof SinkRole)) {
+        			onlySinkRoles = false;
+        		}
+        	}
+        	if (onlySinkRoles) { // SinkRoles are providedRoles but they could not be used to start a SEFF (CallAcess) but only as part of a SEFF (ConsumCallaction)
+        		this.assignPublicMethodsAsInterfaceForComponentsWithoutInterface(componentCandidate);
+        	}
         }
     }
 
@@ -298,6 +317,33 @@ public class InterfaceBuilder extends AbstractBuilder {
             } else if (role instanceof SourceRole) {
             	final SourceRole sourcceRole = (SourceRole) role;
             	final EventGroup eventGroup = sourcceRole.getEventGroup__SourceRole();
+            	if (eventGroup.equals(theInterface)) {
+            		return true;
+            	}
+            }else {
+                InterfaceBuilder.logger.warn("Role type not yet supported: " + role.getClass().getSimpleName());
+            }
+        }
+
+        return false;
+    }
+    
+    private boolean doesComponentAlreadyProvideInterface(final Interface theInterface,
+            final RepositoryComponent component) {
+
+        for (final ProvidedRole role : component.getProvidedRoles_InterfaceProvidingEntity()) {
+
+            if (role instanceof OperationProvidedRole) {
+
+                final OperationProvidedRole opProvRole = (OperationProvidedRole) role;
+                final OperationInterface opInterface = opProvRole.getProvidedInterface__OperationProvidedRole();
+                if (opInterface.equals(theInterface)) {
+                    return true;
+                }
+
+            } else if (role instanceof SinkRole) {
+            	final SinkRole sinkRole = (SinkRole) role;
+            	final EventGroup eventGroup = sinkRole.getEventGroup__SinkRole();
             	if (eventGroup.equals(theInterface)) {
             		return true;
             	}

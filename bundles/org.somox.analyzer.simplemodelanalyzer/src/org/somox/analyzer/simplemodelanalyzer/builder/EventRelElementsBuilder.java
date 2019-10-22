@@ -117,7 +117,7 @@ public class EventRelElementsBuilder extends AbstractBuilder {
     	}
     }
 
-    public boolean isJMSProducerInterface(final ConcreteClassifier accessedClass) {
+    public boolean isJMSProducerInterface(final ConcreteClassifier accessedClass) { // TODO dsg8fe usage JMSDetection
     	//if (accessedClass.equals(somoxConfiguration.getReprMessageProducer())) {
     	if (accessedClass.getName().equals("MessageProducer")) {
     		EventRelElementsBuilder.logger.warn("MESSAGEPRODUCER");

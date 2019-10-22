@@ -19,9 +19,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
+import org.palladiosimulator.pcm.repository.ProvidedRole;
+import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Role;
 import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.repository.SourceRole;
+import org.somox.sourcecodedecorator.ComponentImplementingClassesLink;
 import org.apache.commons.io.FileUtils;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
@@ -216,13 +219,31 @@ public abstract class JMSDetection {
     }
 
 	public static boolean isReceiver(Method method) {
-		// TODO Auto-generated method stub
 		return isNormalReceiver(method);
 	}
 
 	public static boolean isProducer(Method method) {
-		// TODO Auto-generated method stub
 		return isNormalSender(method);
+	}
+
+	public static int getNumberOfProvidedJmsInterfaces(ComponentImplementingClassesLink componentCandidate) {
+		int rolecounter = 0;
+		for (final ProvidedRole role : componentCandidate.getComponent().getProvidedRoles_InterfaceProvidingEntity()) {
+			if (role instanceof SinkRole ) {
+				rolecounter++;
+			}
+		}
+		return rolecounter;
+	}
+
+	public static int getNumberOfRequiredJmsInterfaces(ComponentImplementingClassesLink componentCandidate) {
+		int rolecounter = 0;
+		for (final RequiredRole role : componentCandidate.getComponent().getRequiredRoles_InterfaceRequiringEntity()) {
+			if (role instanceof SourceRole ) {
+				rolecounter++;
+			}
+		}
+		return rolecounter;
 	}
 
 }
