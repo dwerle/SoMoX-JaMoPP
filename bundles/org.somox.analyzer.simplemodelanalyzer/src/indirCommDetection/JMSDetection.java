@@ -64,10 +64,10 @@ public abstract class JMSDetection {
 	        sourceRoleFound = false;
  			while (roleIterator.hasNext()) {
  				Role r = roleIterator.next();
-	 			if (r.equals(sinkRole)) {
+	 			if (r != null && r.equals(sinkRole)) {
 	 				sinkRoleFound = true;
 	 			}
-	 			if (r.equals(sourceRole)) {
+	 			if (r != null && r.equals(sourceRole)) {
 	 				sourceRoleFound = true;
 	 			}
 	 			

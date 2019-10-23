@@ -16,7 +16,7 @@ import org.somox.filter.tests.TestFileFilter;
  * <h4>attribute map</h4> This configuration has a bijective representation as an
  * <em>attribute map</em>. This is a {@code Map<String, Object>} containing the class’ attribute key
  * constants as keys and the configuration’s attributes as values. The value’s type is the same as
- * the corresponding setter’s return type. A value of {@code null} is interpreted as “not defined”
+ * the corresponding setter’s return type. A value of {@code null} is interpreted as “not defined�?
  * just like if the map did not contain the key in question.
  * <p>
  * For a mapping of attribute constants to getters and setters, see their documentation. An
@@ -163,6 +163,10 @@ public class SoMoXConfiguration extends AbstractMoxConfiguration {
     private double weightMidNameResemblance = 15;
     private double weightPackageMapping = 70;
     private String wildcardKey = "";
+    
+    private ConcreteClassifier reprMessageListener = null;
+    private ConcreteClassifier reprMessageProducer = null;
+    private ConcreteClassifier reprMessageConsumer = null; 
 
     /**
      * Creates a new SoMoX configuration initialized with default values.
@@ -538,5 +542,29 @@ public class SoMoXConfiguration extends AbstractMoxConfiguration {
         }
         this.blacklistFilter.setBlacklist(wildCardList);
     }
+
+	public ConcreteClassifier getReprMessageListener() {
+		return reprMessageListener;
+	}
+
+	public void setReprMessageListener(ConcreteClassifier reprMessageListener) {
+		this.reprMessageListener = reprMessageListener;
+	}
+
+	public ConcreteClassifier getReprMessageProducer() {
+		return reprMessageProducer;
+	}
+
+	public void setReprMessageProducer(ConcreteClassifier reprMessageProducer) {
+		this.reprMessageProducer = reprMessageProducer;
+	}
+
+	public ConcreteClassifier getReprMessageConsumer() {
+		return reprMessageConsumer;
+	}
+
+	public void setReprMessageConsumer(ConcreteClassifier reprMessageConsumer) {
+		this.reprMessageConsumer = reprMessageConsumer;
+	}
 
 }

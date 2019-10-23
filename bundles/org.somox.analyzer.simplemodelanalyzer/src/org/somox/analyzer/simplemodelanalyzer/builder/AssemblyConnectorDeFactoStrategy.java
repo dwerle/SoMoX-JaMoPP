@@ -80,7 +80,7 @@ public class AssemblyConnectorDeFactoStrategy implements IAssemblyConnectorStrat
                         AssemblyConnectorBuilder.createAssemblyConnector(component, opReqRole, opProvRole,
                                 edgeSource.getComponent(), edgeTarget.getComponent());
                     }
-                } else {
+                } else { //TODO dsg8fe functional : is Sink/SourcRole handling missing?
                     logger.warn("Role types: " + providedRole.getClass().getSimpleName() + " and "
                             + requiredRole.getClass().getSimpleName() + " not yet supported.");
                 }

@@ -8,14 +8,20 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubProgressMonitor;
+import org.eclipse.core.runtime.preferences.DefaultScope;
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.emftext.language.java.statements.StatementListContainer;
+import org.osgi.service.prefs.BackingStoreException;
 import org.palladiosimulator.pcm.repository.BasicComponent;
 import org.palladiosimulator.pcm.seff.ResourceDemandingSEFF;
 import org.palladiosimulator.pcm.seff.SeffFactory;
@@ -23,6 +29,9 @@ import org.palladiosimulator.pcm.seff.ServiceEffectSpecification;
 import org.palladiosimulator.pcm.seff.StartAction;
 import org.palladiosimulator.pcm.seff.StopAction;
 import org.somox.analyzer.AnalysisResult;
+import org.somox.analyzer.simplemodelanalyzer.Activator;
+import org.somox.analyzer.simplemodelanalyzer.builder.ComponentBuilder;
+import org.somox.analyzer.simplemodelanalyzer.builder.PCMSystemBuilder;
 import org.somox.analyzer.simplemodelanalyzer.jobs.SoMoXBlackboard;
 import org.somox.gast2seff.visitors.DefaultResourceDemandingBehaviourForClassMethodFinder;
 import org.somox.gast2seff.visitors.FunctionCallClassificationVisitor;
@@ -139,11 +148,27 @@ public class GAST2SEFFJob implements IBlackboardInteractingJob<SoMoXBlackboard> 
         // Create default annotations
         final DefaultQosAnnotationsBuilder qosAnnotationBuilder = new DefaultQosAnnotationsBuilder();
         qosAnnotationBuilder.buildDefaultQosAnnotations(this.sourceCodeDecoratorModel.getSeff2MethodMappings());
+        
+        //workaroundInsteadOfSeperateSystemJob();
 
         subMonitor.done();
     }
 
-    /*
+    private void workaroundInsteadOfSeperateSystemJob() {
+    	
+    	final AnalysisResult result = this.blackboard.getAnalysisResult();
+    	
+    	final ComponentBuilder pcmComponentBuilder = new ComponentBuilder(this.root, blackboard.getConfig(), result);
+
+        // Create PCM System
+ //       final PCMSystemBuilder pcmSystemBuilder = new PCMSystemBuilder(this.root, blackboard.getConfig(), result,
+ //               pcmComponentBuilder);
+ //       pcmSystemBuilder.buildSystemModel();
+		
+	}
+    
+
+	/*
      * (non-Javadoc)
      *
      * @see de.uka.ipd.sdq.workflow.IJob#getName()

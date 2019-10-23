@@ -8,9 +8,12 @@ import org.emftext.language.java.statements.Statement;
 import org.palladiosimulator.pcm.repository.BasicComponent;
 import org.palladiosimulator.pcm.repository.EventGroup;
 import org.palladiosimulator.pcm.repository.Interface;
+import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 import org.palladiosimulator.pcm.repository.OperationRequiredRole;
+import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Signature;
+import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.repository.SourceRole;
 import org.somox.sourcecodedecorator.InterfaceSourceCodeLink;
 import org.somox.sourcecodedecorator.MethodLevelSourceCodeLink;
@@ -44,8 +47,9 @@ public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternal
         for (final RequiredRole requiredRole : this.getBasicComponent().getRequiredRoles_InterfaceRequiringEntity()) {
             Interface pcmInterface = this.getInterfaceFromRequiredRole(requiredRole);
             
-            if (pcmInterface instanceof EventGroup && pcmInterface != null) { // TODO dsg8fe My heart breaks when I see my fucking stupid source code.
+            if (pcmInterface instanceof EventGroup && pcmInterface != null) { // TODO dsg8fe functional My heart breaks when I see my fucking stupid source code.
                 logger.trace("accessed interface port " + requiredRole.getEntityName());
+                logger.warn("Sussan, mit mehren Ports funktioniert das nicht mehr");
                 interfacePortOperationTuple.role = requiredRole;
                 interfacePortOperationTuple.signature = (Signature) ((EventGroup) pcmInterface).getEventTypes__EventGroup().get(0);
                 return interfacePortOperationTuple;            	
@@ -71,6 +75,25 @@ public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternal
         return interfacePortOperationTuple;
     }
     
+    @Override
+    public InterfacePortOperationTuple getCalledSinkPort(final Method calledMethod, Statement statement) { // GAST2SEFFCHANGE
+        final InterfacePortOperationTuple interfacePortOperationTuple = new InterfacePortOperationTuple();
+        final ConcreteClassifier accessedConcreteClassifier = calledMethod.getContainingConcreteClassifier();
+
+        for (final ProvidedRole providedRole : this.getBasicComponent().getProvidedRoles_InterfaceProvidingEntity()) {
+            Interface pcmInterface = this.getInterfaceFromProvidedRole(providedRole);
+            
+            if (pcmInterface != null && pcmInterface instanceof EventGroup) { // TODO dsg8fe My heart breaks when I see my fucking stupid source code.
+                logger.trace("accessed interface port " + providedRole.getEntityName());
+                interfacePortOperationTuple.role = providedRole;
+                interfacePortOperationTuple.signature = (Signature) ((EventGroup) pcmInterface).getEventTypes__EventGroup().get(0);
+                return interfacePortOperationTuple;            	
+            }
+        }
+        logger.warn("found no if port for " + accessedConcreteClassifier);
+        return interfacePortOperationTuple;
+    }
+    
     protected SourceCodeDecoratorRepository getSourceCodeDecoratorRepository() {
         return sourceCodeDecoratorRepository;
     }
@@ -86,6 +109,17 @@ public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternal
         } else if (requiredRole instanceof SourceRole) {
             final SourceRole sourceRole = (SourceRole) requiredRole;
             return sourceRole.getEventGroup__SourceRole();
+        }
+        return null;
+    }
+ 
+    private Interface getInterfaceFromProvidedRole(ProvidedRole providedRole) {
+        if (providedRole instanceof OperationProvidedRole) {
+            final OperationProvidedRole operProvRole = (OperationProvidedRole) providedRole;
+            return operProvRole.getProvidedInterface__OperationProvidedRole();
+        } else if (providedRole instanceof SinkRole) {
+            final SinkRole sinkRole = (SinkRole) providedRole;
+            return sinkRole.getEventGroup__SinkRole();
         }
         return null;
     }

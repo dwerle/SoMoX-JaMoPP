@@ -556,8 +556,7 @@ public class JaMoPPStatementVisitor extends AbstractJaMoPPStatementVisitor {
         this.linkSeffElement(consumeEventAction, object);
         consumeEventAction.setEntityName(calledMethod.getName() + this.positionToString(object));
         
-        final InterfacePortOperationTuple ifOperationTuple = this.interfaceOfExternalCallFinder
-                .getCalledInterfacePort(calledMethod, object);
+        final InterfacePortOperationTuple ifOperationTuple = this.interfaceOfExternalCallFinder.getCalledSinkPort(calledMethod, object);
         
         if (null == ifOperationTuple) {
             JaMoPPStatementVisitor.logger.warn("ifOperationTuple == null");
@@ -769,7 +768,7 @@ public class JaMoPPStatementVisitor extends AbstractJaMoPPStatementVisitor {
         Role role = null;
         
     	if (JMSDetection.isReceiver(calledMethod)){
-    		this.createConsumeCallAction(object, calledMethod, statementAnnotation);
+    		role = this.createConsumeCallAction(object, calledMethod, statementAnnotation);
     		logger.info("Found JMSCall Receiver: " + calledMethod.getName());
         } else if (JMSDetection.isProducer(calledMethod)) {
         	role = this.createEmitCallAction(object, calledMethod, statementAnnotation);

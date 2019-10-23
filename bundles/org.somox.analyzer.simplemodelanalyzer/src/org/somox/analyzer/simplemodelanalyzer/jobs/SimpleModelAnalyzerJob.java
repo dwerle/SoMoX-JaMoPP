@@ -33,12 +33,12 @@ public class SimpleModelAnalyzerJob implements IBlackboardInteractingJob<SoMoXBl
 
     private final GUISoMoXCoreController controller;
 
-    private HashMap<String, String> globalPreferences = new HashMap<String, String>();
-
     private final SoMoXConfiguration somoxConfiguration;
 
     /** The somox blackboard to interact with. */
     private SoMoXBlackboard blackboard = null;
+
+	private HashMap<String, String> globalPreferences = new HashMap<String, String>();
 
     public SimpleModelAnalyzerJob(final SoMoXModelAnalyzerConfiguration config) throws CoreException {
         super();
@@ -86,6 +86,7 @@ public class SimpleModelAnalyzerJob implements IBlackboardInteractingJob<SoMoXBl
             final AnalysisResult result = this.controller.startAnalyze(SimpleModelAnalyzer.class.getName(), monitor,
                     this.globalPreferences, this.somoxConfiguration);
             this.blackboard.setAnalysisResult(result);
+            this.blackboard .setConfig(somoxConfiguration);
         } catch (final ModelAnalyzerException e) {
             throw new JobFailedException("SoMoX Failed", e);
         }

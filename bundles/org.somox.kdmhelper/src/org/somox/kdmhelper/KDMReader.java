@@ -53,7 +53,7 @@ public class KDMReader {
         final boolean extractLayoutInformation = true;
 
         KDMReader.logger.trace("Start loading projects: " + Arrays.toString(projects));
-
+        KDMReader.logger.warn("projects is: " + projects);
         if (SoMoXUtil.isStandalone()) {
             List<File> sourceFolderPaths = new ArrayList<>();
             for (String projectPath : projects) {
@@ -80,6 +80,18 @@ public class KDMReader {
 
         this.addModelsToRoot(softwareModelExtractor.getSourceResources());
         KDMReader.logger.trace("Finished reading projects.");
+    }
+    
+    public void loadProject(final List<File> sourceFolderPaths) throws IOException {
+    	
+    	final JaMoPPSoftwareModelExtractor softwareModelExtractor = new JaMoPPSoftwareModelExtractor();
+        final Path cacheFileDir = Paths.get(System.getProperty("java.io.tmpdir", "/tmp/"),
+                "ReadInJMSConfig");
+        
+        final boolean extractLayoutInformation = true;
+
+    	softwareModelExtractor.extractSoftwareModelFromFolders(sourceFolderPaths, new NullProgressMonitor(),
+                cacheFileDir.toString(), extractLayoutInformation);
     }
 
     public void loadProject(final IProject... projects) throws IOException {

@@ -17,6 +17,7 @@ import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.repository.SourceRole;
+import org.palladiosimulator.simulizar.indirection.composition.DataChannelSourceConnector;
 import org.palladiosimulator.simulizar.indirection.system.DataChannel;
 import org.palladiosimulator.simulizar.indirection.system.SystemFactory;
 import org.somox.metrics.ClusteringRelation;
@@ -141,7 +142,7 @@ public class AssemblyConnectorsInsideCompositeComponentStrategy implements IAsse
                 	final SourceRole sourceRole = (SourceRole) requiredRole;
                 	final SinkRole sinkRole = (SinkRole) providedRole;
                 	//if (sourceRole.getEventGroup__SourceRole().equals(sinkRole.getEventGroup__SinkRole())) {
-                	if (JMSDetection.isSinkAndSourceRoleConnected(sinkRole, sourceRole)) {
+                	if (JMSDetection.isSinkAndSourceRoleConnected(sinkRole, sourceRole) || true) {
                     	
                 		DataChannel dataChannel = SystemFactory.eINSTANCE.createDataChannel();
                     	dataChannel.setEntityName("MyDataChannel");
@@ -195,6 +196,11 @@ public class AssemblyConnectorsInsideCompositeComponentStrategy implements IAsse
                 if (reqDelegationConnector.getInnerRequiredRole_RequiredDelegationConnector().equals(requiredRole)) {
                     return true;
                 }
+            } else if (connector instanceof DataChannelSourceConnector) {
+            	final DataChannelSourceConnector dataChannelSourceConnector = (DataChannelSourceConnector) connector;
+            	if (dataChannelSourceConnector.getSourceRole().equals(requiredRole)) {
+            		return true;
+            	}
             } else {
                 logger.warn("Connector type " + connector.getClass().getSimpleName() + " not yet supported.");
             }

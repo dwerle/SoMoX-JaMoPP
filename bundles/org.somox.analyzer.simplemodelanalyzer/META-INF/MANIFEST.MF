@@ -25,7 +25,8 @@ Require-Bundle: org.somox.core;bundle-version="1.0.0",
  org.palladiosimulator.simulizar.indirection
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
-Export-Package: org.somox.analyzer.simplemodelanalyzer,
+Export-Package: indirCommDetection,
+ org.somox.analyzer.simplemodelanalyzer,
  org.somox.analyzer.simplemodelanalyzer.builder,
  org.somox.analyzer.simplemodelanalyzer.builder.util,
  org.somox.analyzer.simplemodelanalyzer.detection,
@@ -33,3 +34,4 @@ Export-Package: org.somox.analyzer.simplemodelanalyzer,
  org.somox.analyzer.simplemodelanalyzer.factories,
  org.somox.analyzer.simplemodelanalyzer.jobs,
  org.somox.analyzer.simplemodelanalyzer.metrics.tabs
+Import-Package: org.apache.commons.io

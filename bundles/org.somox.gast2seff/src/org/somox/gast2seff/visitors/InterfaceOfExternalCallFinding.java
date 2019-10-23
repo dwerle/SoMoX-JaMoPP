@@ -4,6 +4,7 @@ import org.emftext.language.java.members.Method;
 import org.emftext.language.java.statements.Statement;
 import org.palladiosimulator.pcm.repository.Role;
 import org.palladiosimulator.pcm.repository.Signature;
+import org.somox.gast2seff.visitors.InterfaceOfExternalCallFinding.InterfacePortOperationTuple;
 
 /**
  * Implementations of the interface are used by {@link JaMoPPStatementVisitor} to find the called
@@ -24,6 +25,8 @@ public interface InterfaceOfExternalCallFinding {
      * @return interface port and operation corresponding to the access.
      */
     public InterfacePortOperationTuple getCalledInterfacePort(final Method calledMethod, Statement statement);
+    
+    public InterfacePortOperationTuple getCalledSinkPort(final Method calledMethod, Statement statement);
     
     default public InterfacePortOperationTuple getCalledInterfacePort(final Method calledMethod){
         return getCalledInterfacePort(calledMethod, null);

@@ -170,8 +170,8 @@ public class PCMSystemBuilder extends AbstractBuilder {
                 } else if (role instanceof SinkRole) {
                 	
                 	final SinkRole sinkRole = (SinkRole) role;
-                	this.createSystemSinkRoleAndSinkDelegationConnector(pcmSystem, compLink, assemblyContext, sinkRole);
-                	
+                	// this.createSystemSinkRoleAndSinkDelegationConnector(pcmSystem, compLink, assemblyContext, sinkRole);
+                	// TODO dsg8fe functional sollen Jms calls an die systemgrenzen deligiert werden?
                 } else {
                     logger.warn("Role type not yet supported: " + role.getClass().getSimpleName());
                 }
