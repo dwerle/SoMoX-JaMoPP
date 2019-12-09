@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_DhC6cAU-Eeqj4KViiXoFEQ" entityName="SoMoX Reverse Engineered Allocation Model">
+  <targetResourceEnvironment_Allocation href="internal_architecture_model.resourceenvironment#/"/>
+  <system_Allocation href="internal_architecture_model.system#_Dg-B8AU-Eeqj4KViiXoFEQ"/>
+  <allocationContexts_Allocation id="_Du_24AU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 0 brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_Du-owAU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTIgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 1 brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTIQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTJgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTJQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTKgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 3 display_controller.Display.java.Display>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTKQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTLgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 4 display_controller.DisplayControllerJob.java.DisplayControllerJob>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTLQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTMgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTMQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTNgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 6 temp_controller.TempControllerJob.java.TempControllerJob>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTNQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTOgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 7 shutter_controller.ShutterControllerJob.java.ShutterControllerJob>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTOQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvCTPgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 8 App.java.App>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvCTPQU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvC6MwU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 9 temp_controller.TempControllerJmsClient.java.TempControllerJmsClient>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvC6MgU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvC6NwU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvC6NgU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_DvC6OwU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 11 shutter_controller.Shutter.java.Shutter>">
+    <resourceContainer_AllocationContext href="internal_architecture_model.resourceenvironment#_Du8MgAU-Eeqj4KViiXoFEQ"/>
+    <assemblyContext_AllocationContext href="internal_architecture_model.system#_DvC6OgU-Eeqj4KViiXoFEQ"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

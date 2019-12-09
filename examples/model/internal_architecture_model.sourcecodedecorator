@@ -1,0 +1,2231 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sourcecodedecorator:SourceCodeDecoratorRepository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:classifiers="http://www.emftext.org/java/classifiers" xmlns:members="http://www.emftext.org/java/members" xmlns:org.palladiosimulator.simulizar.indirection.actions="http://palladiosimulator.org/Indirection/Actions/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:sourcecodedecorator="http://somox.org/SourceCodeDecorator/2.0" xmlns:statements="http://www.emftext.org/java/statements">
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DiZlUAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/brightness_controller/BrightnessControllerJob.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Djw3QAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnWWwAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnlAQAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/Display.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dns8EAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerJob.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dn1e8AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DoRj0AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/temp_controller/TempControllerJob.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DosakAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/ShutterControllerJob.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Do3ZsAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/App.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpCY0AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/temp_controller/TempControllerJmsClient.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpDm-AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#/"/>
+  </fileLevelSourceCodeLink>
+  <fileLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpE1GQU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/Shutter.java#/"/>
+  </fileLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="../src/main/java/brightness_sensor/IBrightness.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="../src/main/java/brightness_sensor/IBrightness.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DinAsAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DosakAU-Eeqj4KViiXoFEQ"/>
+    <file href="pathmap:/javaclass/java.lang.Runnable.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/java.lang.Runnable.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DixYwQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/java.lang.AutoCloseable.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/java.lang.AutoCloseable.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DjyFYQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DjyFYgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dj8dcAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.6"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkGOcAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.7"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkLuAAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.8"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkUQ4AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.9"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkczwAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.10"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DklWoAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.11"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkrdQAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.12"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DksEUAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.13"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DksEUQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.14"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DksEUgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.15"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DksEUwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.16"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DksrYAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.17"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DksrYQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.18"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DksrYgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.19"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkyyAAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.20"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkzZEAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.21"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DkzZEQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.22"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlDQsAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.23"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlIwQAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.24"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlJXUAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.25"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlJXUQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.26"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlO24AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.27"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlPd8AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.28"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlU9gAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.29"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlVkkAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.30"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DladEAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.31"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlbEIAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.32"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlbEIQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.33"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlbrMAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.34"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlbrMQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.35"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlcSQAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.36"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dlhx0AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.37"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dlhx0QU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.38"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlnRYAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Session.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0/@members.39"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dlsw8AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dlsw8wU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.1"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlyQgAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.2"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlyQgQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.3"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DlyQggU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dly3kAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dly3kQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.6"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dl4XIAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.7"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dl9PoAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.8"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dl92sAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.9"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dl92sQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.10"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dl92sgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.11"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dl92swU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.12"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmJc4AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.13"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmKD8AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Connection.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0/@members.14"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmKD8QU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmOVYAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0/@members.1"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmSm0AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0/@members.2"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmTN4AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0/@members.3"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmaioAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmaioQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmbJsAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmbwwAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmbwwQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.6"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmbwwgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.7"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmcX0AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.8"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmcX0QU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.9"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dmdl8QU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.10"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmeNAAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.11"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmeNAQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.12"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmeNAgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.13"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmeNAwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.14"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dme0EAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.15"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dme0EQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.16"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dme0EgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.17"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dme0EwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.18"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmfbIAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.19"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmfbIQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.20"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmfbIgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.21"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmfbIwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.22"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmfbJAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.23"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmfbJQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.24"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmgCMAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.25"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmgCMQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.26"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmgCMgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.27"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmgpQAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.28"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmgpQQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.29"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmgpQgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.30"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmgpQwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.31"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmhQUAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.32"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmhQUQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.33"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dmh3YAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.34"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dmh3YQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.35"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dmh3YgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.36"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dmh3YwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.37"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmiecAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.38"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmiecQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.39"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmnW8AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.40"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dms2gAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.41"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dms2gQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.42"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmtdkAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.43"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmtdkQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.44"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmtdkgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.45"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmuEoAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.46"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmuEoQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.47"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmuEogU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.48"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmursAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.49"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmursQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.50"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmursgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.51"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DmurswU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.Message.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0/@members.52"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dm98QQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.TextMessage.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.TextMessage.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dm98QgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.TextMessage.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="pathmap:/javaclass/javax.jms.TextMessage.java#//@classifiers.0/@members.1"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dm-jUAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.JMSException.java#/"/>
+    <function xsi:type="members:ClassMethod" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dm_KYAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.JMSException.java#/"/>
+    <function xsi:type="members:ClassMethod" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0/@members.6"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dm_KYQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="pathmap:/javaclass/javax.jms.JMSException.java#/"/>
+    <function xsi:type="members:ClassMethod" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0/@members.7"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnEp8AU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Djw3QAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnFRBAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Djw3QAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnF4EAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Djw3QAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.6"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnF4EQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnWWwAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnYzAgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnWWwAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnYzAwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnWWwAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnYzBAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnlAQAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/Display.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnlAQgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnlAQAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/Display.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.1"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DnlnUAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dn1e8AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dn2GCQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dn1e8AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dn2tEAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dn1e8AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Dn2tEQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <file href="../src/main/java/temperature_sensor/ITemperature.java#/"/>
+    <function xsi:type="members:InterfaceMethod" href="../src/main/java/temperature_sensor/ITemperature.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DoZfoQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Do3ZsAU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/App.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/App.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_Do4AwQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpCY0AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/temp_controller/TempControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpDm8QU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpCY0AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/temp_controller/TempControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpDm8gU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpCY0AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/temp_controller/TempControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpDm8wU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpDm-AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpE1EgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpDm-AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpE1EwU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpDm-AU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpE1FAU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpE1GQU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/Shutter.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpFcIQU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <methodLevelSourceCodeLink>
+    <repositoryComponent xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpE1GQU-Eeqj4KViiXoFEQ"/>
+    <file href="../src/main/java/shutter_controller/Shutter.java#/"/>
+    <function xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1"/>
+    <operation xsi:type="repository:OperationSignature" href="internal_architecture_model.repository#_DpFcIgU-Eeqj4KViiXoFEQ"/>
+  </methodLevelSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DijWUAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="../src/main/java/brightness_sensor/IBrightness.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/java.lang.Runnable.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:EventGroup" href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.MessageProducer.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.TextMessage.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Destination.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnFRAwU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:EventGroup" href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.MessageConsumer.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJswU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.TextMessage.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Destination.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnYzAQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnlAQQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/display_controller/Display.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnYzAQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnlAQQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/display_controller/Display.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/java.lang.Runnable.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:EventGroup" href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.MessageConsumer.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJswU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.TextMessage.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Destination.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dn2GCAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DoZfoAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="../src/main/java/temperature_sensor/ITemperature.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/java.lang.Runnable.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/java.lang.Runnable.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Do4AwAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/App.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:EventGroup" href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.MessageProducer.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.TextMessage.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Destination.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DpDm8AU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Session.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Connection.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:EventGroup" href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.MessageConsumer.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJswU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Message.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.TextMessage.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="pathmap:/javaclass/javax.jms.JMSException.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.ConnectionFactory.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Interface" href="pathmap:/javaclass/javax.jms.Destination.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DpE1EQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DpFcIAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DnFRAwU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_Dn2GCAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DpDm8AU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DpE1EQU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <interfaceSourceCodeLink>
+    <interface xsi:type="repository:OperationInterface" href="internal_architecture_model.repository#_DpFcIAU-Eeqj4KViiXoFEQ"/>
+    <gastClass xsi:type="classifiers:Class" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0"/>
+  </interfaceSourceCodeLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.1" requiredInterfaces="//@interfaceSourceCodeLink.0 //@interfaceSourceCodeLink.54">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DiZlUAU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.9" requiredInterfaces="//@interfaceSourceCodeLink.2 //@interfaceSourceCodeLink.3 //@interfaceSourceCodeLink.4 //@interfaceSourceCodeLink.5 //@interfaceSourceCodeLink.6 //@interfaceSourceCodeLink.7 //@interfaceSourceCodeLink.8">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Djw3QAU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.18" requiredInterfaces="//@interfaceSourceCodeLink.10 //@interfaceSourceCodeLink.11 //@interfaceSourceCodeLink.12 //@interfaceSourceCodeLink.13 //@interfaceSourceCodeLink.14 //@interfaceSourceCodeLink.15 //@interfaceSourceCodeLink.16 //@interfaceSourceCodeLink.17">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnWWwAU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.19">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnlAQAU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/display_controller/Display.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.22" requiredInterfaces="//@interfaceSourceCodeLink.20 //@interfaceSourceCodeLink.21 //@interfaceSourceCodeLink.55">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dns8EAU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.31" requiredInterfaces="//@interfaceSourceCodeLink.23 //@interfaceSourceCodeLink.24 //@interfaceSourceCodeLink.25 //@interfaceSourceCodeLink.26 //@interfaceSourceCodeLink.27 //@interfaceSourceCodeLink.28 //@interfaceSourceCodeLink.29 //@interfaceSourceCodeLink.30">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dn1e8AU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.33" requiredInterfaces="//@interfaceSourceCodeLink.32 //@interfaceSourceCodeLink.56">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DoRj0AU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.34" requiredInterfaces="//@interfaceSourceCodeLink.57 //@interfaceSourceCodeLink.58">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DosakAU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.35">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Do3ZsAU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/App.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.43" requiredInterfaces="//@interfaceSourceCodeLink.36 //@interfaceSourceCodeLink.37 //@interfaceSourceCodeLink.38 //@interfaceSourceCodeLink.39 //@interfaceSourceCodeLink.40 //@interfaceSourceCodeLink.41 //@interfaceSourceCodeLink.42">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpCY0AU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.52" requiredInterfaces="//@interfaceSourceCodeLink.44 //@interfaceSourceCodeLink.45 //@interfaceSourceCodeLink.46 //@interfaceSourceCodeLink.47 //@interfaceSourceCodeLink.48 //@interfaceSourceCodeLink.49 //@interfaceSourceCodeLink.50 //@interfaceSourceCodeLink.51">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpDm-AU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <componentImplementingClassesLink providedInterfaces="//@interfaceSourceCodeLink.53">
+    <component xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpE1GQU-Eeqj4KViiXoFEQ"/>
+    <implementingClasses xsi:type="classifiers:Class" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0"/>
+  </componentImplementingClassesLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsDQkAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DsG68AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DsJXMAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsKlUAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsLzcAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DsLzcQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsMagAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsMagQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsMahAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsNooAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsNooQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:EmitEventAction" href="internal_architecture_model.repository#_DsO2wAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsbEAAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEAQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEAgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEAwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEBAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEBQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsbrFAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" href="internal_architecture_model.repository#_DtT00AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_DtsPUAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DtuEggU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtuEgwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtuEhAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DturkAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DturkQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DturlAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DturlQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DturlgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtvSoAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtvSoQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtvSogU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtv5sAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtv5sQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtv5sgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.0"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Dtv5twU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.1"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtwgwQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtwgxAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DtxH0AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DtxH0gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtxH0wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtxu4AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_Dtxu4QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_Dtxu5AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtxu5QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_Dtxu5gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_Dtxu6QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_Dtxu6gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_Dtxu7QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtxu7gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtyV8AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DtyV8QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DtyV9AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtyV9QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9AAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9AQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_Dty9AgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_Dty9AwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_Dty9BAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_Dty9BwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9CAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9CQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9CgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_Dty9CwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Dty9DAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_Dty9DQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9DgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtzkEAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtzkEwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" href="internal_architecture_model.repository#_Dt0LIAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_DuEp0AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuEp0wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuEp1AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuEp1QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuEp1gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuEp1wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuFQ4AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuFQ4QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuFQ4gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuF38AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF38QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF38gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF38wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF39AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuGfAAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuGfBQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DuHGEAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuHGEgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_DuHGEwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuHGFgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGFwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGGAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGGQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGGgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuHGGwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuHGHgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGHwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGIAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuHGIQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGIgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuHGIwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGJAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHtIAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHtIwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DuHtJAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuHtJgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHtJwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_DuHtKAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuIUMgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuIUMwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuIUNAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuIUNwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_DuIUOAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_DuIUOwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuIUPAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuIUPQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuIUPgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuIUPwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_DuIUQAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuIUQQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/App.java#//@classifiers.0/@members.0"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuI7QAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuI7QwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuJiUAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuJiUQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:EmitEventAction" href="internal_architecture_model.repository#_DuJiUgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuReIAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReIQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReIgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReIwU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReJAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReJQU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuReKgU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" href="internal_architecture_model.repository#_DuSFMAU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:BranchAction" href="internal_architecture_model.repository#_Duh80AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_Duh80wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duh81AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Duh81QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duh81gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_Duh81wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StartAction" href="internal_architecture_model.repository#_Duh82gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duh82wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+    <abstractAction xsi:type="seff:StopAction" href="internal_architecture_model.repository#_Duh83AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duij4gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Duij4wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8QU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8gU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+    <abstractAction xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DujK-AU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <abstractActionClassMethodLink>
+    <classMethod href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1"/>
+    <abstractAction xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DujK-wU-Eeqj4KViiXoFEQ"/>
+  </abstractActionClassMethodLink>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_Di4GcAU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnF4EwU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnF4FAU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnF4FQU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.6"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnZaEAU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnZaEQU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnZaEgU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.5"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnlnUgU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.0"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DnlnUwU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.1"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DntjIQU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_Dn2tEwU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_Dn2tFAU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_Dn2tFQU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.5"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DoaGsQU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_Do2yogU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_Do4n0AU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/App.java#//@classifiers.0/@members.0"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpDm9QU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpDm9gU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpDm9wU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.5"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpE1FgU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpE1FwU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpE1GAU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.5"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpFcJAU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0"/>
+  </seff2MethodMappings>
+  <seff2MethodMappings>
+    <seff xsi:type="seff:ResourceDemandingSEFF" href="internal_architecture_model.repository#_DpFcJQU-Eeqj4KViiXoFEQ"/>
+    <statementListContainer xsi:type="members:ClassMethod" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1"/>
+  </seff2MethodMappings>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsDQkAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.1"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DsG68AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:DoWhileLoop" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsKlUAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.3/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsLzcAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Condition" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.3/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsMagAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsMagQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJob.java#//@classifiers.0/@members.6/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsMahAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsNooAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4/@statements.2/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsNooQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4/@statements.2/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:EmitEventAction" href="internal_architecture_model.repository#_DsO2wAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.4/@statements.2/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsbEAAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5/@statements.0/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEAQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5/@statements.0/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEAgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5/@statements.0/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEAwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5/@statements.0/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEBAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5/@statements.0/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DsbEBQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/brightness_controller/BrightnessControllerJmsClient.java#//@classifiers.0/@members.5/@statements.0/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DsbrFAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.0"/>
+    <statement xsi:type="statements:Return" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" href="internal_architecture_model.repository#_DtT00AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DtuEgQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtuEgwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtuEhAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DturkAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DturkwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@elseStatement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DturlQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@elseStatement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtvSoAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtvSoQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtvSogU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtv5sAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtv5sQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtv5sgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerDaylightJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Dtv5twU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.0/@statements.0"/>
+    <statement xsi:type="statements:ForLoop" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.0/@statements.1"/>
+    <statement xsi:type="statements:Return" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.0/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtwgwQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.1/@statements.0"/>
+    <statement xsi:type="statements:Condition" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.1/@statements.1"/>
+    <statement xsi:type="statements:Return" href="../src/main/java/display_controller/Display.java#//@classifiers.0/@members.1/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtwgxAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.1"/>
+    <statement xsi:type="statements:TryBlock" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.2"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DtxH0AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:DoWhileLoop" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtxH0wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtxu4AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_Dtxu4wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtxu5QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_Dtxu6AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Condition" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_Dtxu7AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dtxu7gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtyV8AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DtyV8wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement/@elseStatement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtyV9QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement/@elseStatement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9AAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement/@elseStatement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9AQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.2/@elseStatement/@elseStatement/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_Dty9BgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.3/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9CAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.3/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9CQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.3/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9CgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.3/@statement/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Dty9DAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.3/@statement/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Dty9DgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DtzkEAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerJob.java#//@classifiers.0/@members.4/@statements.6"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DtzkEwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.0"/>
+    <statement xsi:type="statements:Condition" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.2"/>
+    <statement xsi:type="statements:Return" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" href="internal_architecture_model.repository#_Dt0LIAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DuEp0gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuEp1AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuEp1QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuEp1gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DuEp2QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@elseStatement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuFQ4QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@elseStatement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuF38AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF38QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF38gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF38wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuF39AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuGfAAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/display_controller/DisplayControllerTemperatureJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuGfBQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DuHGEAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:DoWhileLoop" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DuHGFQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGFwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ForLoop" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGGAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@statement/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGGQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@statement/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGGgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@statement/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DuHGHQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@elseStatement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGHwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@elseStatement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGIAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.0/@elseStatement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHGIgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:TryBlock" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.1/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHGJAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHtIAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJob.java#//@classifiers.0/@members.7/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuHtIwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.1"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.2"/>
+    <statement xsi:type="statements:TryBlock" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.3"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:LoopAction" href="internal_architecture_model.repository#_DuHtJAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:DoWhileLoop" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuHtJwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DuIUMQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4/@statement/@statements.1/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuIUMwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4/@statement/@statements.1/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DuIUNgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Condition" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4/@statement/@statements.1/@elseStatement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_DuIUOgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4/@statement/@statements.1/@elseStatement/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuIUPAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4/@statement/@statements.1/@elseStatement/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuIUPwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.4/@statement/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuIUQQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJob.java#//@classifiers.0/@members.3/@statements.6"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuI7QAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.1"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.2"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.3"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.4"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.5"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.6"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.7"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.8"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/App.java#//@classifiers.0/@members.0/@statements.9"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuI7QwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuJiUAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3/@statements.2/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuJiUQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3/@statements.2/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:EmitEventAction" href="internal_architecture_model.repository#_DuJiUgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.3/@statements.2/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuReIAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReIQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReIgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReIwU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReJAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DuReJQU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/temp_controller/TempControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DuReKgU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.0"/>
+    <statement xsi:type="statements:Return" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" href="internal_architecture_model.repository#_DuSFMAU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_Duh80gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duh81AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Duh81QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duh81gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@statement/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ResourceDemandingBehaviour" href="internal_architecture_model.repository#_Duh82QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:Block" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@elseStatement"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duh82wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.3/@statements.1/@statements.1/@elseStatement/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_Duij4gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.0"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_Duij4wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.1"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.2"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8QU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.3"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8gU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:ExternalCallAction" href="internal_architecture_model.repository#_DujK8wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/ShutterControllerJmsClient.java#//@classifiers.0/@members.4/@statements.0/@statements.5"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DujK-AU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0/@statements.1"/>
+    <statement xsi:type="statements:ForLoop" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0/@statements.2"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0/@statements.3"/>
+    <statement xsi:type="statements:Return" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.0/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+  <seffElementsSourceCodeLinks>
+    <seffElement xsi:type="seff:InternalAction" href="internal_architecture_model.repository#_DujK-wU-Eeqj4KViiXoFEQ"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1/@statements.0"/>
+    <statement xsi:type="statements:LocalVariableStatement" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1/@statements.1"/>
+    <statement xsi:type="statements:ForLoop" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1/@statements.2"/>
+    <statement xsi:type="statements:ExpressionStatement" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1/@statements.3"/>
+    <statement xsi:type="statements:Return" href="../src/main/java/shutter_controller/Shutter.java#//@classifiers.0/@members.1/@statements.4"/>
+  </seffElementsSourceCodeLinks>
+</sourcecodedecorator:SourceCodeDecoratorRepository>

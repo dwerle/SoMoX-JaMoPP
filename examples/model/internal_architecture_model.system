@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ASCII"?>
+<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:org.palladiosimulator.simulizar.indirection.composition="http://palladiosimulator.org/Indirection/Composition/1.0" xmlns:org.palladiosimulator.simulizar.indirection.system="http://palladiosimulator.org/Indirection/System/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_Dg-B8AU-Eeqj4KViiXoFEQ" entityName="SoMoX Reverse Engineered System">
+  <assemblyContexts__ComposedStructure id="_Du-owAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 0 brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DiZlUAU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTIQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 1 brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Djw3QAU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTJQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnWWwAU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTKQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 3 display_controller.Display.java.Display>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DnlAQAU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTLQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 4 display_controller.DisplayControllerJob.java.DisplayControllerJob>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dns8EAU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTMQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Dn1e8AU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTNQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 6 temp_controller.TempControllerJob.java.TempControllerJob>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DoRj0AU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTOQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 7 shutter_controller.ShutterControllerJob.java.ShutterControllerJob>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DosakAU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvCTPQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 8 App.java.App>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_Do3ZsAU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvC6MgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 9 temp_controller.TempControllerJmsClient.java.TempControllerJmsClient>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpCY0AU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvC6NgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpDm-AU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_DvC6OgU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 11 shutter_controller.Shutter.java.Shutter>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="internal_architecture_model.repository#_DpE1GQU-Eeqj4KViiXoFEQ"/>
+  </assemblyContexts__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.system:DataChannel" id="_DvGkkAU-Eeqj4KViiXoFEQ" entityName="MyDataChannel" dataChannelSourceConnector="_DvK2AAU-Eeqj4KViiXoFEQ" dataChannelSinkConnector="_DvJA0AU-Eeqj4KViiXoFEQ">
+    <sourceEventGroup href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <sinkEventGroup href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.system:DataChannel" id="_DvLdEAU-Eeqj4KViiXoFEQ" entityName="MyDataChannel" dataChannelSourceConnector="_DvLdEgU-Eeqj4KViiXoFEQ" dataChannelSinkConnector="_DvLdEQU-Eeqj4KViiXoFEQ">
+    <sourceEventGroup href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <sinkEventGroup href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.system:DataChannel" id="_DvLdEwU-Eeqj4KViiXoFEQ" entityName="MyDataChannel" dataChannelSourceConnector="_DvLdFQU-Eeqj4KViiXoFEQ" dataChannelSinkConnector="_DvLdFAU-Eeqj4KViiXoFEQ">
+    <sourceEventGroup href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <sinkEventGroup href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.system:DataChannel" id="_DvPugAU-Eeqj4KViiXoFEQ" entityName="MyDataChannel" dataChannelSourceConnector="_DvPuggU-Eeqj4KViiXoFEQ" dataChannelSinkConnector="_DvPugQU-Eeqj4KViiXoFEQ">
+    <sourceEventGroup href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <sinkEventGroup href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.system:DataChannel" id="_DvPugwU-Eeqj4KViiXoFEQ" entityName="MyDataChannel" dataChannelSourceConnector="_DvPuhQU-Eeqj4KViiXoFEQ" dataChannelSinkConnector="_DvPuhAU-Eeqj4KViiXoFEQ">
+    <sourceEventGroup href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <sinkEventGroup href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+  </eventChannel__ComposedStructure>
+  <eventChannel__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.system:DataChannel" id="_DvQVkAU-Eeqj4KViiXoFEQ" entityName="MyDataChannel" dataChannelSourceConnector="_DvQVkgU-Eeqj4KViiXoFEQ" dataChannelSinkConnector="_DvQVkQU-Eeqj4KViiXoFEQ">
+    <sourceEventGroup href="internal_architecture_model.repository#_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <sinkEventGroup href="internal_architecture_model.repository#_DnW90gU-Eeqj4KViiXoFEQ"/>
+  </eventChannel__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTIAU-Eeqj4KViiXoFEQ" entityName="Runnable.java.Runnable" outerProvidedRole_ProvidedDelegationConnector="_Du_24QU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_Du-owAU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_Di1DIAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTJAU-Eeqj4KViiXoFEQ" entityName="I...ntrollerJmsClient.java.BrightnessControllerJmsClient" outerProvidedRole_ProvidedDelegationConnector="_DvCTIwU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTIQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DnF4EgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTKAU-Eeqj4KViiXoFEQ" entityName="I...ghtJmsClient.java.DisplayControllerDaylightJmsClient" outerProvidedRole_ProvidedDelegationConnector="_DvCTJwU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTJQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DnYzBQU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTLAU-Eeqj4KViiXoFEQ" entityName="IDisplay.java.Display" outerProvidedRole_ProvidedDelegationConnector="_DvCTKwU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTKQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DnlnUQU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTMAU-Eeqj4KViiXoFEQ" entityName="Runnable.java.Runnable" outerProvidedRole_ProvidedDelegationConnector="_DvCTLwU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTLQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DntjIAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTNAU-Eeqj4KViiXoFEQ" entityName="I...JmsClient.java.DisplayControllerTemperatureJmsClient" outerProvidedRole_ProvidedDelegationConnector="_DvCTMwU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTMQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_Dn2tEgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTOAU-Eeqj4KViiXoFEQ" entityName="Runnable.java.Runnable" outerProvidedRole_ProvidedDelegationConnector="_DvCTNwU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTNQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DoaGsAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvCTPAU-Eeqj4KViiXoFEQ" entityName="Runnable.java.Runnable" outerProvidedRole_ProvidedDelegationConnector="_DvCTOwU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTOQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_Do2yoQU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvC6MQU-Eeqj4KViiXoFEQ" entityName="IApp.java.App" outerProvidedRole_ProvidedDelegationConnector="_DvC6MAU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvCTPQU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_Do4AwwU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvC6NQU-Eeqj4KViiXoFEQ" entityName="ITempControllerJmsClient.java.TempControllerJmsClient" outerProvidedRole_ProvidedDelegationConnector="_DvC6NAU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvC6MgU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DpDm9AU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvC6OQU-Eeqj4KViiXoFEQ" entityName="I...rControllerJmsClient.java.ShutterControllerJmsClient" outerProvidedRole_ProvidedDelegationConnector="_DvC6OAU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvC6NgU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DpE1FQU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_DvC6PQU-Eeqj4KViiXoFEQ" entityName="IShutter.java.Shutter" outerProvidedRole_ProvidedDelegationConnector="_DvC6PAU-Eeqj4KViiXoFEQ" assemblyContext_ProvidedDelegationConnector="_DvC6OgU-Eeqj4KViiXoFEQ">
+    <innerProvidedRole_ProvidedDelegationConnector href="internal_architecture_model.repository#_DpFcIwU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_DvEIUAU-Eeqj4KViiXoFEQ" entityName="Assembly Connector from  &lt;PC No. 0 brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob> to  &lt;PC No. 1 brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient>" requiringAssemblyContext_AssemblyConnector="_Du-owAU-Eeqj4KViiXoFEQ" providingAssemblyContext_AssemblyConnector="_DvCTIQU-Eeqj4KViiXoFEQ">
+    <providedRole_AssemblyConnector href="internal_architecture_model.repository#_DnF4EgU-Eeqj4KViiXoFEQ"/>
+    <requiredRole_AssemblyConnector href="internal_architecture_model.repository#_Dq-SgAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSinkConnector" id="_DvJA0AU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from  &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient> to MyDataChannel" assemblyContext="_DvCTJQU-Eeqj4KViiXoFEQ" dataChannel="_DvGkkAU-Eeqj4KViiXoFEQ">
+    <sinkRole href="internal_architecture_model.repository#_DnYL8AU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSourceConnector" id="_DvK2AAU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from MyDataChannel to  &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient>" assemblyContext="_DvCTJQU-Eeqj4KViiXoFEQ" dataChannel="_DvGkkAU-Eeqj4KViiXoFEQ">
+    <sourceRole href="internal_architecture_model.repository#_DmNuUAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSinkConnector" id="_DvLdEQU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from  &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient> to MyDataChannel" assemblyContext="_DvCTMQU-Eeqj4KViiXoFEQ" dataChannel="_DvLdEAU-Eeqj4KViiXoFEQ">
+    <sinkRole href="internal_architecture_model.repository#_Dn2GAgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSourceConnector" id="_DvLdEgU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from MyDataChannel to  &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient>" assemblyContext="_DvCTMQU-Eeqj4KViiXoFEQ" dataChannel="_DvLdEAU-Eeqj4KViiXoFEQ">
+    <sourceRole href="internal_architecture_model.repository#_DmNuUAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSinkConnector" id="_DvLdFAU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from  &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient> to MyDataChannel" assemblyContext="_DvC6NgU-Eeqj4KViiXoFEQ" dataChannel="_DvLdEwU-Eeqj4KViiXoFEQ">
+    <sinkRole href="internal_architecture_model.repository#_DpEOAgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSourceConnector" id="_DvLdFQU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from MyDataChannel to  &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient>" assemblyContext="_DvC6NgU-Eeqj4KViiXoFEQ" dataChannel="_DvLdEwU-Eeqj4KViiXoFEQ">
+    <sourceRole href="internal_architecture_model.repository#_DmNuUAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_DvNSQAU-Eeqj4KViiXoFEQ" entityName="Assembly Connector from  &lt;PC No. 4 display_controller.DisplayControllerJob.java.DisplayControllerJob> to  &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient>" requiringAssemblyContext_AssemblyConnector="_DvCTLQU-Eeqj4KViiXoFEQ" providingAssemblyContext_AssemblyConnector="_DvCTJQU-Eeqj4KViiXoFEQ">
+    <providedRole_AssemblyConnector href="internal_architecture_model.repository#_DnYzBQU-Eeqj4KViiXoFEQ"/>
+    <requiredRole_AssemblyConnector href="internal_architecture_model.repository#_Dns8EQU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_DvNSQQU-Eeqj4KViiXoFEQ" entityName="Assembly Connector from  &lt;PC No. 4 display_controller.DisplayControllerJob.java.DisplayControllerJob> to  &lt;PC No. 3 display_controller.Display.java.Display>" requiringAssemblyContext_AssemblyConnector="_DvCTLQU-Eeqj4KViiXoFEQ" providingAssemblyContext_AssemblyConnector="_DvCTKQU-Eeqj4KViiXoFEQ">
+    <providedRole_AssemblyConnector href="internal_architecture_model.repository#_DnlnUQU-Eeqj4KViiXoFEQ"/>
+    <requiredRole_AssemblyConnector href="internal_architecture_model.repository#_Dns8EgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_DvN5UAU-Eeqj4KViiXoFEQ" entityName="Assembly Connector from  &lt;PC No. 4 display_controller.DisplayControllerJob.java.DisplayControllerJob> to  &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient>" requiringAssemblyContext_AssemblyConnector="_DvCTLQU-Eeqj4KViiXoFEQ" providingAssemblyContext_AssemblyConnector="_DvCTMQU-Eeqj4KViiXoFEQ">
+    <providedRole_AssemblyConnector href="internal_architecture_model.repository#_Dn2tEgU-Eeqj4KViiXoFEQ"/>
+    <requiredRole_AssemblyConnector href="internal_architecture_model.repository#_Dq_goAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_DvPHcAU-Eeqj4KViiXoFEQ" entityName="Assembly Connector from  &lt;PC No. 6 temp_controller.TempControllerJob.java.TempControllerJob> to  &lt;PC No. 9 temp_controller.TempControllerJmsClient.java.TempControllerJmsClient>" requiringAssemblyContext_AssemblyConnector="_DvCTNQU-Eeqj4KViiXoFEQ" providingAssemblyContext_AssemblyConnector="_DvC6MgU-Eeqj4KViiXoFEQ">
+    <providedRole_AssemblyConnector href="internal_architecture_model.repository#_DpDm9AU-Eeqj4KViiXoFEQ"/>
+    <requiredRole_AssemblyConnector href="internal_architecture_model.repository#_DrAuwAU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_DvPHcQU-Eeqj4KViiXoFEQ" entityName="Assembly Connector from  &lt;PC No. 7 shutter_controller.ShutterControllerJob.java.ShutterControllerJob> to  &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient>" requiringAssemblyContext_AssemblyConnector="_DvCTOQU-Eeqj4KViiXoFEQ" providingAssemblyContext_AssemblyConnector="_DvC6NgU-Eeqj4KViiXoFEQ">
+    <providedRole_AssemblyConnector href="internal_architecture_model.repository#_DpE1FQU-Eeqj4KViiXoFEQ"/>
+    <requiredRole_AssemblyConnector href="internal_architecture_model.repository#_DrAuwgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_DvPHcgU-Eeqj4KViiXoFEQ" entityName="Assembly Connector from  &lt;PC No. 7 shutter_controller.ShutterControllerJob.java.ShutterControllerJob> to  &lt;PC No. 11 shutter_controller.Shutter.java.Shutter>" requiringAssemblyContext_AssemblyConnector="_DvCTOQU-Eeqj4KViiXoFEQ" providingAssemblyContext_AssemblyConnector="_DvC6OgU-Eeqj4KViiXoFEQ">
+    <providedRole_AssemblyConnector href="internal_architecture_model.repository#_DpFcIwU-Eeqj4KViiXoFEQ"/>
+    <requiredRole_AssemblyConnector href="internal_architecture_model.repository#_DrAuwwU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSinkConnector" id="_DvPugQU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from  &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient> to MyDataChannel" assemblyContext="_DvCTJQU-Eeqj4KViiXoFEQ" dataChannel="_DvPugAU-Eeqj4KViiXoFEQ">
+    <sinkRole href="internal_architecture_model.repository#_DnYL8AU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSourceConnector" id="_DvPuggU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from MyDataChannel to  &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient>" assemblyContext="_DvCTJQU-Eeqj4KViiXoFEQ" dataChannel="_DvPugAU-Eeqj4KViiXoFEQ">
+    <sourceRole href="internal_architecture_model.repository#_DpC_4gU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSinkConnector" id="_DvPuhAU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from  &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient> to MyDataChannel" assemblyContext="_DvCTMQU-Eeqj4KViiXoFEQ" dataChannel="_DvPugwU-Eeqj4KViiXoFEQ">
+    <sinkRole href="internal_architecture_model.repository#_Dn2GAgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSourceConnector" id="_DvPuhQU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from MyDataChannel to  &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient>" assemblyContext="_DvCTMQU-Eeqj4KViiXoFEQ" dataChannel="_DvPugwU-Eeqj4KViiXoFEQ">
+    <sourceRole href="internal_architecture_model.repository#_DpC_4gU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSinkConnector" id="_DvQVkQU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from  &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient> to MyDataChannel" assemblyContext="_DvC6NgU-Eeqj4KViiXoFEQ" dataChannel="_DvQVkAU-Eeqj4KViiXoFEQ">
+    <sinkRole href="internal_architecture_model.repository#_DpEOAgU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="org.palladiosimulator.simulizar.indirection.composition:DataChannelSourceConnector" id="_DvQVkgU-Eeqj4KViiXoFEQ" entityName="DataChannel Connector from MyDataChannel to  &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient>" assemblyContext="_DvC6NgU-Eeqj4KViiXoFEQ" dataChannel="_DvQVkAU-Eeqj4KViiXoFEQ">
+    <sourceRole href="internal_architecture_model.repository#_DpC_4gU-Eeqj4KViiXoFEQ"/>
+  </connectors__ComposedStructure>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Du_24QU-Eeqj4KViiXoFEQ" entityName="Runnable 0 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvCTIwU-Eeqj4KViiXoFEQ" entityName="BrightnessControllerJmsClient 1 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DnFRAwU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvCTJwU-Eeqj4KViiXoFEQ" entityName="DisplayControllerDaylightJmsClient 2 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DnYzAQU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvCTKwU-Eeqj4KViiXoFEQ" entityName="Display 3 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DnlAQQU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvCTLwU-Eeqj4KViiXoFEQ" entityName="Runnable 4 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvCTMwU-Eeqj4KViiXoFEQ" entityName="DisplayControllerTemperatureJmsClient 5 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_Dn2GCAU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvCTNwU-Eeqj4KViiXoFEQ" entityName="Runnable 6 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvCTOwU-Eeqj4KViiXoFEQ" entityName="Runnable 7 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DixYwAU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvC6MAU-Eeqj4KViiXoFEQ" entityName="App 8 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_Do4AwAU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvC6NAU-Eeqj4KViiXoFEQ" entityName="TempControllerJmsClient 9 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DpDm8AU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvC6OAU-Eeqj4KViiXoFEQ" entityName="ShutterControllerJmsClient 10 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DpE1EQU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DvC6PAU-Eeqj4KViiXoFEQ" entityName="Shutter 11 (prov)(sys)">
+    <providedInterface__OperationProvidedRole href="internal_architecture_model.repository#_DpFcIAU-Eeqj4KViiXoFEQ"/>
+  </providedRoles_InterfaceProvidingEntity>
+</system:System>

@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="ASCII"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.palladiosimulator.simulizar.indirection.actions="http://palladiosimulator.org/Indirection/Actions/1.0" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" id="_DhBFQAU-Eeqj4KViiXoFEQ">
+  <components__Repository xsi:type="repository:BasicComponent" id="_DiZlUAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 0 brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Di1DIAU-Eeqj4KViiXoFEQ" entityName="Runnable 0 (prov)" providedInterface__OperationProvidedRole="_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DivjkAU-Eeqj4KViiXoFEQ" entityName="IBrightness 0 (req)" requiredInterface__OperationRequiredRole="_DijWUAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dq-SgAU-Eeqj4KViiXoFEQ" entityName="BrightnessControllerJmsClient 43 (req)" requiredInterface__OperationRequiredRole="_DnFRAwU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Di4GcAU-Eeqj4KViiXoFEQ" describedService__SEFF="_DixYwQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Dr1OIAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsDQkAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DsDQkAU-Eeqj4KViiXoFEQ" entityName="IA  @position: brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob.run() at 583" predecessor_AbstractAction="_Dr1OIAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsG68AU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_DsG68AU-Eeqj4KViiXoFEQ" entityName="SoMoX default loop count value" predecessor_AbstractAction="_DsDQkAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsMagAU-Eeqj4KViiXoFEQ">
+        <bodyBehaviour_Loop id="_DsIJEAU-Eeqj4KViiXoFEQ">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_DsJXMAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsKlUAU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsKlUAU-Eeqj4KViiXoFEQ" entityName="getBrightness @position: brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob.run().Block at 697" predecessor_AbstractAction="_DsJXMAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsLzcAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DinAsAU-Eeqj4KViiXoFEQ" role_ExternalService="_DivjkAU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_DsLzcAU-Eeqj4KViiXoFEQ" entityName="IA  @position: brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob.run().Block from 698 to 791" predecessor_AbstractAction="_DsKlUAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsLzcQU-Eeqj4KViiXoFEQ">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="0"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_DsLzcQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DsLzcAU-Eeqj4KViiXoFEQ"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsMagAU-Eeqj4KViiXoFEQ" entityName="prepareBrightnessCommunication @position: brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob.run() at 1366" predecessor_AbstractAction="_DsG68AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsMagQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnF4EAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dq-SgAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DsMagQU-Eeqj4KViiXoFEQ" entityName="IA  @position: brightness_controller.BrightnessControllerJob.java.BrightnessControllerJob.run() at 1408" predecessor_AbstractAction="_DsMagAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dr11MAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Dr11MAU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DsMagQU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_Djw3QAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 1 brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DnF4EgU-Eeqj4KViiXoFEQ" entityName="BrightnessControllerJmsClient 1 (prov)" providedInterface__OperationProvidedRole="_DnFRAwU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dlsw8QU-Eeqj4KViiXoFEQ" entityName="Session 2 (req)" requiredInterface__OperationRequiredRole="_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DmKrAAU-Eeqj4KViiXoFEQ" entityName="Connection 3 (req)" requiredInterface__OperationRequiredRole="_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:SourceRole" id="_DmNuUAU-Eeqj4KViiXoFEQ" entityName="JMSEventGroup0 4 (req)" eventGroup__SourceRole="_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DmbJsQU-Eeqj4KViiXoFEQ" entityName="ConnectionFactory 5 (req)" requiredInterface__OperationRequiredRole="_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dm-jUQU-Eeqj4KViiXoFEQ" entityName="TextMessage 6 (req)" requiredInterface__OperationRequiredRole="_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnFRAAU-Eeqj4KViiXoFEQ" entityName="JMSException 7 (req)" requiredInterface__OperationRequiredRole="_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnFRAgU-Eeqj4KViiXoFEQ" entityName="Destination 8 (req)" requiredInterface__OperationRequiredRole="_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnF4EwU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnFRBAU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DsMaggU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsMahAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DsMahAU-Eeqj4KViiXoFEQ" entityName="IA  @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.sendIsDaylight() at 720" predecessor_AbstractAction="_DsMaggU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsNooAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsNooAU-Eeqj4KViiXoFEQ" entityName="createTextMessage @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.sendIsDaylight() at 805" predecessor_AbstractAction="_DsMahAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsNooQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DkrdQAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dlsw8QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DsNooQU-Eeqj4KViiXoFEQ" entityName="IA  @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.sendIsDaylight() at 920" predecessor_AbstractAction="_DsNooAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsO2wAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:EmitEventAction" id="_DsO2wAU-Eeqj4KViiXoFEQ" entityName="send @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.sendIsDaylight() at 954" predecessor_AbstractAction="_DsNooQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsMagwU-Eeqj4KViiXoFEQ" eventType__EmitEventAction="_DmNHQAU-Eeqj4KViiXoFEQ" sourceRole__EmitEventAction="_DmNuUAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DsMagwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DsO2wAU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnF4FAU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnF4EAU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Dsac8AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbEAAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DsbEAAU-Eeqj4KViiXoFEQ" entityName="IA  @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.prepareBrightnessCommunication() at 1378" predecessor_AbstractAction="_Dsac8AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbEAQU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsbEAQU-Eeqj4KViiXoFEQ" entityName="createConnection @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.prepareBrightnessCommunication() at 1478" predecessor_AbstractAction="_DsbEAAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbEAgU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DmOVYAU-Eeqj4KViiXoFEQ" role_ExternalService="_DmbJsQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsbEAgU-Eeqj4KViiXoFEQ" entityName="start @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.prepareBrightnessCommunication() at 1510" predecessor_AbstractAction="_DsbEAQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbEAwU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dl92sAU-Eeqj4KViiXoFEQ" role_ExternalService="_DmKrAAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsbEAwU-Eeqj4KViiXoFEQ" entityName="createSession @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.prepareBrightnessCommunication() at 1625" predecessor_AbstractAction="_DsbEAgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbEBAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dlsw8wU-Eeqj4KViiXoFEQ" role_ExternalService="_DmKrAAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsbEBAU-Eeqj4KViiXoFEQ" entityName="createQueue @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.prepareBrightnessCommunication() at 1757" predecessor_AbstractAction="_DsbEAwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbEBQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlPd8AU-Eeqj4KViiXoFEQ" role_ExternalService="_Dlsw8QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DsbEBQU-Eeqj4KViiXoFEQ" entityName="createProducer @position: brightness_controller.BrightnessControllerJmsClient.java.BrightnessControllerJmsClient.prepareBrightnessCommunication() at 1898" predecessor_AbstractAction="_DsbEBAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dsac8QU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DkzZEQU-Eeqj4KViiXoFEQ" role_ExternalService="_Dlsw8QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Dsac8QU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DsbEBQU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnF4FQU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnF4EQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DsbrEAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbrEQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DsbrEQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DsbrEAU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_DnWWwAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 2 display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:SinkRole" id="_DnYL8AU-Eeqj4KViiXoFEQ" entityName="JMSEventGroup1 2 (prov)" eventGroup__SinkRole="_DnW90gU-Eeqj4KViiXoFEQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DnYzBQU-Eeqj4KViiXoFEQ" entityName="DisplayControllerDaylightJmsClient 3 (prov)" providedInterface__OperationProvidedRole="_DnYzAQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnW90AU-Eeqj4KViiXoFEQ" entityName="Session 9 (req)" requiredInterface__OperationRequiredRole="_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnW90QU-Eeqj4KViiXoFEQ" entityName="Connection 10 (req)" requiredInterface__OperationRequiredRole="_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnYL8QU-Eeqj4KViiXoFEQ" entityName="Message 11 (req)" requiredInterface__OperationRequiredRole="_DmbJswU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnYL8gU-Eeqj4KViiXoFEQ" entityName="TextMessage 12 (req)" requiredInterface__OperationRequiredRole="_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnYL8wU-Eeqj4KViiXoFEQ" entityName="JMSException 13 (req)" requiredInterface__OperationRequiredRole="_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnYL9AU-Eeqj4KViiXoFEQ" entityName="ConnectionFactory 14 (req)" requiredInterface__OperationRequiredRole="_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DnYzAAU-Eeqj4KViiXoFEQ" entityName="Destination 15 (req)" requiredInterface__OperationRequiredRole="_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnZaEAU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnYzAgU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DsbrEgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbrFAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DsbrFAU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.receiveIsDaylight() at 600" predecessor_AbstractAction="_DsbrEgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtT00AU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" id="_DtT00AU-Eeqj4KViiXoFEQ" entityName="receive @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.receiveIsDaylight() at 726" predecessor_AbstractAction="_DsbrFAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtsPUAU-Eeqj4KViiXoFEQ" eventType="_DnW90wU-Eeqj4KViiXoFEQ" sinkRole="_DnYL8AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_DtsPUAU-Eeqj4KViiXoFEQ" entityName=" @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.receiveIsDaylight() from 727 to 990" predecessor_AbstractAction="_DtT00AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DsbrEwU-Eeqj4KViiXoFEQ">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DtuEgAU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_DtuEgQU-Eeqj4KViiXoFEQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_DtuEggU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtuEgwU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_DtuEgwU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.receiveIsDaylight().Block at 848" predecessor_AbstractAction="_DtuEggU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtuEhAU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtuEhAU-Eeqj4KViiXoFEQ" entityName="getText @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.receiveIsDaylight().Block at 896" predecessor_AbstractAction="_DtuEgwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DturkAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dm-jUAU-Eeqj4KViiXoFEQ" role_ExternalService="_DnYL8gU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_DturkAU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.receiveIsDaylight().Block at 973" predecessor_AbstractAction="_DtuEhAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DturkQU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_DturkQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DturkAU-Eeqj4KViiXoFEQ"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DturkgU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_DturkwU-Eeqj4KViiXoFEQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_DturlAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DturlQU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_DturlQU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.receiveIsDaylight().Block at 1076" predecessor_AbstractAction="_DturlAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DturlgU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_DturlgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DturlQU-Eeqj4KViiXoFEQ"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DsbrEwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DtsPUAU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnZaEQU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnYzAwU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DturlwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtvSoAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DtvSoAU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.prepareDisplayDaylightCommunication() at 1463" predecessor_AbstractAction="_DturlwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtvSoQU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtvSoQU-Eeqj4KViiXoFEQ" entityName="createConnection @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.prepareDisplayDaylightCommunication() at 1563" predecessor_AbstractAction="_DtvSoAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtvSogU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DmOVYAU-Eeqj4KViiXoFEQ" role_ExternalService="_DnYL9AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtvSogU-Eeqj4KViiXoFEQ" entityName="start @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.prepareDisplayDaylightCommunication() at 1595" predecessor_AbstractAction="_DtvSoQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtv5sAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dl92sAU-Eeqj4KViiXoFEQ" role_ExternalService="_DnW90QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dtv5sAU-Eeqj4KViiXoFEQ" entityName="createSession @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.prepareDisplayDaylightCommunication() at 1710" predecessor_AbstractAction="_DtvSogU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtv5sQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dlsw8wU-Eeqj4KViiXoFEQ" role_ExternalService="_DnW90QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dtv5sQU-Eeqj4KViiXoFEQ" entityName="createQueue @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.prepareDisplayDaylightCommunication() at 1842" predecessor_AbstractAction="_Dtv5sAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtv5sgU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlPd8AU-Eeqj4KViiXoFEQ" role_ExternalService="_DnW90AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dtv5sgU-Eeqj4KViiXoFEQ" entityName="createConsumer @position: display_controller.DisplayControllerDaylightJmsClient.java.DisplayControllerDaylightJmsClient.prepareDisplayDaylightCommunication() at 1983" predecessor_AbstractAction="_Dtv5sQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DturmAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlDQsAU-Eeqj4KViiXoFEQ" role_ExternalService="_DnW90AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DturmAU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dtv5sgU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnZaEgU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnYzBAU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Dtv5swU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtv5tAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Dtv5tAU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dtv5swU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_DnlAQAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 3 display_controller.Display.java.Display>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DnlnUQU-Eeqj4KViiXoFEQ" entityName="Display 4 (prov)" providedInterface__OperationProvidedRole="_DnlAQQU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnlnUgU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnlAQgU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Dtv5tQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtv5twU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Dtv5twU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.Display.java.Display.printADigit() at 97" predecessor_AbstractAction="_Dtv5tQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtv5tgU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Dtv5tgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dtv5twU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DnlnUwU-Eeqj4KViiXoFEQ" describedService__SEFF="_DnlnUAU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Dtv5uAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtwgwQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DtwgwQU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.Display.java.Display.turnOnLED() at 230" predecessor_AbstractAction="_Dtv5uAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtwgwAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DtwgwAU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DtwgwQU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_Dns8EAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 4 display_controller.DisplayControllerJob.java.DisplayControllerJob>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DntjIAU-Eeqj4KViiXoFEQ" entityName="Runnable 5 (prov)" providedInterface__OperationProvidedRole="_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dns8EQU-Eeqj4KViiXoFEQ" entityName="DisplayControllerDaylightJmsClient 16 (req)" requiredInterface__OperationRequiredRole="_DnYzAQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dns8EgU-Eeqj4KViiXoFEQ" entityName="Display 17 (req)" requiredInterface__OperationRequiredRole="_DnlAQQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dq_goAU-Eeqj4KViiXoFEQ" entityName="DisplayControllerTemperatureJmsClient 45 (req)" requiredInterface__OperationRequiredRole="_Dn2GCAU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DntjIQU-Eeqj4KViiXoFEQ" describedService__SEFF="_DixYwQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DtwgwgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtwgxAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DtwgxAU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run() at 581" predecessor_AbstractAction="_DtwgwgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtxH0AU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_DtxH0AU-Eeqj4KViiXoFEQ" entityName="SoMoX default loop count value" predecessor_AbstractAction="_DtwgxAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9DgU-Eeqj4KViiXoFEQ">
+        <bodyBehaviour_Loop id="_DtxH0QU-Eeqj4KViiXoFEQ">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_DtxH0gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtxH0wU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtxH0wU-Eeqj4KViiXoFEQ" entityName="receiveTemperature @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block at 824" predecessor_AbstractAction="_DtxH0gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtxu4AU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dn2GCQU-Eeqj4KViiXoFEQ" role_ExternalService="_Dq_goAU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dtxu4AU-Eeqj4KViiXoFEQ" entityName="receiveIsDaylight @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block at 880" predecessor_AbstractAction="_DtxH0wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtxu4QU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnYzAgU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EQU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:BranchAction" id="_Dtxu4QU-Eeqj4KViiXoFEQ" entityName=" @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block from 881 to 962" predecessor_AbstractAction="_Dtxu4AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9BAU-Eeqj4KViiXoFEQ">
+            <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_Dtxu4gU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+              <branchBehaviour_BranchTransition id="_Dtxu4wU-Eeqj4KViiXoFEQ">
+                <steps_Behaviour xsi:type="seff:StartAction" id="_Dtxu5AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtxu5QU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dtxu5QU-Eeqj4KViiXoFEQ" entityName="printADigit @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 955" predecessor_AbstractAction="_Dtxu5AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtxu5gU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlAQgU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:StopAction" id="_Dtxu5gU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dtxu5QU-Eeqj4KViiXoFEQ"/>
+              </branchBehaviour_BranchTransition>
+            </branches_Branch>
+            <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_Dtxu5wU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+              <branchBehaviour_BranchTransition id="_Dtxu6AU-Eeqj4KViiXoFEQ">
+                <steps_Behaviour xsi:type="seff:StartAction" id="_Dtxu6QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtxu6gU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:BranchAction" id="_Dtxu6gU-Eeqj4KViiXoFEQ" entityName=" @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block from 967 to 1068" predecessor_AbstractAction="_Dtxu6QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9AwU-Eeqj4KViiXoFEQ">
+                  <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_Dtxu6wU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+                    <branchBehaviour_BranchTransition id="_Dtxu7AU-Eeqj4KViiXoFEQ">
+                      <steps_Behaviour xsi:type="seff:StartAction" id="_Dtxu7QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dtxu7gU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dtxu7gU-Eeqj4KViiXoFEQ" entityName="printADigit @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1033" predecessor_AbstractAction="_Dtxu7QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtyV8AU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlAQgU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtyV8AU-Eeqj4KViiXoFEQ" entityName="printADigit @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1061" predecessor_AbstractAction="_Dtxu7gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtyV8QU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlAQgU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:StopAction" id="_DtyV8QU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DtyV8AU-Eeqj4KViiXoFEQ"/>
+                    </branchBehaviour_BranchTransition>
+                  </branches_Branch>
+                  <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DtyV8gU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+                    <branchBehaviour_BranchTransition id="_DtyV8wU-Eeqj4KViiXoFEQ">
+                      <steps_Behaviour xsi:type="seff:StartAction" id="_DtyV9AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtyV9QU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtyV9QU-Eeqj4KViiXoFEQ" entityName="printADigit @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1102" predecessor_AbstractAction="_DtyV9AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9AAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlAQgU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dty9AAU-Eeqj4KViiXoFEQ" entityName="printADigit @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1130" predecessor_AbstractAction="_DtyV9QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9AQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlAQgU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dty9AQU-Eeqj4KViiXoFEQ" entityName="printADigit @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1158" predecessor_AbstractAction="_Dty9AAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9AgU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlAQgU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:StopAction" id="_Dty9AgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dty9AQU-Eeqj4KViiXoFEQ"/>
+                    </branchBehaviour_BranchTransition>
+                  </branches_Branch>
+                </steps_Behaviour>
+                <steps_Behaviour xsi:type="seff:StopAction" id="_Dty9AwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dtxu6gU-Eeqj4KViiXoFEQ"/>
+              </branchBehaviour_BranchTransition>
+            </branches_Branch>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:BranchAction" id="_Dty9BAU-Eeqj4KViiXoFEQ" entityName=" @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block from 1165 to 1198" predecessor_AbstractAction="_Dtxu4QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9DAU-Eeqj4KViiXoFEQ">
+            <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_Dty9BQU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="1.0">
+              <branchBehaviour_BranchTransition id="_Dty9BgU-Eeqj4KViiXoFEQ">
+                <steps_Behaviour xsi:type="seff:StartAction" id="_Dty9BwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9CAU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dty9CAU-Eeqj4KViiXoFEQ" entityName="turnOnLED @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1230" predecessor_AbstractAction="_Dty9BwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9CQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlnUAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dty9CQU-Eeqj4KViiXoFEQ" entityName="turnOnLED @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1261" predecessor_AbstractAction="_Dty9CAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9CgU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlnUAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dty9CgU-Eeqj4KViiXoFEQ" entityName="turnOnLED @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block.Block at 1291" predecessor_AbstractAction="_Dty9CQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9CwU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnlnUAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EgU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:StopAction" id="_Dty9CwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dty9CgU-Eeqj4KViiXoFEQ"/>
+              </branchBehaviour_BranchTransition>
+            </branches_Branch>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_Dty9DAU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run().Block at 1316" predecessor_AbstractAction="_Dty9BAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dty9DQU-Eeqj4KViiXoFEQ">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="0"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_Dty9DQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Dty9DAU-Eeqj4KViiXoFEQ"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Dty9DgU-Eeqj4KViiXoFEQ" entityName="endDisplayTemperatureCommunication @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run() at 1594" predecessor_AbstractAction="_DtxH0AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtzkEAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dn2tEQU-Eeqj4KViiXoFEQ" role_ExternalService="_Dq_goAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DtzkEAU-Eeqj4KViiXoFEQ" entityName="endDisplayDaylightCommunication @position: display_controller.DisplayControllerJob.java.DisplayControllerJob.run() at 1650" predecessor_AbstractAction="_Dty9DgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtwgwwU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DnYzBAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dns8EQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DtwgwwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DtzkEAU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_Dn1e8AU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 5 display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:SinkRole" id="_Dn2GAgU-Eeqj4KViiXoFEQ" entityName="JMSEventGroup1 6 (prov)" eventGroup__SinkRole="_DnW90gU-Eeqj4KViiXoFEQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Dn2tEgU-Eeqj4KViiXoFEQ" entityName="DisplayControllerTemperatureJmsClient 7 (prov)" providedInterface__OperationProvidedRole="_Dn2GCAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dn2GAAU-Eeqj4KViiXoFEQ" entityName="Session 19 (req)" requiredInterface__OperationRequiredRole="_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dn2GAQU-Eeqj4KViiXoFEQ" entityName="Connection 20 (req)" requiredInterface__OperationRequiredRole="_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dn2GAwU-Eeqj4KViiXoFEQ" entityName="Message 21 (req)" requiredInterface__OperationRequiredRole="_DmbJswU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dn2GBAU-Eeqj4KViiXoFEQ" entityName="TextMessage 22 (req)" requiredInterface__OperationRequiredRole="_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dn2GBQU-Eeqj4KViiXoFEQ" entityName="JMSException 23 (req)" requiredInterface__OperationRequiredRole="_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dn2GBgU-Eeqj4KViiXoFEQ" entityName="ConnectionFactory 24 (req)" requiredInterface__OperationRequiredRole="_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Dn2GBwU-Eeqj4KViiXoFEQ" entityName="Destination 25 (req)" requiredInterface__OperationRequiredRole="_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Dn2tEwU-Eeqj4KViiXoFEQ" describedService__SEFF="_Dn2GCQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DtzkEQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtzkEwU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DtzkEwU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.receiveTemperature() at 602" predecessor_AbstractAction="_DtzkEQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Dt0LIAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" id="_Dt0LIAU-Eeqj4KViiXoFEQ" entityName="receive @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.receiveTemperature() at 728" predecessor_AbstractAction="_DtzkEwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuEp0AU-Eeqj4KViiXoFEQ" eventType="_DnW90wU-Eeqj4KViiXoFEQ" sinkRole="_Dn2GAgU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_DuEp0AU-Eeqj4KViiXoFEQ" entityName=" @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.receiveTemperature() from 729 to 974" predecessor_AbstractAction="_Dt0LIAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DtzkEgU-Eeqj4KViiXoFEQ">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DuEp0QU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_DuEp0gU-Eeqj4KViiXoFEQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_DuEp0wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuEp1AU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_DuEp1AU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.receiveTemperature().Block at 850" predecessor_AbstractAction="_DuEp0wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuEp1QU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuEp1QU-Eeqj4KViiXoFEQ" entityName="getText @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.receiveTemperature().Block at 898" predecessor_AbstractAction="_DuEp1AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuEp1gU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dm-jUAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dn2GBAU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_DuEp1gU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.receiveTemperature().Block at 957" predecessor_AbstractAction="_DuEp1QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuEp1wU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_DuEp1wU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuEp1gU-Eeqj4KViiXoFEQ"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DuEp2AU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_DuEp2QU-Eeqj4KViiXoFEQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_DuFQ4AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuFQ4QU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_DuFQ4QU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.receiveTemperature().Block at 1042" predecessor_AbstractAction="_DuFQ4AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuFQ4gU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_DuFQ4gU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuFQ4QU-Eeqj4KViiXoFEQ"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DtzkEgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuEp0AU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Dn2tFAU-Eeqj4KViiXoFEQ" describedService__SEFF="_Dn2tEAU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuFQ4wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuF38AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuF38AU-Eeqj4KViiXoFEQ" entityName="IA  @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.prepareDisplayTemperatureCommunication() at 1470" predecessor_AbstractAction="_DuFQ4wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuF38QU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuF38QU-Eeqj4KViiXoFEQ" entityName="createConnection @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.prepareDisplayTemperatureCommunication() at 1570" predecessor_AbstractAction="_DuF38AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuF38gU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DmOVYAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dn2GBgU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuF38gU-Eeqj4KViiXoFEQ" entityName="start @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.prepareDisplayTemperatureCommunication() at 1602" predecessor_AbstractAction="_DuF38QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuF38wU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dl92sAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dn2GAQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuF38wU-Eeqj4KViiXoFEQ" entityName="createSession @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.prepareDisplayTemperatureCommunication() at 1728" predecessor_AbstractAction="_DuF38gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuF39AU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dlsw8wU-Eeqj4KViiXoFEQ" role_ExternalService="_Dn2GAQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuF39AU-Eeqj4KViiXoFEQ" entityName="createQueue @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.prepareDisplayTemperatureCommunication() at 1863" predecessor_AbstractAction="_DuF38wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuGfAAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlPd8AU-Eeqj4KViiXoFEQ" role_ExternalService="_Dn2GAAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuGfAAU-Eeqj4KViiXoFEQ" entityName="createConsumer @position: display_controller.DisplayControllerTemperatureJmsClient.java.DisplayControllerTemperatureJmsClient.prepareDisplayTemperatureCommunication() at 2004" predecessor_AbstractAction="_DuF39AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuFQ5AU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlDQsAU-Eeqj4KViiXoFEQ" role_ExternalService="_Dn2GAAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuFQ5AU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuGfAAU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Dn2tFQU-Eeqj4KViiXoFEQ" describedService__SEFF="_Dn2tEQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuGfAQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuGfAgU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuGfAgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuGfAQU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_DoRj0AU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 6 temp_controller.TempControllerJob.java.TempControllerJob>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DoaGsAU-Eeqj4KViiXoFEQ" entityName="Runnable 8 (prov)" providedInterface__OperationProvidedRole="_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DoZfogU-Eeqj4KViiXoFEQ" entityName="ITemperature 26 (req)" requiredInterface__OperationRequiredRole="_DoZfoAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DrAuwAU-Eeqj4KViiXoFEQ" entityName="TempControllerJmsClient 47 (req)" requiredInterface__OperationRequiredRole="_DpDm8AU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DoaGsQU-Eeqj4KViiXoFEQ" describedService__SEFF="_DixYwQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuGfAwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuGfBQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuGfBQU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJob.java.TempControllerJob.run() at 553" predecessor_AbstractAction="_DuGfAwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGEAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_DuHGEAU-Eeqj4KViiXoFEQ" entityName="SoMoX default loop count value" predecessor_AbstractAction="_DuGfBQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGJAU-Eeqj4KViiXoFEQ">
+        <bodyBehaviour_Loop id="_DuHGEQU-Eeqj4KViiXoFEQ">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_DuHGEgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGEwU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:BranchAction" id="_DuHGEwU-Eeqj4KViiXoFEQ" entityName=" @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block from 566 to 868" predecessor_AbstractAction="_DuHGEgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGIgU-Eeqj4KViiXoFEQ">
+            <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DuHGFAU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+              <branchBehaviour_BranchTransition id="_DuHGFQU-Eeqj4KViiXoFEQ">
+                <steps_Behaviour xsi:type="seff:StartAction" id="_DuHGFgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGFwU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:InternalAction" id="_DuHGFwU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block.Block from 600 to 642" predecessor_AbstractAction="_DuHGFgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGGAU-Eeqj4KViiXoFEQ">
+                  <resourceDemand_Action>
+                    <specification_ParametericResourceDemand specification="0"/>
+                    <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+                  </resourceDemand_Action>
+                </steps_Behaviour>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuHGGAU-Eeqj4KViiXoFEQ" entityName="sendTemperature @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block.Block at 785" predecessor_AbstractAction="_DuHGFwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGGQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DpDm8QU-Eeqj4KViiXoFEQ" role_ExternalService="_DrAuwAU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:InternalAction" id="_DuHGGQU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block.Block at 809" predecessor_AbstractAction="_DuHGGAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGGgU-Eeqj4KViiXoFEQ">
+                  <resourceDemand_Action>
+                    <specification_ParametericResourceDemand specification="0"/>
+                    <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+                  </resourceDemand_Action>
+                </steps_Behaviour>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuHGGgU-Eeqj4KViiXoFEQ" entityName="getTemperature @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block.Block at 861" predecessor_AbstractAction="_DuHGGQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGGwU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DoZfoQU-Eeqj4KViiXoFEQ" role_ExternalService="_DoZfogU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:StopAction" id="_DuHGGwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuHGGgU-Eeqj4KViiXoFEQ"/>
+              </branchBehaviour_BranchTransition>
+            </branches_Branch>
+            <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DuHGHAU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+              <branchBehaviour_BranchTransition id="_DuHGHQU-Eeqj4KViiXoFEQ">
+                <steps_Behaviour xsi:type="seff:StartAction" id="_DuHGHgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGHwU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuHGHwU-Eeqj4KViiXoFEQ" entityName="getTemperature @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block.Block at 932" predecessor_AbstractAction="_DuHGHgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGIAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DoZfoQU-Eeqj4KViiXoFEQ" role_ExternalService="_DoZfogU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:InternalAction" id="_DuHGIAU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block.Block at 948" predecessor_AbstractAction="_DuHGHwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGIQU-Eeqj4KViiXoFEQ">
+                  <resourceDemand_Action>
+                    <specification_ParametericResourceDemand specification="0"/>
+                    <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+                  </resourceDemand_Action>
+                </steps_Behaviour>
+                <steps_Behaviour xsi:type="seff:StopAction" id="_DuHGIQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuHGIAU-Eeqj4KViiXoFEQ"/>
+              </branchBehaviour_BranchTransition>
+            </branches_Branch>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_DuHGIgU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJob.java.TempControllerJob.run().Block from 955 to 987" predecessor_AbstractAction="_DuHGEwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHGIwU-Eeqj4KViiXoFEQ">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="0"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_DuHGIwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuHGIgU-Eeqj4KViiXoFEQ"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuHGJAU-Eeqj4KViiXoFEQ" entityName="endCommunication @position: temp_controller.TempControllerJob.java.TempControllerJob.run() at 1177" predecessor_AbstractAction="_DuHGEAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHtIAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DpDm8wU-Eeqj4KViiXoFEQ" role_ExternalService="_DrAuwAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuHtIAU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJob.java.TempControllerJob.run() at 1219" predecessor_AbstractAction="_DuHGJAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuGfBAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuGfBAU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuHtIAU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_DosakAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 7 shutter_controller.ShutterControllerJob.java.ShutterControllerJob>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Do2yoQU-Eeqj4KViiXoFEQ" entityName="Runnable 9 (prov)" providedInterface__OperationProvidedRole="_DixYwAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DrAuwgU-Eeqj4KViiXoFEQ" entityName="ShutterControllerJmsClient 49 (req)" requiredInterface__OperationRequiredRole="_DpE1EQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DrAuwwU-Eeqj4KViiXoFEQ" entityName="Shutter 50 (req)" requiredInterface__OperationRequiredRole="_DpFcIAU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Do2yogU-Eeqj4KViiXoFEQ" describedService__SEFF="_DixYwQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuHtIQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHtIwU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuHtIwU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run() at 355" predecessor_AbstractAction="_DuHtIQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHtJAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:LoopAction" id="_DuHtJAU-Eeqj4KViiXoFEQ" entityName="SoMoX default loop count value" predecessor_AbstractAction="_DuHtIwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUQQU-Eeqj4KViiXoFEQ">
+        <bodyBehaviour_Loop id="_DuHtJQU-Eeqj4KViiXoFEQ">
+          <steps_Behaviour xsi:type="seff:StartAction" id="_DuHtJgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHtJwU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuHtJwU-Eeqj4KViiXoFEQ" entityName="receiveIsDaylight @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run().Block at 624" predecessor_AbstractAction="_DuHtJgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHtKAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DpE1EgU-Eeqj4KViiXoFEQ" role_ExternalService="_DrAuwgU-Eeqj4KViiXoFEQ"/>
+          <steps_Behaviour xsi:type="seff:BranchAction" id="_DuHtKAU-Eeqj4KViiXoFEQ" entityName=" @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run().Block from 625 to 724" predecessor_AbstractAction="_DuHtJwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUPwU-Eeqj4KViiXoFEQ">
+            <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DuIUMAU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+              <branchBehaviour_BranchTransition id="_DuIUMQU-Eeqj4KViiXoFEQ">
+                <steps_Behaviour xsi:type="seff:StartAction" id="_DuIUMgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUMwU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuIUMwU-Eeqj4KViiXoFEQ" entityName="moveShutterUp @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run().Block.Block at 717" predecessor_AbstractAction="_DuIUMgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUNAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DpFcIQU-Eeqj4KViiXoFEQ" role_ExternalService="_DrAuwwU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:StopAction" id="_DuIUNAU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuIUMwU-Eeqj4KViiXoFEQ"/>
+              </branchBehaviour_BranchTransition>
+            </branches_Branch>
+            <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DuIUNQU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+              <branchBehaviour_BranchTransition id="_DuIUNgU-Eeqj4KViiXoFEQ">
+                <steps_Behaviour xsi:type="seff:StartAction" id="_DuIUNwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUOAU-Eeqj4KViiXoFEQ"/>
+                <steps_Behaviour xsi:type="seff:BranchAction" id="_DuIUOAU-Eeqj4KViiXoFEQ" entityName=" @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run().Block from 729 to 778" predecessor_AbstractAction="_DuIUNwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUPgU-Eeqj4KViiXoFEQ">
+                  <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_DuIUOQU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="1.0">
+                    <branchBehaviour_BranchTransition id="_DuIUOgU-Eeqj4KViiXoFEQ">
+                      <steps_Behaviour xsi:type="seff:StartAction" id="_DuIUOwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUPAU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuIUPAU-Eeqj4KViiXoFEQ" entityName="moveShutterDown @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run().Block.Block at 814" predecessor_AbstractAction="_DuIUOwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUPQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DpFcIgU-Eeqj4KViiXoFEQ" role_ExternalService="_DrAuwwU-Eeqj4KViiXoFEQ"/>
+                      <steps_Behaviour xsi:type="seff:StopAction" id="_DuIUPQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuIUPAU-Eeqj4KViiXoFEQ"/>
+                    </branchBehaviour_BranchTransition>
+                  </branches_Branch>
+                </steps_Behaviour>
+                <steps_Behaviour xsi:type="seff:StopAction" id="_DuIUPgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuIUOAU-Eeqj4KViiXoFEQ"/>
+              </branchBehaviour_BranchTransition>
+            </branches_Branch>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:InternalAction" id="_DuIUPwU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run().Block at 853" predecessor_AbstractAction="_DuHtKAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUQAU-Eeqj4KViiXoFEQ">
+            <resourceDemand_Action>
+              <specification_ParametericResourceDemand specification="0"/>
+              <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+            </resourceDemand_Action>
+          </steps_Behaviour>
+          <steps_Behaviour xsi:type="seff:StopAction" id="_DuIUQAU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuIUPwU-Eeqj4KViiXoFEQ"/>
+        </bodyBehaviour_Loop>
+        <iterationCount_LoopAction specification="1"/>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuIUQQU-Eeqj4KViiXoFEQ" entityName="endCommunication @position: shutter_controller.ShutterControllerJob.java.ShutterControllerJob.run() at 1227" predecessor_AbstractAction="_DuHtJAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuHtIgU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DpE1FAU-Eeqj4KViiXoFEQ" role_ExternalService="_DrAuwgU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuHtIgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuIUQQU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_Do3ZsAU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 8 App.java.App>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Do4AwwU-Eeqj4KViiXoFEQ" entityName="App 10 (prov)" providedInterface__OperationProvidedRole="_Do4AwAU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Do4n0AU-Eeqj4KViiXoFEQ" describedService__SEFF="_Do4AwQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuIUQgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuI7QAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuI7QAU-Eeqj4KViiXoFEQ" entityName="IA  @position: App.java.App.main() at 412" predecessor_AbstractAction="_DuIUQgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuIUQwU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuIUQwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuI7QAU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_DpCY0AU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 9 temp_controller.TempControllerJmsClient.java.TempControllerJmsClient>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DpDm9AU-Eeqj4KViiXoFEQ" entityName="TempControllerJmsClient 11 (prov)" providedInterface__OperationProvidedRole="_DpDm8AU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpC_4AU-Eeqj4KViiXoFEQ" entityName="Session 29 (req)" requiredInterface__OperationRequiredRole="_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpC_4QU-Eeqj4KViiXoFEQ" entityName="Connection 30 (req)" requiredInterface__OperationRequiredRole="_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:SourceRole" id="_DpC_4gU-Eeqj4KViiXoFEQ" entityName="JMSEventGroup0 31 (req)" eventGroup__SourceRole="_DmL5IAU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpC_4wU-Eeqj4KViiXoFEQ" entityName="TextMessage 32 (req)" requiredInterface__OperationRequiredRole="_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpC_5AU-Eeqj4KViiXoFEQ" entityName="JMSException 33 (req)" requiredInterface__OperationRequiredRole="_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpC_5QU-Eeqj4KViiXoFEQ" entityName="ConnectionFactory 34 (req)" requiredInterface__OperationRequiredRole="_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpC_5gU-Eeqj4KViiXoFEQ" entityName="Destination 35 (req)" requiredInterface__OperationRequiredRole="_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpDm9QU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpDm8QU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuI7QQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuI7QwU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuI7QwU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.sendTemperature() at 665" predecessor_AbstractAction="_DuI7QQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuJiUAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuJiUAU-Eeqj4KViiXoFEQ" entityName="createTextMessage @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.sendTemperature() at 751" predecessor_AbstractAction="_DuI7QwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuJiUQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DkrdQAU-Eeqj4KViiXoFEQ" role_ExternalService="_DpC_4AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuJiUQU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.sendTemperature() at 872" predecessor_AbstractAction="_DuJiUAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuJiUgU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:EmitEventAction" id="_DuJiUgU-Eeqj4KViiXoFEQ" entityName="send @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.sendTemperature() at 906" predecessor_AbstractAction="_DuJiUQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuI7QgU-Eeqj4KViiXoFEQ" eventType__EmitEventAction="_DmNHQAU-Eeqj4KViiXoFEQ" sourceRole__EmitEventAction="_DpC_4gU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuI7QgU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuJiUgU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpDm9gU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpDm8gU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuQ3EAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReIAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuReIAU-Eeqj4KViiXoFEQ" entityName="IA  @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.prepareCommunication() at 1339" predecessor_AbstractAction="_DuQ3EAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReIQU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuReIQU-Eeqj4KViiXoFEQ" entityName="createConnection @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.prepareCommunication() at 1441" predecessor_AbstractAction="_DuReIAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReIgU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DmOVYAU-Eeqj4KViiXoFEQ" role_ExternalService="_DpC_5QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuReIgU-Eeqj4KViiXoFEQ" entityName="start @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.prepareCommunication() at 1474" predecessor_AbstractAction="_DuReIQU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReIwU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dl92sAU-Eeqj4KViiXoFEQ" role_ExternalService="_DpC_4QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuReIwU-Eeqj4KViiXoFEQ" entityName="createSession @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.prepareCommunication() at 1591" predecessor_AbstractAction="_DuReIgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReJAU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dlsw8wU-Eeqj4KViiXoFEQ" role_ExternalService="_DpC_4QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuReJAU-Eeqj4KViiXoFEQ" entityName="createQueue @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.prepareCommunication() at 1728" predecessor_AbstractAction="_DuReIwU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReJQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlPd8AU-Eeqj4KViiXoFEQ" role_ExternalService="_DpC_4AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DuReJQU-Eeqj4KViiXoFEQ" entityName="createProducer @position: temp_controller.TempControllerJmsClient.java.TempControllerJmsClient.prepareCommunication() at 1871" predecessor_AbstractAction="_DuReJAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuQ3EQU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DkzZEQU-Eeqj4KViiXoFEQ" role_ExternalService="_DpC_4AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuQ3EQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuReJQU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpDm9wU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpDm8wU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuReJgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReJwU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuReJwU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DuReJgU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_DpDm-AU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 10 shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:SinkRole" id="_DpEOAgU-Eeqj4KViiXoFEQ" entityName="JMSEventGroup1 12 (prov)" eventGroup__SinkRole="_DnW90gU-Eeqj4KViiXoFEQ"/>
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DpE1FQU-Eeqj4KViiXoFEQ" entityName="ShutterControllerJmsClient 13 (prov)" providedInterface__OperationProvidedRole="_DpE1EQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpEOAAU-Eeqj4KViiXoFEQ" entityName="Session 36 (req)" requiredInterface__OperationRequiredRole="_Djw3QQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpEOAQU-Eeqj4KViiXoFEQ" entityName="Connection 37 (req)" requiredInterface__OperationRequiredRole="_Dlsw8gU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpEOAwU-Eeqj4KViiXoFEQ" entityName="Message 38 (req)" requiredInterface__OperationRequiredRole="_DmbJswU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpEOBAU-Eeqj4KViiXoFEQ" entityName="TextMessage 39 (req)" requiredInterface__OperationRequiredRole="_DmbJsgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpEOBQU-Eeqj4KViiXoFEQ" entityName="JMSException 40 (req)" requiredInterface__OperationRequiredRole="_Dm-jUgU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpEOBgU-Eeqj4KViiXoFEQ" entityName="ConnectionFactory 41 (req)" requiredInterface__OperationRequiredRole="_DmNuUQU-Eeqj4KViiXoFEQ"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_DpE1EAU-Eeqj4KViiXoFEQ" entityName="Destination 42 (req)" requiredInterface__OperationRequiredRole="_DnFRAQU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpE1FgU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpE1EgU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DuReKAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReKgU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DuReKgU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.receiveIsDaylight() at 591" predecessor_AbstractAction="_DuReKAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuSFMAU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="org.palladiosimulator.simulizar.indirection.actions:ConsumeEventAction" id="_DuSFMAU-Eeqj4KViiXoFEQ" entityName="receive @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.receiveIsDaylight() at 716" predecessor_AbstractAction="_DuReKgU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duh80AU-Eeqj4KViiXoFEQ" eventType="_DnW90wU-Eeqj4KViiXoFEQ" sinkRole="_DpEOAgU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:BranchAction" id="_Duh80AU-Eeqj4KViiXoFEQ" entityName=" @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.receiveIsDaylight() from 717 to 980" predecessor_AbstractAction="_DuSFMAU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DuReKQU-Eeqj4KViiXoFEQ">
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_Duh80QU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_Duh80gU-Eeqj4KViiXoFEQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_Duh80wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duh81AU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Duh81AU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.receiveIsDaylight().Block at 838" predecessor_AbstractAction="_Duh80wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duh81QU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Duh81QU-Eeqj4KViiXoFEQ" entityName="getText @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.receiveIsDaylight().Block at 886" predecessor_AbstractAction="_Duh81AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duh81gU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dm-jUAU-Eeqj4KViiXoFEQ" role_ExternalService="_DpEOBAU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Duh81gU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.receiveIsDaylight().Block at 963" predecessor_AbstractAction="_Duh81QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duh81wU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_Duh81wU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Duh81gU-Eeqj4KViiXoFEQ"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+        <branches_Branch xsi:type="seff:ProbabilisticBranchTransition" id="_Duh82AU-Eeqj4KViiXoFEQ" entityName="SoMoX default branch probability" branchProbability="0.5">
+          <branchBehaviour_BranchTransition id="_Duh82QU-Eeqj4KViiXoFEQ">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_Duh82gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duh82wU-Eeqj4KViiXoFEQ"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_Duh82wU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.receiveIsDaylight().Block at 1066" predecessor_AbstractAction="_Duh82gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duh83AU-Eeqj4KViiXoFEQ">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_Duh83AU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Duh82wU-Eeqj4KViiXoFEQ"/>
+          </branchBehaviour_BranchTransition>
+        </branches_Branch>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DuReKQU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_Duh80AU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpE1FwU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpE1EwU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Duij4AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duij4gU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_Duij4gU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.prepareCommunication() at 1436" predecessor_AbstractAction="_Duij4AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duij4wU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_Duij4wU-Eeqj4KViiXoFEQ" entityName="createConnection @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.prepareCommunication() at 1534" predecessor_AbstractAction="_Duij4gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK8AU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DmOVYAU-Eeqj4KViiXoFEQ" role_ExternalService="_DpEOBgU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DujK8AU-Eeqj4KViiXoFEQ" entityName="start @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.prepareCommunication() at 1565" predecessor_AbstractAction="_Duij4wU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK8QU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dl92sAU-Eeqj4KViiXoFEQ" role_ExternalService="_DpEOAQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DujK8QU-Eeqj4KViiXoFEQ" entityName="createSession @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.prepareCommunication() at 1678" predecessor_AbstractAction="_DujK8AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK8gU-Eeqj4KViiXoFEQ" calledService_ExternalService="_Dlsw8wU-Eeqj4KViiXoFEQ" role_ExternalService="_DpEOAQU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DujK8gU-Eeqj4KViiXoFEQ" entityName="createQueue @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.prepareCommunication() at 1808" predecessor_AbstractAction="_DujK8QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK8wU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlPd8AU-Eeqj4KViiXoFEQ" role_ExternalService="_DpEOAAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_DujK8wU-Eeqj4KViiXoFEQ" entityName="createConsumer @position: shutter_controller.ShutterControllerJmsClient.java.ShutterControllerJmsClient.prepareCommunication() at 1947" predecessor_AbstractAction="_DujK8gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_Duij4QU-Eeqj4KViiXoFEQ" calledService_ExternalService="_DlDQsAU-Eeqj4KViiXoFEQ" role_ExternalService="_DpEOAAU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Duij4QU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DujK8wU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpE1GAU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpE1FAU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DujK9AU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK9QU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DujK9QU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DujK9AU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_DpE1GQU-Eeqj4KViiXoFEQ" entityName=" &lt;PC No. 11 shutter_controller.Shutter.java.Shutter>">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_DpFcIwU-Eeqj4KViiXoFEQ" entityName="Shutter 14 (prov)" providedInterface__OperationProvidedRole="_DpFcIAU-Eeqj4KViiXoFEQ"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpFcJAU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpFcIQU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DujK9gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK-AU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DujK-AU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.Shutter.java.Shutter.moveShutterUp() at 122" predecessor_AbstractAction="_DujK9gU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK9wU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DujK9wU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DujK-AU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_DpFcJQU-Eeqj4KViiXoFEQ" describedService__SEFF="_DpFcIgU-Eeqj4KViiXoFEQ">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_DujK-QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK-wU-Eeqj4KViiXoFEQ"/>
+      <steps_Behaviour xsi:type="seff:InternalAction" id="_DujK-wU-Eeqj4KViiXoFEQ" entityName="IA  @position: shutter_controller.Shutter.java.Shutter.moveShutterDown() at 328" predecessor_AbstractAction="_DujK-QU-Eeqj4KViiXoFEQ" successor_AbstractAction="_DujK-gU-Eeqj4KViiXoFEQ">
+        <resourceDemand_Action>
+          <specification_ParametericResourceDemand specification="0"/>
+          <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+        </resourceDemand_Action>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_DujK-gU-Eeqj4KViiXoFEQ" predecessor_AbstractAction="_DujK-wU-Eeqj4KViiXoFEQ"/>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DijWUAU-Eeqj4KViiXoFEQ" entityName="IBrightness.java.IBrightness">
+    <signatures__OperationInterface id="_DinAsAU-Eeqj4KViiXoFEQ" entityName="getBrightness">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DixYwAU-Eeqj4KViiXoFEQ" entityName="Runnable.java.Runnable">
+    <signatures__OperationInterface id="_DixYwQU-Eeqj4KViiXoFEQ" entityName="run"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DjyFYAU-Eeqj4KViiXoFEQ" entityName="AutoCloseable.java.AutoCloseable">
+    <signatures__OperationInterface id="_DjyFYQU-Eeqj4KViiXoFEQ" entityName="close"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Djw3QQU-Eeqj4KViiXoFEQ" entityName="Session.java.Session" parentInterfaces__Interface="_DixYwAU-Eeqj4KViiXoFEQ _DjyFYAU-Eeqj4KViiXoFEQ">
+    <signatures__OperationInterface id="_DjyFYgU-Eeqj4KViiXoFEQ" entityName="createBytesMessage" returnType__OperationSignature="_Dj0hoAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_Dj8dcAU-Eeqj4KViiXoFEQ" entityName="createMapMessage" returnType__OperationSignature="_Dj9rkAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DkGOcAU-Eeqj4KViiXoFEQ" entityName="createMessage" returnType__OperationSignature="_DkGOcQU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DkLuAAU-Eeqj4KViiXoFEQ" entityName="createObjectMessage" returnType__OperationSignature="_DkMVEAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DkUQ4AU-Eeqj4KViiXoFEQ" entityName="createObjectMessage_1" returnType__OperationSignature="_DkMVEAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DkWtIAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DkczwAU-Eeqj4KViiXoFEQ" entityName="createStreamMessage" returnType__OperationSignature="_DkeB4AU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DklWoAU-Eeqj4KViiXoFEQ" entityName="createTextMessage" returnType__OperationSignature="_DklWoQU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DkrdQAU-Eeqj4KViiXoFEQ" entityName="createTextMessage_1" returnType__OperationSignature="_DklWoQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DksEUAU-Eeqj4KViiXoFEQ" entityName="getTransacted">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DksEUQU-Eeqj4KViiXoFEQ" entityName="getAcknowledgeMode">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DksEUgU-Eeqj4KViiXoFEQ" entityName="commit"/>
+    <signatures__OperationInterface id="_DksEUwU-Eeqj4KViiXoFEQ" entityName="rollback"/>
+    <signatures__OperationInterface id="_DksrYAU-Eeqj4KViiXoFEQ" entityName="close"/>
+    <signatures__OperationInterface id="_DksrYQU-Eeqj4KViiXoFEQ" entityName="recover"/>
+    <signatures__OperationInterface id="_DksrYgU-Eeqj4KViiXoFEQ" entityName="getMessageListener" returnType__OperationSignature="_DktScAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DkyyAAU-Eeqj4KViiXoFEQ" entityName="setMessageListener">
+      <parameters__OperationSignature dataType__Parameter="_DktScAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DkzZEAU-Eeqj4KViiXoFEQ" entityName="run"/>
+    <signatures__OperationInterface id="_DkzZEQU-Eeqj4KViiXoFEQ" entityName="createProducer" returnType__OperationSignature="_Dk778AU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DkzZEgU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlDQsAU-Eeqj4KViiXoFEQ" entityName="createConsumer" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DkzZEgU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlIwQAU-Eeqj4KViiXoFEQ" entityName="createConsumer_1" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DkzZEgU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlJXUAU-Eeqj4KViiXoFEQ" entityName="createConsumer_2" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DkzZEgU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlJXUQU-Eeqj4KViiXoFEQ" entityName="createSharedConsumer" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlO24AU-Eeqj4KViiXoFEQ" entityName="createSharedConsumer_1" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlPd8AU-Eeqj4KViiXoFEQ" entityName="createQueue" returnType__OperationSignature="_DlQFAAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlU9gAU-Eeqj4KViiXoFEQ" entityName="createTopic" returnType__OperationSignature="_DlJ-YAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlVkkAU-Eeqj4KViiXoFEQ" entityName="createDurableSubscriber" returnType__OperationSignature="_DlWLoAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DladEAU-Eeqj4KViiXoFEQ" entityName="createDurableSubscriber_1" returnType__OperationSignature="_DlWLoAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg3">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlbEIAU-Eeqj4KViiXoFEQ" entityName="createDurableConsumer" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlbEIQU-Eeqj4KViiXoFEQ" entityName="createDurableConsumer_1" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg3">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlbrMAU-Eeqj4KViiXoFEQ" entityName="createSharedDurableConsumer" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlbrMQU-Eeqj4KViiXoFEQ" entityName="createSharedDurableConsumer_1" returnType__OperationSignature="_DlDQsQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlcSQAU-Eeqj4KViiXoFEQ" entityName="createBrowser" returnType__OperationSignature="_Dlc5UAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlQFAAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dlhx0AU-Eeqj4KViiXoFEQ" entityName="createBrowser_1" returnType__OperationSignature="_Dlc5UAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlQFAAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dlhx0QU-Eeqj4KViiXoFEQ" entityName="createTemporaryQueue" returnType__OperationSignature="_DliY4AU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DlnRYAU-Eeqj4KViiXoFEQ" entityName="createTemporaryTopic" returnType__OperationSignature="_Dln4cAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_Dlsw8AU-Eeqj4KViiXoFEQ" entityName="unsubscribe">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Dlsw8gU-Eeqj4KViiXoFEQ" entityName="Connection.java.Connection" parentInterfaces__Interface="_DjyFYAU-Eeqj4KViiXoFEQ">
+    <signatures__OperationInterface id="_Dlsw8wU-Eeqj4KViiXoFEQ" entityName="createSession" returnType__OperationSignature="_DltYAAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlyQgAU-Eeqj4KViiXoFEQ" entityName="createSession_1" returnType__OperationSignature="_DltYAAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DlyQgQU-Eeqj4KViiXoFEQ" entityName="createSession_2" returnType__OperationSignature="_DltYAAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DlyQggU-Eeqj4KViiXoFEQ" entityName="getClientID">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dly3kAU-Eeqj4KViiXoFEQ" entityName="setClientID">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dly3kQU-Eeqj4KViiXoFEQ" entityName="getMetaData" returnType__OperationSignature="_DlzeoAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_Dl4XIAU-Eeqj4KViiXoFEQ" entityName="getExceptionListener" returnType__OperationSignature="_Dl4-MAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_Dl9PoAU-Eeqj4KViiXoFEQ" entityName="setExceptionListener">
+      <parameters__OperationSignature dataType__Parameter="_Dl4-MAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dl92sAU-Eeqj4KViiXoFEQ" entityName="start"/>
+    <signatures__OperationInterface id="_Dl92sQU-Eeqj4KViiXoFEQ" entityName="stop"/>
+    <signatures__OperationInterface id="_Dl92sgU-Eeqj4KViiXoFEQ" entityName="close"/>
+    <signatures__OperationInterface id="_Dl92swU-Eeqj4KViiXoFEQ" entityName="createConnectionConsumer" returnType__OperationSignature="_DmEkYAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DkzZEgU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_Dl_E0AU-Eeqj4KViiXoFEQ" parameterName="arg2"/>
+      <parameters__OperationSignature parameterName="arg3">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmJc4AU-Eeqj4KViiXoFEQ" entityName="createSharedConnectionConsumer" returnType__OperationSignature="_DmEkYAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_Dl_E0AU-Eeqj4KViiXoFEQ" parameterName="arg3"/>
+      <parameters__OperationSignature parameterName="arg4">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmKD8AU-Eeqj4KViiXoFEQ" entityName="createDurableConnectionConsumer" returnType__OperationSignature="_DmEkYAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_Dl_E0AU-Eeqj4KViiXoFEQ" parameterName="arg3"/>
+      <parameters__OperationSignature parameterName="arg4">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmKD8QU-Eeqj4KViiXoFEQ" entityName="createSharedDurableConnectionConsumer" returnType__OperationSignature="_DmEkYAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_DlJ-YAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_Dl_E0AU-Eeqj4KViiXoFEQ" parameterName="arg3"/>
+      <parameters__OperationSignature parameterName="arg4">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:EventGroup" id="_DmL5IAU-Eeqj4KViiXoFEQ" entityName="JMSEventGroup0">
+    <eventTypes__EventGroup id="_DmNHQAU-Eeqj4KViiXoFEQ" entityName="myEventType"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DmNuUQU-Eeqj4KViiXoFEQ" entityName="ConnectionFactory.java.ConnectionFactory">
+    <signatures__OperationInterface id="_DmOVYAU-Eeqj4KViiXoFEQ" entityName="createConnection" returnType__OperationSignature="_DmOVYQU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DmSm0AU-Eeqj4KViiXoFEQ" entityName="createConnection_1" returnType__OperationSignature="_DmOVYQU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmTN4AU-Eeqj4KViiXoFEQ" entityName="createContext" returnType__OperationSignature="_DmUcAAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DmaioAU-Eeqj4KViiXoFEQ" entityName="createContext_1" returnType__OperationSignature="_DmUcAAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmaioQU-Eeqj4KViiXoFEQ" entityName="createContext_2" returnType__OperationSignature="_DmUcAAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg2">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmbJsAU-Eeqj4KViiXoFEQ" entityName="createContext_3" returnType__OperationSignature="_DmUcAAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DmbJswU-Eeqj4KViiXoFEQ" entityName="Message.java.Message">
+    <signatures__OperationInterface id="_DmbwwAU-Eeqj4KViiXoFEQ" entityName="getJMSMessageID">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmbwwQU-Eeqj4KViiXoFEQ" entityName="setJMSMessageID">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmbwwgU-Eeqj4KViiXoFEQ" entityName="getJMSTimestamp">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmcX0AU-Eeqj4KViiXoFEQ" entityName="setJMSTimestamp">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmcX0QU-Eeqj4KViiXoFEQ" entityName="getJMSCorrelationIDAsBytes" returnType__OperationSignature="_Dmdl8AU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_Dmdl8QU-Eeqj4KViiXoFEQ" entityName="setJMSCorrelationIDAsBytes">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmeNAAU-Eeqj4KViiXoFEQ" entityName="setJMSCorrelationID">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmeNAQU-Eeqj4KViiXoFEQ" entityName="getJMSCorrelationID">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmeNAgU-Eeqj4KViiXoFEQ" entityName="getJMSReplyTo" returnType__OperationSignature="_DkzZEgU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DmeNAwU-Eeqj4KViiXoFEQ" entityName="setJMSReplyTo">
+      <parameters__OperationSignature dataType__Parameter="_DkzZEgU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dme0EAU-Eeqj4KViiXoFEQ" entityName="getJMSDestination" returnType__OperationSignature="_DkzZEgU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_Dme0EQU-Eeqj4KViiXoFEQ" entityName="setJMSDestination">
+      <parameters__OperationSignature dataType__Parameter="_DkzZEgU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dme0EgU-Eeqj4KViiXoFEQ" entityName="getJMSDeliveryMode">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dme0EwU-Eeqj4KViiXoFEQ" entityName="setJMSDeliveryMode">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmfbIAU-Eeqj4KViiXoFEQ" entityName="getJMSRedelivered">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmfbIQU-Eeqj4KViiXoFEQ" entityName="setJMSRedelivered">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmfbIgU-Eeqj4KViiXoFEQ" entityName="getJMSType">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmfbIwU-Eeqj4KViiXoFEQ" entityName="setJMSType">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmfbJAU-Eeqj4KViiXoFEQ" entityName="getJMSExpiration">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmfbJQU-Eeqj4KViiXoFEQ" entityName="setJMSExpiration">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmgCMAU-Eeqj4KViiXoFEQ" entityName="getJMSDeliveryTime">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmgCMQU-Eeqj4KViiXoFEQ" entityName="setJMSDeliveryTime">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmgCMgU-Eeqj4KViiXoFEQ" entityName="getJMSPriority">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmgpQAU-Eeqj4KViiXoFEQ" entityName="setJMSPriority">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmgpQQU-Eeqj4KViiXoFEQ" entityName="clearProperties"/>
+    <signatures__OperationInterface id="_DmgpQgU-Eeqj4KViiXoFEQ" entityName="propertyExists">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmgpQwU-Eeqj4KViiXoFEQ" entityName="getBooleanProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmhQUAU-Eeqj4KViiXoFEQ" entityName="getByteProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmhQUQU-Eeqj4KViiXoFEQ" entityName="getShortProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dmh3YAU-Eeqj4KViiXoFEQ" entityName="getIntProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dmh3YQU-Eeqj4KViiXoFEQ" entityName="getLongProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dmh3YgU-Eeqj4KViiXoFEQ" entityName="getFloatProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dmh3YwU-Eeqj4KViiXoFEQ" entityName="getDoubleProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmiecAU-Eeqj4KViiXoFEQ" entityName="getStringProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmiecQU-Eeqj4KViiXoFEQ" entityName="getObjectProperty" returnType__OperationSignature="_DmiecgU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmnW8AU-Eeqj4KViiXoFEQ" entityName="getPropertyNames" returnType__OperationSignature="_Dmn-AAU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_Dms2gAU-Eeqj4KViiXoFEQ" entityName="setBooleanProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dms2gQU-Eeqj4KViiXoFEQ" entityName="setByteProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmtdkAU-Eeqj4KViiXoFEQ" entityName="setShortProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmtdkQU-Eeqj4KViiXoFEQ" entityName="setIntProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmtdkgU-Eeqj4KViiXoFEQ" entityName="setLongProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmuEoAU-Eeqj4KViiXoFEQ" entityName="setFloatProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmuEoQU-Eeqj4KViiXoFEQ" entityName="setDoubleProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmuEogU-Eeqj4KViiXoFEQ" entityName="setStringProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="arg1">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmursAU-Eeqj4KViiXoFEQ" entityName="setObjectProperty">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature dataType__Parameter="_DmiecgU-Eeqj4KViiXoFEQ" parameterName="arg1"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DmursQU-Eeqj4KViiXoFEQ" entityName="acknowledge"/>
+    <signatures__OperationInterface id="_DmursgU-Eeqj4KViiXoFEQ" entityName="clearBody"/>
+    <signatures__OperationInterface id="_DmurswU-Eeqj4KViiXoFEQ" entityName="getBody" returnType__OperationSignature="_Dm98QAU-Eeqj4KViiXoFEQ">
+      <parameters__OperationSignature dataType__Parameter="_Dm3OkAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dm98QQU-Eeqj4KViiXoFEQ" entityName="isBodyAssignableTo">
+      <parameters__OperationSignature dataType__Parameter="_Dm3OkAU-Eeqj4KViiXoFEQ" parameterName="arg0"/>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DmbJsgU-Eeqj4KViiXoFEQ" entityName="TextMessage.java.TextMessage" parentInterfaces__Interface="_DmbJswU-Eeqj4KViiXoFEQ">
+    <signatures__OperationInterface id="_Dm98QgU-Eeqj4KViiXoFEQ" entityName="setText">
+      <parameters__OperationSignature parameterName="arg0">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dm-jUAU-Eeqj4KViiXoFEQ" entityName="getText">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Dm-jUwU-Eeqj4KViiXoFEQ" entityName="Serializable.java.Serializable"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Dm-jUgU-Eeqj4KViiXoFEQ" entityName="JMSException.java.JMSException" parentInterfaces__Interface="_Dm-jUwU-Eeqj4KViiXoFEQ">
+    <signatures__OperationInterface id="_Dm_KYAU-Eeqj4KViiXoFEQ" entityName="getErrorCode">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dm_KYQU-Eeqj4KViiXoFEQ" entityName="getLinkedException" returnType__OperationSignature="_Dm_KYgU-Eeqj4KViiXoFEQ"/>
+    <signatures__OperationInterface id="_DnEp8AU-Eeqj4KViiXoFEQ" entityName="setLinkedException">
+      <parameters__OperationSignature dataType__Parameter="_Dm_KYgU-Eeqj4KViiXoFEQ" parameterName="ex"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DnFRAQU-Eeqj4KViiXoFEQ" entityName="Destination.java.Destination"/>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DnFRAwU-Eeqj4KViiXoFEQ" entityName="I...ntrollerJmsClient.java.BrightnessControllerJmsClient">
+    <signatures__OperationInterface id="_DnFRBAU-Eeqj4KViiXoFEQ" entityName="sendIsDaylight">
+      <parameters__OperationSignature parameterName="isdaylight">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DnF4EAU-Eeqj4KViiXoFEQ" entityName="prepareBrightnessCommunication"/>
+    <signatures__OperationInterface id="_DnF4EQU-Eeqj4KViiXoFEQ" entityName="endBrightnessCommunication"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:EventGroup" id="_DnW90gU-Eeqj4KViiXoFEQ" entityName="JMSEventGroup1">
+    <eventTypes__EventGroup id="_DnW90wU-Eeqj4KViiXoFEQ" entityName="myEventType"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DnYzAQU-Eeqj4KViiXoFEQ" entityName="I...ghtJmsClient.java.DisplayControllerDaylightJmsClient">
+    <signatures__OperationInterface id="_DnYzAgU-Eeqj4KViiXoFEQ" entityName="receiveIsDaylight">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DnYzAwU-Eeqj4KViiXoFEQ" entityName="prepareDisplayDaylightCommunication"/>
+    <signatures__OperationInterface id="_DnYzBAU-Eeqj4KViiXoFEQ" entityName="endDisplayDaylightCommunication"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DnlAQQU-Eeqj4KViiXoFEQ" entityName="IDisplay.java.Display">
+    <signatures__OperationInterface id="_DnlAQgU-Eeqj4KViiXoFEQ" entityName="printADigit">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DnlnUAU-Eeqj4KViiXoFEQ" entityName="turnOnLED">
+      <parameters__OperationSignature parameterName="b">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Dn2GCAU-Eeqj4KViiXoFEQ" entityName="I...JmsClient.java.DisplayControllerTemperatureJmsClient">
+    <signatures__OperationInterface id="_Dn2GCQU-Eeqj4KViiXoFEQ" entityName="receiveTemperature">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_Dn2tEAU-Eeqj4KViiXoFEQ" entityName="prepareDisplayTemperatureCommunication"/>
+    <signatures__OperationInterface id="_Dn2tEQU-Eeqj4KViiXoFEQ" entityName="endDisplayTemperatureCommunication"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DoZfoAU-Eeqj4KViiXoFEQ" entityName="ITemperature.java.ITemperature">
+    <signatures__OperationInterface id="_DoZfoQU-Eeqj4KViiXoFEQ" entityName="getTemperature">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_Do4AwAU-Eeqj4KViiXoFEQ" entityName="IApp.java.App">
+    <signatures__OperationInterface id="_Do4AwQU-Eeqj4KViiXoFEQ" entityName="main">
+      <parameters__OperationSignature dataType__Parameter="_Do4AwgU-Eeqj4KViiXoFEQ" parameterName="args"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DpDm8AU-Eeqj4KViiXoFEQ" entityName="ITempControllerJmsClient.java.TempControllerJmsClient">
+    <signatures__OperationInterface id="_DpDm8QU-Eeqj4KViiXoFEQ" entityName="sendTemperature">
+      <parameters__OperationSignature parameterName="temperature">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.3"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DpDm8gU-Eeqj4KViiXoFEQ" entityName="prepareCommunication"/>
+    <signatures__OperationInterface id="_DpDm8wU-Eeqj4KViiXoFEQ" entityName="endCommunication"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DpE1EQU-Eeqj4KViiXoFEQ" entityName="I...rControllerJmsClient.java.ShutterControllerJmsClient">
+    <signatures__OperationInterface id="_DpE1EgU-Eeqj4KViiXoFEQ" entityName="receiveIsDaylight">
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.2"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DpE1EwU-Eeqj4KViiXoFEQ" entityName="prepareCommunication"/>
+    <signatures__OperationInterface id="_DpE1FAU-Eeqj4KViiXoFEQ" entityName="endCommunication"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_DpFcIAU-Eeqj4KViiXoFEQ" entityName="IShutter.java.Shutter">
+    <signatures__OperationInterface id="_DpFcIQU-Eeqj4KViiXoFEQ" entityName="moveShutterUp">
+      <parameters__OperationSignature parameterName="ticks">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_DpFcIgU-Eeqj4KViiXoFEQ" entityName="moveShutterDown">
+      <parameters__OperationSignature parameterName="ticks">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dj0hoAU-Eeqj4KViiXoFEQ" entityName="BytesMessage"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dj9rkAU-Eeqj4KViiXoFEQ" entityName="MapMessage"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DkGOcQU-Eeqj4KViiXoFEQ" entityName="Message"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DkMVEAU-Eeqj4KViiXoFEQ" entityName="ObjectMessage"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DkWtIAU-Eeqj4KViiXoFEQ" entityName="Serializable"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DkeB4AU-Eeqj4KViiXoFEQ" entityName="StreamMessage"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DklWoQU-Eeqj4KViiXoFEQ" entityName="TextMessage"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DktScAU-Eeqj4KViiXoFEQ" entityName="MessageListener"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DkzZEgU-Eeqj4KViiXoFEQ" entityName="Destination"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dk778AU-Eeqj4KViiXoFEQ" entityName="MessageProducer"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DlDQsQU-Eeqj4KViiXoFEQ" entityName="MessageConsumer"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DlJ-YAU-Eeqj4KViiXoFEQ" entityName="Topic"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DlQFAAU-Eeqj4KViiXoFEQ" entityName="Queue"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DlWLoAU-Eeqj4KViiXoFEQ" entityName="TopicSubscriber"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dlc5UAU-Eeqj4KViiXoFEQ" entityName="QueueBrowser"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DliY4AU-Eeqj4KViiXoFEQ" entityName="TemporaryQueue"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dln4cAU-Eeqj4KViiXoFEQ" entityName="TemporaryTopic"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DltYAAU-Eeqj4KViiXoFEQ" entityName="Session"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DlzeoAU-Eeqj4KViiXoFEQ" entityName="ConnectionMetaData"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dl4-MAU-Eeqj4KViiXoFEQ" entityName="ExceptionListener"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dl_E0AU-Eeqj4KViiXoFEQ" entityName="ServerSessionPool"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DmEkYAU-Eeqj4KViiXoFEQ" entityName="ConnectionConsumer"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DmOVYQU-Eeqj4KViiXoFEQ" entityName="Connection"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DmUcAAU-Eeqj4KViiXoFEQ" entityName="JMSContext"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_Dmdl8AU-Eeqj4KViiXoFEQ" entityName="BYTEList">
+    <innerType_CollectionDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.5"/>
+  </dataTypes__Repository>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_DmiecgU-Eeqj4KViiXoFEQ" entityName="Object"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dmn-AAU-Eeqj4KViiXoFEQ" entityName="Enumeration"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dm3OkAU-Eeqj4KViiXoFEQ" entityName="Class"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dm98QAU-Eeqj4KViiXoFEQ" entityName="Object"/>
+  <dataTypes__Repository xsi:type="repository:CompositeDataType" id="_Dm_KYgU-Eeqj4KViiXoFEQ" entityName="Exception"/>
+  <dataTypes__Repository xsi:type="repository:CollectionDataType" id="_Do4AwgU-Eeqj4KViiXoFEQ" entityName="STRINGList">
+    <innerType_CollectionDataType xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.1"/>
+  </dataTypes__Repository>
+</repository:Repository>
