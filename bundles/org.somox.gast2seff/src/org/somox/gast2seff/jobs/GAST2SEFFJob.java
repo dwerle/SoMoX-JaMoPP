@@ -153,19 +153,6 @@ public class GAST2SEFFJob implements IBlackboardInteractingJob<SoMoXBlackboard> 
 
         subMonitor.done();
     }
-
-    private void workaroundInsteadOfSeperateSystemJob() {
-    	
-    	final AnalysisResult result = this.blackboard.getAnalysisResult();
-    	
-    	final ComponentBuilder pcmComponentBuilder = new ComponentBuilder(this.root, blackboard.getConfig(), result);
-
-        // Create PCM System
- //       final PCMSystemBuilder pcmSystemBuilder = new PCMSystemBuilder(this.root, blackboard.getConfig(), result,
- //               pcmComponentBuilder);
- //       pcmSystemBuilder.buildSystemModel();
-		
-	}
     
 
 	/*

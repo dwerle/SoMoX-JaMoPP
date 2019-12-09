@@ -89,44 +89,6 @@ public class SimpleModelAnalyzer implements ModelAnalyzer<SoMoXConfiguration> {
             SimpleModelAnalyzer.logger.error("Failed to load GAST Model", e);
             throw new ModelAnalyzerException("Failed to load GAST model", e);
         }
-        /* Sussans Spielwiese
-        final KDMReader JmsReader = new KDMReader();
-        final Root jmsRoot = JmsReader.getRoot();
-        
-        try {
-        	final File folder = new File("C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\ConfigurationTest\\jms1.1\\src\\share\\javax\\jms");
-        	File[] folders = {folder};
-        	List<File> allApiResources = Arrays.asList(folders);
-			JmsReader.loadProject(allApiResources);
-		} catch (IOException e) {
-			SimpleModelAnalyzer.logger.error("Failed to load JMS Interfaces", e);
-		}
-        
-        final List<ConcreteClassifier> classList = jmsRoot.getNormalClasses();
-    
-        ConcreteClassifier reprMessageListener = null;
-        ConcreteClassifier reprMessageProducer = null;
-        ConcreteClassifier reprMessageConsumer = null;
-
-        
-        for (final ConcreteClassifier clazz : classList) {
-        	if (clazz instanceof Interface)
-        	{
-        		if (clazz.getName().equals("MessageListener")) {
-        			reprMessageListener = clazz;
-        		} else if (clazz.getName().equals("MessageProducer")) {
-        			reprMessageProducer = clazz;
-        		} else if (clazz.getName().equals("MessageConsumer")) {
-        			reprMessageConsumer = clazz;
-        		}
-        	}
-        }
-        
-        somoxConfiguration.setReprMessageListener(reprMessageListener);
-        somoxConfiguration.setReprMessageProducer(reprMessageProducer);
-        somoxConfiguration.setReprMessageConsumer(reprMessageConsumer);
-        
-        Sussans Spielwiese End */
         
         final Root root = modelReader.getRoot();
         analysisResult = this.analyzeGASTModel(root, somoxConfiguration, progressMonitor);
@@ -154,7 +116,7 @@ public class SimpleModelAnalyzer implements ModelAnalyzer<SoMoXConfiguration> {
         analysisResult.setResultStatus(AnalysisResult.ResultStatus.FAILED);
 
         // Set up model builder
-        final ComponentBuilder pcmComponentBuilder = new ComponentBuilder(astModel, somoxConfiguration, analysisResult);
+        final ComponentBuilder pcmComponentBuilder = ComponentBuilder.getComponentBuilder(astModel, somoxConfiguration, analysisResult);
         final ISoMoXStrategiesFactory strategiesFactory = new BasicSoMoXStrategiesFactory(astModel, somoxConfiguration);
 
         // Initial Components
@@ -178,12 +140,7 @@ public class SimpleModelAnalyzer implements ModelAnalyzer<SoMoXConfiguration> {
 
         // Post Detection Phase
         this.postComponentDetection(somoxConfiguration, analysisResult, strategiesFactory, progressMonitor);
-
-        // Create PCM System
-        final PCMSystemBuilder pcmSystemBuilder = new PCMSystemBuilder(astModel, somoxConfiguration, analysisResult,
-                pcmComponentBuilder);
-        pcmSystemBuilder.buildSystemModel();
-
+        
         analysisResult.setResultStatus(AnalysisResult.ResultStatus.SUCCESS);
 
         return analysisResult;

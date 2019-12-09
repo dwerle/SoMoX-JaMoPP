@@ -5,6 +5,7 @@ import java.util.Map;
 import org.eclipse.core.runtime.CoreException;
 import org.somox.analyzer.simplemodelanalyzer.jobs.SaveSoMoXModelsJob;
 import org.somox.analyzer.simplemodelanalyzer.jobs.SimpleModelAnalyzerJob;
+import org.somox.analyzer.simplemodelanalyzer.jobs.SimpleSystemBuilderJob;
 import org.somox.analyzer.simplemodelanalyzer.jobs.SoMoXBlackboard;
 import org.somox.configuration.SoMoXConfiguration;
 import org.somox.gast2seff.jobs.GAST2SEFFJob;
@@ -62,6 +63,7 @@ public class ExtendableCompleteSimpleModelAnalysisJob extends AbstractExtendable
         this.add(new SimpleModelAnalyzerJob(config));
         this.add(new GAST2SEFFJob(
                 config.getMoxConfiguration().isReverseEngineerInternalMethodsAsResourceDemandingInternalBehaviour()));
+        this.add(new SimpleSystemBuilderJob(config));
 
         this.handleJobExtensions(ExtendableCompleteSimpleModelAnalysisJob.AFTER_MODELS_JOB_EXTENSION_ID,
                 extensionJobsConfiguration);

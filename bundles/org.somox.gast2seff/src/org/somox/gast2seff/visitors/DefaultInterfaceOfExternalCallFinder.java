@@ -19,6 +19,8 @@ import org.somox.sourcecodedecorator.InterfaceSourceCodeLink;
 import org.somox.sourcecodedecorator.MethodLevelSourceCodeLink;
 import org.somox.sourcecodedecorator.SourceCodeDecoratorRepository;
 
+import indirCommDetection.JMSDetection;
+
 public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternalCallFinding {
 
     private static final Logger logger = Logger.getLogger(DefaultInterfaceOfExternalCallFinder.class.getSimpleName());
@@ -47,28 +49,31 @@ public class DefaultInterfaceOfExternalCallFinder implements InterfaceOfExternal
         for (final RequiredRole requiredRole : this.getBasicComponent().getRequiredRoles_InterfaceRequiringEntity()) {
             Interface pcmInterface = this.getInterfaceFromRequiredRole(requiredRole);
             
-            if (pcmInterface instanceof EventGroup && pcmInterface != null) { // TODO dsg8fe functional My heart breaks when I see my fucking stupid source code.
-                logger.trace("accessed interface port " + requiredRole.getEntityName());
-                logger.warn("Sussan, mit mehren Ports funktioniert das nicht mehr");
-                interfacePortOperationTuple.role = requiredRole;
-                interfacePortOperationTuple.signature = (Signature) ((EventGroup) pcmInterface).getEventTypes__EventGroup().get(0);
-                return interfacePortOperationTuple;            	
-            }
+            if (JMSDetection.isProducer(calledMethod) && JMSDetection.isProducerClass(accessedConcreteClassifier)) {
+            	if (pcmInterface instanceof EventGroup && pcmInterface != null) { // TODO dsg8fe functional My heart breaks when I see my fucking stupid source code.
+	                logger.trace("accessed interface port " + requiredRole.getEntityName());
+	                logger.warn("Sussan, mit mehren Ports funktioniert das nicht mehr");
+	                interfacePortOperationTuple.role = requiredRole;
+	                interfacePortOperationTuple.signature = (Signature) ((EventGroup) pcmInterface).getEventTypes__EventGroup().get(0);
+	                return interfacePortOperationTuple; 
+            	}
+            } else {
             
-            /* TODO dsg8fe non of the condition is based on one of the parameter... what is the purpose of the whole construct? 
-             * AND the existence of an interface ergo required role is checked with pcmInterface != null simply ... :( */
-            for (final InterfaceSourceCodeLink ifLink : this.getSourceCodeDecoratorRepository()
-                    .getInterfaceSourceCodeLink()) {
-                if (pcmInterface != null && pcmInterface.equals(ifLink.getInterface())) {
-                    final ConcreteClassifier gastClass = ifLink.getGastClass();
-                    if (gastClass.equals(accessedConcreteClassifier)) {
-                        logger.trace("accessed interface port " + requiredRole.getEntityName());
-                        interfacePortOperationTuple.role = requiredRole;
-                        // query operation:
-                        interfacePortOperationTuple.signature = this.queryInterfaceOperation(calledMethod);
-                        return interfacePortOperationTuple;
-                    }
-                }
+	            /* TODO dsg8fe non of the condition is based on one of the parameter... what is the purpose of the whole construct? 
+	             * AND the existence of an interface ergo required role is checked with pcmInterface != null simply ... :( */
+	            for (final InterfaceSourceCodeLink ifLink : this.getSourceCodeDecoratorRepository()
+	                    .getInterfaceSourceCodeLink()) {
+	                if (pcmInterface != null && pcmInterface.equals(ifLink.getInterface())) {
+	                    final ConcreteClassifier gastClass = ifLink.getGastClass();
+	                     if (gastClass.equals(accessedConcreteClassifier)) {
+	                        logger.trace("accessed interface port " + requiredRole.getEntityName());
+	                        interfacePortOperationTuple.role = requiredRole;
+	                        // query operation:
+	                        interfacePortOperationTuple.signature = this.queryInterfaceOperation(calledMethod);
+	                        return interfacePortOperationTuple;
+	                    }
+	                }
+	            }
             }
         }
         logger.warn("found no if port for " + accessedConcreteClassifier);

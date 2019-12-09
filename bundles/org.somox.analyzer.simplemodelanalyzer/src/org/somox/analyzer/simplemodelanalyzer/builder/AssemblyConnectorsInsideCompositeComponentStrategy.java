@@ -142,7 +142,7 @@ public class AssemblyConnectorsInsideCompositeComponentStrategy implements IAsse
                 	final SourceRole sourceRole = (SourceRole) requiredRole;
                 	final SinkRole sinkRole = (SinkRole) providedRole;
                 	//if (sourceRole.getEventGroup__SourceRole().equals(sinkRole.getEventGroup__SinkRole())) {
-                	if (JMSDetection.isSinkAndSourceRoleConnected(sinkRole, sourceRole) || true) {
+                	if (JMSDetection.isSinkAndSourceRoleConnected(sinkRole, sourceRole)) {
                     	
                 		DataChannel dataChannel = SystemFactory.eINSTANCE.createDataChannel();
                     	dataChannel.setEntityName("MyDataChannel");

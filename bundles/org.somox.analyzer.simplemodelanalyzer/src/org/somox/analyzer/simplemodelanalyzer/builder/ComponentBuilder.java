@@ -34,6 +34,8 @@ import org.somox.sourcecodedecorator.SourcecodedecoratorFactory;
  *
  */
 public class ComponentBuilder extends AbstractBuilder {
+	
+	private static ComponentBuilder cb;
 
     /*
      * ------------------- Sub-Builder used by this builder -------------------
@@ -46,6 +48,15 @@ public class ComponentBuilder extends AbstractBuilder {
 
     private static Logger logger = Logger.getLogger(ComponentBuilder.class);
 
+    public static ComponentBuilder getComponentBuilder(final Root gastModel, final SoMoXConfiguration somoxConfiguration,
+            final AnalysisResult analysisResult) {
+    	if (cb == null) {
+    		cb = new ComponentBuilder(gastModel, somoxConfiguration, analysisResult);
+    	}
+    	
+    	return cb;
+    }
+    
     /**
      * Main builder used to create model elements of the SAMM during component detection with SoMoX.
      *
@@ -55,8 +66,9 @@ public class ComponentBuilder extends AbstractBuilder {
      *            SoMoX configuration object
      * @param analysisResult
      *            Object holding the root elements of the models to create
+     * @return 
      */
-    public ComponentBuilder(final Root gastModel, final SoMoXConfiguration somoxConfiguration,
+    private ComponentBuilder(final Root gastModel, final SoMoXConfiguration somoxConfiguration,
             final AnalysisResult analysisResult) {
         super(gastModel, somoxConfiguration, analysisResult);
 

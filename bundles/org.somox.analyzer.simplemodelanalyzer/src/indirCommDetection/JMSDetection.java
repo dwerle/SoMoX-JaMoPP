@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.emftext.language.java.arrays.ArrayInstantiation;
 import org.emftext.language.java.classifiers.AnonymousClass;
 import org.emftext.language.java.classifiers.Classifier;
+import org.emftext.language.java.classifiers.ConcreteClassifier;
 import org.emftext.language.java.expressions.AssignmentExpression;
 import org.emftext.language.java.expressions.AssignmentExpressionChild;
 import org.emftext.language.java.expressions.Expression;
@@ -83,6 +84,10 @@ public abstract class JMSDetection {
 	public static String parseStatementForDestination(Statement statement) {
 		String destination = null;
 		
+		ConcreteClassifier parent = statement.getParentConcreteClassifier();
+		String name = parent.getClass().getName();
+		// ConcreteClassifier parentparent.getParentConcreteClassifier();
+				
         final TreeIterator<EObject> treeIterator = statement.eAllContents();
         while (treeIterator.hasNext()) {
             final EObject current = treeIterator.next();
@@ -94,15 +99,15 @@ public abstract class JMSDetection {
                 if (rel_mc instanceof Method)
                 {
 
-                	
-	                	String dir = "C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\modeling-2018-09\\runtime-InnerEclipse\\JmsEasy\\src\\main\\java";
+                		String dir = "C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\modeling-2018-09\\runtime-InnerEclipse\\EnvironmentMonitoring\\src\\main\\java";
+	                	//String dir = "C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\modeling-2018-09\\runtime-InnerEclipse\\JmsEasy\\src\\main\\java";
 	                	String dest_var_name = null;
-	                	if (isNormalSender((Method)rel_mc)) {
+	                	if (isNormalSenderMethod((Method)rel_mc)) {
 	                    	Expression arg = methodCall.getArguments().get(0);         	
 	                		if (arg instanceof IdentifierReference) {
 		                		dest_var_name = ((IdentifierReference) arg).getTarget().getName();
 	                		}
-	                	} else if (isNormalReceiver((Method)rel_mc)) {
+	                	} else if (isNormalReceiverMethod((Method)rel_mc)) {
 	                		dest_var_name = findValueOfVariable("MessageConsumer (.+) = (.+).createConsumer\\((.+)\\)", dir, 3);
 	                	} else {
 	                		System.out.println("JMSDetection: Neither Receiver nor Sender"); // TODO dsg8fe throw exception
@@ -202,7 +207,7 @@ public abstract class JMSDetection {
         return list;
     } 
     
-    static boolean isNormalSender(Method method) {
+    static boolean isNormalSenderMethod(Method method) {
     	if (method.getName().equals("send")) { // TODO dsg8fe regex
     		return true;
     	} else {
@@ -210,7 +215,7 @@ public abstract class JMSDetection {
     	}
     }
     
-    static boolean isNormalReceiver(Method method) {
+    static boolean isNormalReceiverMethod(Method method) {
     	if (method.getName().equals("receive")) { // TODO dsg8fe regex
     		return true;
     	} else {
@@ -219,11 +224,33 @@ public abstract class JMSDetection {
     }
 
 	public static boolean isReceiver(Method method) {
-		return isNormalReceiver(method);
+		return isNormalReceiverMethod(method);
 	}
 
 	public static boolean isProducer(Method method) {
-		return isNormalSender(method);
+		return isNormalSenderMethod(method);
+	}
+	
+	public static boolean isProducerClass(ConcreteClassifier clazz) {
+		boolean isProducerClass = false;
+		if (clazz.getName().equals("MessageProducer")) {
+			isProducerClass = true;
+		} else {
+			isProducerClass = false;
+		}
+		
+		return isProducerClass;
+	}
+	
+	public static boolean isReceiverClass(ConcreteClassifier clazz) {
+		boolean isReceiverClass = false;
+		if (clazz.getName().equals("MessageConsumer")) {
+			isReceiverClass = true;
+		} else {
+			isReceiverClass = false;
+		}
+		
+		return isReceiverClass;
 	}
 
 	public static int getNumberOfProvidedJmsInterfaces(ComponentImplementingClassesLink componentCandidate) {
