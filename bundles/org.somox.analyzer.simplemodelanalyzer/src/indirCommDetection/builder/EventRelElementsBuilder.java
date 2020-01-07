@@ -1,4 +1,4 @@
-package org.somox.analyzer.simplemodelanalyzer.builder;
+package indirCommDetection.builder;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +20,8 @@ import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.repository.SourceRole;
 import org.somox.analyzer.AnalysisResult;
+import org.somox.analyzer.simplemodelanalyzer.builder.AbstractBuilder;
+import org.somox.analyzer.simplemodelanalyzer.builder.ComponentAndTypeNaming;
 import org.somox.analyzer.simplemodelanalyzer.detection.IComponentInterfaceStrategy;
 import org.somox.configuration.SoMoXConfiguration;
 import org.somox.kdmhelper.KDMHelper;

@@ -52,6 +52,7 @@ import org.somox.sourcecodedecorator.InterfaceSourceCodeLink;
 import org.somox.sourcecodedecorator.SourcecodedecoratorFactory;
 
 import indirCommDetection.JMSDetection;
+import indirCommDetection.builder.EventRelElementsBuilder;
 
 /**
  * Builder used to create {@link Interface}s in the SAMM instance based on reverse engineered code
