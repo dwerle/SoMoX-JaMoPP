@@ -6,25 +6,38 @@ import java.util.ListIterator;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-public class JMSPatternHandler {
+public class JMSPatternAndApiHandler {
 	private List<String> createProducerPatterns;
 	private List<String> createReceiverPatterns;
+	private List<Integer> groupNrcreateProducerPatterns;
+	private List<Integer> groupNrcreateReceiverPatterns;
 	private List<LookUpPattern> lookupPatterns;
 	private List<Integer>groupNrinLupPatterns;
 	
-	JMSPatternHandler() {
+	private List<String> messageChannel;
+	
+	JMSPatternAndApiHandler() {
 		createProducerPatterns = new ArrayList<>();
 		createReceiverPatterns = new ArrayList<>();
+		groupNrcreateProducerPatterns = new ArrayList<>();
+		groupNrcreateReceiverPatterns = new ArrayList<>();
 		lookupPatterns = new ArrayList<>();
 		groupNrinLupPatterns = new ArrayList<>();
+		messageChannel = new ArrayList<>();
 		
-		createProducerPatterns.add("(.+) = (.+).createProducer\\\\((.+)\\\\)");
-		createReceiverPatterns.add("(.+) = (.+).createConsumer\\\\((.+)\\\\)");
-		//lookupPatterns.add(Pattern.compile("Queue \"+dest_var_name+\" = \\\\(Queue\\\\) (.+).lookup\\\\(\\\"(.+)\\\"\\\\)"));
-		lookupPatterns.add(new LookUpPattern("Queue( *)", "( *)=( *)\\\\(Queue\\\\)( *)(.+).lookup\\\\(\\\"(.+)\\\"\\\\)"));
+		createProducerPatterns.add("(.+) = (.+).createProducer\\((.+)\\)");
+		groupNrcreateProducerPatterns.add(3);
+		createReceiverPatterns.add("(.+) = (.+).createConsumer\\((.+)\\)");
+		groupNrcreateReceiverPatterns.add(3);
+
+		lookupPatterns.add(new LookUpPattern("Queue( *)", "( *)=( *)\\(Queue\\)( *)(.+).lookup\\(\\\"(.+)\\\"\\)"));
 		groupNrinLupPatterns.add(6);
 		lookupPatterns.add(new LookUpPattern("Destination( *)","( *)=( *)(.+).createQueue\\(\\\"(.+)\\\"\\)"));
 		groupNrinLupPatterns.add(5);
+		
+		messageChannel.add("Destination");
+		messageChannel.add("Queue");
+		messageChannel.add("Topic");
 	}
 	
 	List<Pattern> getCreateProducerPatterns() {
@@ -80,6 +93,14 @@ public class JMSPatternHandler {
 			// TODO dsg8fe Exception
 			return null;
 		}
+	}
+
+	public List<Integer> getGroupNrcreateProducerPatterns() {
+		return groupNrcreateProducerPatterns;
+	}
+
+	public List<Integer> getGroupNrcreateReceiverPatterns() {
+		return groupNrcreateReceiverPatterns;
 	}
 	
 	List<Integer> getGroupNrForLookupPattern(){

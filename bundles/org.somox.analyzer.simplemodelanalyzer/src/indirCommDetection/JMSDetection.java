@@ -46,7 +46,9 @@ public abstract class JMSDetection {
 	
 	static HashMap<String, ArrayList<Role>> mapRolesToDestination = new HashMap<String, ArrayList<Role>>();
 	
-	static private JMSPatternHandler jmsPatternHandler = new JMSPatternHandler();
+	static private JMSPatternAndApiHandler jmsPatternHandler = new JMSPatternAndApiHandler();
+	
+	static private List<File> files = new ArrayList<File>();
 
 	// Nutzte sie weise und selten, sie enthaelt mehrere Schleifen und ist somit Ressourcen intensiv TODO translate
 	public static boolean isSinkAndSourceRoleConnected(SinkRole sinkRole, SourceRole sourceRole)
@@ -85,7 +87,7 @@ public abstract class JMSDetection {
 		String destination = null;
 
 		String clazzname = statement.getParentConcreteClassifier().getName();
-				
+		
         final TreeIterator<EObject> treeIterator = statement.eAllContents();
         while (treeIterator.hasNext()) {
             final EObject current = treeIterator.next();
@@ -97,9 +99,9 @@ public abstract class JMSDetection {
                 if (rel_mc instanceof Method)
                 {
                 		// TODO dsg8fe SourceCodeDecoratorRepository -> Component -> Statements
-                		String dir = "C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\modeling-2018-09\\runtime-InnerEclipse\\\\EnvironmentMonitoring\\src\\main\\java";
-	                	//String dir = "C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\modeling-2018-09\\runtime-InnerEclipse\\JmsEasy\\src\\main\\java";
-	                	String dest_var_name = null;
+                		String dir = "C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\modeling-2018-09\\runtime-InnerEclipse\\EnvironmentMonitoring\\src\\main\\java";
+
+                		String dest_var_name = null;
 	                	if (isNormalSenderMethod((Method)rel_mc)) {
 	                    	Expression arg = methodCall.getArguments().get(0);
 	                		if (arg instanceof IdentifierReference) {
@@ -119,22 +121,15 @@ public abstract class JMSDetection {
 	                		    if (true == isDestination) {
 	                		    	dest_var_name = ((IdentifierReference) arg).getTarget().getName();
 	                		    } else {
-	                		    	dest_var_name = findValueOfVariable("(.+) = (.+).createProducer\\((.+)\\)", dir, 3, clazzname);
+	                		    	dest_var_name = findValueInPatterns(jmsPatternHandler.getCreateProducerPatterns(), dir, jmsPatternHandler.getGroupNrcreateProducerPatterns(), clazzname);
 	                		    }
-	                		    
-	                		    /* TODO dsg8fe Idee wie mensch an den File Namen kommen */
-	                			String MyInterface22 = ((IdentifierReference) arg).getType().getContainingCompilationUnit().getName();
-
 	                		}
 	                	} else if (isNormalReceiverMethod((Method)rel_mc)) {
-	                		dest_var_name = findValueOfVariable("(.+) = (.+).createConsumer\\((.+)\\)", dir, 3, clazzname);
+	                		dest_var_name = findValueInPatterns(jmsPatternHandler.getCreateReceiverPatterns(), dir, jmsPatternHandler.getGroupNrcreateReceiverPatterns(), clazzname);
 	                	} else {
 	                		System.out.println("JMSDetection: Neither Receiver nor Sender"); // TODO dsg8fe throw exception
 	                		return null;
 	                	}
-	                	
-	                	//Destination destination = session.createQueue("DAYLIGHT.FOO");
-	                	//destination = findValueOfVariable(jmsPatternHandler.getLookupPattern(dest_var_name), dir, jmsPatternHandler.getGroupNrForLookupPattern());
 	                	destination = findValueInPatterns(jmsPatternHandler.getLookupPattern(dest_var_name), dir, jmsPatternHandler.getGroupNrForLookupPattern(), clazzname);
 	                	if (destination == null) {
 	                		// TODO dsg8fe Exception
@@ -163,115 +158,18 @@ public abstract class JMSDetection {
 	public static ArrayList<Role> getRolesConnectedToDestination(String destination) {
 		return mapRolesToDestination.get(destination);
 	}
-	
-	public static ArrayList<Role> getConntectedRolesToRole(Role role) {
-		String destination = null;
-		Set<Entry<String, ArrayList<Role>>> set = mapRolesToDestination.entrySet();
-		Iterator<Entry<String, ArrayList<Role>>> iterator = set.iterator();
-		
-		while(iterator.hasNext() && null == destination ) {
-			Map.Entry mentry = (Map.Entry)iterator.next();
-	        Iterator<Role> roleIterator = ((ArrayList<Role>) mentry.getValue()).iterator();
- 			while (roleIterator.hasNext()) {
-	 			if (roleIterator.next().equals(role)) {
-	 				destination = (String) mentry.getKey();
-	 				break;
-	 			}
- 			}
- 		}
-	      
-		return null;
-		
-	}
-	
-	static String findValueOfVariable(String var, String dir, int numberOfGroup, String clazz)
-	{
-		String value = null;
-		
-        ArrayList<File> files = getPaths(new File(dir), new ArrayList<File>());
-        if(files != null) {
-	        try {
-	            for (int i = 0; i < files.size(); i++)
-	            {
-	            	if (files.get(i).getName().contains(clazz)) {
-		            	String patternToFind = var;
-		            	Pattern m = Pattern.compile(patternToFind);
-		            	
-		            	try (Stream<String> lines = Files.lines(files.get(i).toPath())) {
-		            	    Optional<String> message = lines.filter(m.asPredicate()).findFirst();
-		            	    if (message.isPresent()) {
-		            	        Matcher matcher = m.matcher(message.get());
-		            	        matcher.find();
-		            	        String group = matcher.group(numberOfGroup);
-		            	        System.out.println(group);
-		            	        
-		            	        value = group;
-		            	    }
-		            	}
-	            	}
-	            }
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-        }
-        
-		
-		return value;
-	}
 
-	static String findValueOfVariable(List<Pattern> pattern, String dir, List<Integer> numberOfGroups, String clazz) {
-		if (pattern.size() != numberOfGroups.size()) {
-			// TODO dsg8fe exception 
-			return null;
-		}
-		/* TODO dsg8fe improvement 1. process only the corresponding class / file 
-		 * 2. perform the search / mapping by priority or variable visibility : 
-		 * first in the function, then in the class etc.. */
-        ArrayList<File> files = getPaths(new File(dir), new ArrayList<File>());
-        if(files != null) {
-	        try {
-	            for (int i = 0; i < files.size(); i++)
-	            {
-	            	if (files.get(i).getName().contains(clazz)) {
-		            	for(Pattern p: pattern){
-			            	try (Stream<String> lines = Files.lines(files.get(i).toPath())) {
-			            	    	
-		    	    			ListIterator<Integer> litr = numberOfGroups.listIterator();
-
-		    	    		    
-		    	    		    	Integer numberOfGroup = litr.next();
-		    	    		    	
-				            	    Optional<String> message = lines.filter(p.asPredicate()).findFirst();
-				            	    if (message.isPresent()) {
-				            	        Matcher matcher = p.matcher(message.get());
-				            	        matcher.find();
-				            	        String group = matcher.group(numberOfGroup);
-				            	        System.out.println(group);
-				            	        
-				            	        return group;
-				            	    }
-		    	    		    }
-			            	}
-	            	} 
-	            }
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-        }
-        
-		return null;
-	}
-	
 	static String findValueInPatterns(List<Pattern> pattern, String dir, List<Integer> numberOfGroups, String clazz) {
 		ArrayList<String> results = new ArrayList<String>();
 		if (pattern.size() != numberOfGroups.size()) {
 			// TODO dsg8fe exception 
 			return null;
 		}
-		/* TODO dsg8fe improvement 1. process only the corresponding class / file 
-		 * 2. perform the search / mapping by priority or variable visibility : 
-		 * first in the function, then in the class etc.. */
-        ArrayList<File> files = getPaths(new File(dir), new ArrayList<File>());
+		if (files.isEmpty())
+		{
+			files = getPaths(new File(dir), new ArrayList<File>());
+		}
+		
         if(files != null) {
 	        try {
 	            for (int i = 0; i < files.size(); i++)
@@ -292,6 +190,7 @@ public abstract class JMSDetection {
 	                            	results.add (m.group(numberOfGroups.get(j)));
 	                        }
 	                    }
+	                    buf.close();
 	            	}
 	            }
 	        } catch (IOException e) {
@@ -329,7 +228,7 @@ public abstract class JMSDetection {
     }
     
     static boolean isNormalReceiverMethod(Method method) {
-    	if (method.getName().equals("receive")) { // TODO dsg8fe regex
+    	if (method.getName().equals("receive")) { 
     		return true;
     	} else {
     		return false;
