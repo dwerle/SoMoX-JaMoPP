@@ -24,6 +24,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
@@ -98,8 +100,8 @@ public abstract class JMSDetection {
                 ReferenceableElement rel_mc =  methodCall.getTarget();
                 if (rel_mc instanceof Method)
                 {
-                		// TODO dsg8fe SourceCodeDecoratorRepository -> Component -> Statements
-                		String dir = "C:\\Users\\Kpt. Zusel\\eclipse - Kopie - Kopie\\modeling-2018-09\\runtime-InnerEclipse\\EnvironmentMonitoring\\src\\main\\java";
+                	final String root = ResourcesPlugin.getWorkspace().getRoot().getLocation().toOSString();
+                		String dir = root + "\\EnvironmentMonitoring\\src\\main\\java";
 
                 		String dest_var_name = null;
 	                	if (isNormalSenderMethod((Method)rel_mc)) {
